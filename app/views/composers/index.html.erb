@@ -1,0 +1,21 @@
+<h1>Listing Composers</h1>
+
+<div class='pagination'>
+  <strong>Jump to:</strong>
+  <%- Composer.pagination_letters.each do |letter| -%>
+    <%= link_to(letter, composers_path(:letter => letter)) %>
+  <%- end -%>
+</div>
+<br/ >
+<table>
+
+
+
+<% for composer in @composers.sort_by(&:composer_name) %>
+  <tr>
+    <td><%= link_to composer.composer_name, composer %></td>
+
+  </tr>
+<% end %>
+</table>
+

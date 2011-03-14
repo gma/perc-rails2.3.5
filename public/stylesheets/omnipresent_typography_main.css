@@ -1,0 +1,149 @@
+/* -----------------------------------------------
+
+WOW Design Solutions Ltd
+Author:  Glynn Williams
+Created:  December 2007
+Revision:  
+
+----------------------------- */
+
+/*----------------------------- tags */
+#MainColumn p {line-height:14pt;
+	color:#666;
+	margin:0;
+	padding:0 0 10px;}
+h1, h2, h3, h4 {font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	margin:0;
+	padding:0 0 10px;}
+h1 {font-size:150%;
+	color:#8D2C06;}
+h2 {font-size:135%;
+	color:#333;}
+h3 {font-size:120%;
+	color:#666;}
+h4 {font-size:105%;
+	color:#8D2C06;}
+strong {font-weight:bold;}
+img {border:none;
+	border-collapse:collapse;}
+ul, ol, li {color:#7F848F;}
+ul, ol {margin-top:0;
+	margin-bottom:10px;}
+#MainColumn li {padding:0 0 2px;}
+blockquote {padding:5px 10px;
+	color:#666;
+	quotes: "“" "”" "‘" "’";
+	background-color:#E4F1F7;
+	font-style:italic;
+	text-align:justify;
+	border:1px dotted #7F848F;
+	margin:0 0 4px;}
+cite {color:#333;}
+hr {margin:0.4em 0;
+	border:0;
+	color:#7F848F;
+	background-color:#7F848F;
+	height:1px;
+	width:100%;}
+acronym {cursor:help;
+	text-decoration:none;
+	color:#900;
+	border-bottom:1px dotted #8D2C06;}
+
+/*----------------------------- Form */
+
+#Alphabetical {padding:0 5px 5px;
+	border:none;
+	border-collapse:collapse;
+	text-align:center;
+	font-size:80%;
+	background-color:#FFF;	
+	color:#333;}
+#Alphabetical fieldset {border:none;
+	border-collapse:collapse;}
+#Alphabetical select.ATOZ {padding:1px 2px;
+	margin:0;
+	text-align:center;
+	font-size:100%;}
+
+.StandardForms {background-color:#CED4D8;
+	padding:0 5px 5px;
+	border:none;
+	float:left;
+	display:inline;
+	width:232px;
+	font-size:90%;
+	border:solid 1px #000;
+	text-align:left;
+	margin:0 25px 10px 0;
+	color:#333;}
+.StandardForms fieldset {border:solid 1px #8D2C06;
+	padding:5px;
+	margin:0}
+.StandardForms legend {color:#8D2C06;
+	font-weight:bold;}
+.StandardForms input.formInputField {background-color:#E9E9EB;
+	padding:0;
+	margin:0;
+	border:solid 1px #000;}
+.StandardForms input.formInputField:hover {background-color:#FFF;
+	color:#000;}
+.StandardForms input.FormButtons {background-color:#CED4D8;
+	text-align:center;
+	padding:0 3px;
+	margin:0;
+	color:#333;
+	border:solid 1px #333;}
+.StandardForms input.FormButtons:hover {background-color:#8D2C06;
+	color:#FFF;
+	border:solid 1px #FFF;}
+
+#Members {padding:0 5px 5px;
+	border:none;
+	float:left;
+	left:10px;
+	position:relative;
+	text-align:center;
+	font-size:80%;
+	width:119px;
+	margin:0;
+	background:#B8BFBF url(../images/form_bg.jpg) no-repeat center;	
+	color:#333;
+	border:solid 1px #8D2C06;}
+#Members fieldset {padding:5px;
+	text-align:center;
+	margin:0;
+	border:solid 1px #666;}
+#Members legend {padding:2px 0 0;
+	color:#8D2C06;
+	margin:0 auto;
+	text-align:center;
+	font-weight:bold;}
+#Members label {padding:0 0 2px 0;
+	margin:0;
+	display:block;
+	font-weight:bold;}
+#Members input.formInputField {border:solid 1px #8D2C06;
+	margin-bottom:3px;
+	font-size:92%;
+	text-align:center;
+	background-color:#EFEAE1;
+	width:98%;}
+#Members input.formInputField:hover {background-color:#FFF;
+	color:#000;}
+#Members input.FormButtons {background-color:#EFEAE1;
+	color:#8D2C06;
+	font-size:92%;
+	width:100%;
+	padding:1px 0;
+	margin:0;
+	text-align:center;
+	border:solid 1px #8D2C06;}
+#Members input.FormButtons:hover {background-color:#8D2C06;
+	color:#FFF;
+	border:solid 1px #FFF;}
+	
+/*---------------------- text styles */
+IntrPara {font-weight:bold;
+	font-size:115%;}

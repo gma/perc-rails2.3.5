@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Percussion Orchestrations</title>
+  <%= stylesheet_link_tag "welcome_revised", :media => "all" %>
+  <%= javascript_include_tag "scroller" %>
+</head>
+
+<BODY onLoad="start()">
+<div id="container">
+	<div id="header" title="Percussion Orchestrations">
+		<h1>Percussion Orchestrations</h1>
+	</div>
+	<div id="mainnav">
+		<ul>
+			<li><%= link_to 'Home', root_path -%></li>
+			<li><%= link_to 'About', :action => "about" %></li>
+			<li><%= link_to 'Join', :action => "join" %></li>
+			<li><%= link_to 'Contact', :action => "contact" %></li>
+			<li><%= link_to 'Members Login', :action => "login" %></li>
+		</ul>
+	</div>
+	<div class="contents">
+		<div class="floatright">
+			<div id="menu">
+		<ul>
+			<li><%= link_to 'Member Orchestras', :action => "member_orchestras" %></li>
+			<li><%= link_to 'Endorsements', :action => "endorsements" %></li>
+			<li><%= link_to 'Free Trial', :action => "free_trial" %></li>
+			<li><%= link_to 'Subscription Rates', :action => "subscription_rates" %></li>
+			<li><%= link_to 'Links', :action => "links" %></li>
+				</ul>
+			</div>
+		</div>
+	
+		<%= yield :layout %>
+	</div>
+	<div id="footer">
+		<a href="terms" class="FooterLinks">Terms & Conditions</a> | 
+		<a href="privacy_policy" class="FooterLinks">Privacy Policy</a> | 
+		&copy; Copyright 2004-2011 Ed Cervenka
+	</div>
+</div>
+</body>
+</html>

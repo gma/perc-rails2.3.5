@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+  <title>No Percussion</title>
+  <%= stylesheet_link_tag "database", :media => "all" %>
+</head>
+<body id="">
+  <div id="banner">
+	<%= image_tag("logo.jpg") %>
+	<%= @page_title || "Percussion Orchestrations" %>
+  </div>
+  <div id="columns">
+	<div id="side">
+	  <a href="http://www.....">Home</a><br />
+	<p>
+	  <%= link_to 'Composers Index', composers_path %><br />
+	</p>
+	<p>
+	  Works With No Percussion<br />
+	  <%= link_to 'Percussion Notes', perc_notes_path %><br />
+	  <%= link_to 'Timpani Notes', timp_notes_path %><br />
+	  <%= link_to 'Figures Explanation', figures_path %><br />
+	  <%= link_to 'Instrument Translations', instrument_translations_path %>
+	</p>
+	</div>		
+    <div id="main">
+	  <%= yield :layout %>
+	</div>
+  </div>
+</body>
+</html>

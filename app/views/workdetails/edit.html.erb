@@ -1,0 +1,152 @@
+<h1>Editing workdetail</h1>
+
+<% form_for(@workdetail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :work_id %><br />
+    <%= f.text_field :work_id %>
+  </p>
+  <p>
+    <%= f.label :movement_id %><br />
+    <%= f.text_field :movement_id %>
+  </p>
+  <p>
+    <%= f.label :movement_name %><br />
+    <%= f.text_field :movement_name %>
+  </p>
+  <p>
+    <%= f.label :timpani %><br />
+    <%= f.text_field :timpani %>
+  </p>
+  <p>
+    <%= f.label :timpani_2 %><br />
+    <%= f.text_field :timpani_2 %>
+  </p>
+  <p>
+    <%= f.label :timpani_3 %><br />
+    <%= f.text_field :timpani_3 %>
+  </p>
+  <p>
+    <%= f.label :timpani_4 %><br />
+    <%= f.text_field :timpani_4 %>
+  </p>
+  <p>
+    <%= f.label :timpani_5 %><br />
+    <%= f.text_field :timpani_5 %>
+  </p>
+  <p>
+    <%= f.label :timpani_6 %><br />
+    <%= f.text_field :timpani_6 %>
+  </p>
+  <p>
+    <%= f.label :timpani_7 %><br />
+    <%= f.text_field :timpani_7 %>
+  </p>
+  <p>
+    <%= f.label :timpani_8 %><br />
+    <%= f.text_field :timpani_8 %>
+  </p>
+  <p>
+    <%= f.label :timpani_9 %><br />
+    <%= f.text_field :timpani_9 %>
+  </p>
+  <p>
+    <%= f.label :timpani_10 %><br />
+    <%= f.text_field :timpani_10 %>
+  </p>
+  <p>
+    <%= f.label :percussion_1 %><br />
+    <%= f.text_field :percussion_1 %>
+  </p>
+  <p>
+    <%= f.label :percussion_2 %><br />
+    <%= f.text_field :percussion_2 %>
+  </p>
+  <p>
+    <%= f.label :percussion_3 %><br />
+    <%= f.text_field :percussion_3 %>
+  </p>
+  <p>
+    <%= f.label :percussion_4 %><br />
+    <%= f.text_field :percussion_4 %>
+  </p>
+  <p>
+    <%= f.label :percussion_5 %><br />
+    <%= f.text_field :percussion_5 %>
+  </p>
+  <p>
+    <%= f.label :percussion_6 %><br />
+    <%= f.text_field :percussion_6 %>
+  </p>
+  <p>
+    <%= f.label :percussion_7 %><br />
+    <%= f.text_field :percussion_7 %>
+  </p>
+  <p>
+    <%= f.label :percussion_8 %><br />
+    <%= f.text_field :percussion_8 %>
+  </p>
+  <p>
+    <%= f.label :percussion_9 %><br />
+    <%= f.text_field :percussion_9 %>
+  </p>
+  <p>
+    <%= f.label :percussion_10 %><br />
+    <%= f.text_field :percussion_10 %>
+  </p>
+  <p>
+    <%= f.label :percussion_11 %><br />
+    <%= f.text_field :percussion_11 %>
+  </p>
+  <p>
+    <%= f.label :percussion_12 %><br />
+    <%= f.text_field :percussion_12 %>
+  </p>
+  <p>
+    <%= f.label :percussion_13 %><br />
+    <%= f.text_field :percussion_13 %>
+  </p>
+  <p>
+    <%= f.label :percussion_14 %><br />
+    <%= f.text_field :percussion_14 %>
+  </p>
+  <p>
+    <%= f.label :percussion_15 %><br />
+    <%= f.text_field :percussion_15 %>
+  </p>
+  <p>
+    <%= f.label :percussion_16 %><br />
+    <%= f.text_field :percussion_16 %>
+  </p>
+  <p>
+    <%= f.label :percussion_17 %><br />
+    <%= f.text_field :percussion_17 %>
+  </p>
+  <p>
+    <%= f.label :percussion_18 %><br />
+    <%= f.text_field :percussion_18 %>
+  </p>
+  <p>
+    <%= f.label :percussion_19 %><br />
+    <%= f.text_field :percussion_19 %>
+  </p>
+  <p>
+    <%= f.label :percussion_20 %><br />
+    <%= f.text_field :percussion_20 %>
+  </p>
+  <p>
+    <%= f.label :cimbalom %><br />
+    <%= f.text_field :cimbalom %>
+  </p>
+  <p>
+    <%= f.label :attachment_exists %><br />
+    <%= f.check_box :attachment_exists %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @workdetail %> |
+<%= link_to 'Back', workdetails_path %>

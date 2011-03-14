@@ -1,0 +1,29 @@
+require "paginate_alphabetically"
+
+class ComposersController < ApplicationController
+  layout "database"
+  # GET /composers
+  # GET /composers.xml
+  def index
+    @composers = Composer.alphabetical_group(params[:letter])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @composers }
+    end
+  end
+
+  # GET /composers/1
+  # GET /composers/1.xml
+  def show
+    @composer = Composer.find(params[:id])
+    @works = @composer.works.find(:all, :order => 'work_order_id')
+    @work = @composer.works.find(:first)
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @composer }
+    end
+  end
+
+
+end

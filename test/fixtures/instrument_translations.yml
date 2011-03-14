@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  instrument_name: MyString
+  description: MyString
+  french: MyString
+  german: MyString
+  spanish: MyString
+  italian: MyString
+
+two:
+  instrument_name: MyString
+  description: MyString
+  french: MyString
+  german: MyString
+  spanish: MyString
+  italian: MyString

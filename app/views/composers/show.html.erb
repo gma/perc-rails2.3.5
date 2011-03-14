@@ -1,0 +1,23 @@
+<p>
+<h1>Listing works by <%=h @composer.composer_name %></h1>
+</p>
+
+<table>
+
+
+	
+	<% for work in @works %>
+	  <tr>
+
+	    <td><%= link_to work.work_name, work_path(work.id) %> 
+	<%= if @work.showarrorch.present? ; work.arr_orch ; end %>	
+<%=h work.opus_no %></td>
+
+	<% end %>
+
+</table>
+
+
+<p>
+<%= link_to 'Back to All Composers', composers_path %>
+</p>

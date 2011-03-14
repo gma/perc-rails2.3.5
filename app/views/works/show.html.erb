@@ -1,0 +1,88 @@
+
+
+<h1><%= "#{@work.composer.composer_name}" %>: <%=h @work.work_name %> <%=h @work.arr_orch %>  <%=h @work.opus_no %></h1>
+<table border=1>
+  <tr>
+	
+		
+<%= if @workdetail.movement_name.present? ; "<th>Movement name</th>"; end %>
+<%= if @workdetail.timpani.present? ; "<th>Timpani</th>"; end %>
+<%= if @workdetail.timpani_2.present? ; "<th>Timpani 2</th>"; end %>
+<%= if @workdetail.timpani_3.present? ; "<th>Timpani 3</th>"; end %>
+<%= if @workdetail.timpani_4.present? ; "<th>Timpani 4</th>"; end %>
+<%= if @workdetail.timpani_5.present? ; "<th>Timpani 5</th>"; end %>
+<%= if @workdetail.timpani_6.present? ; "<th>Timpani 6</th>"; end %>
+<%= if @workdetail.timpani_7.present? ; "<th>Timpani 7</th>"; end %>
+<%= if @workdetail.timpani_8.present? ; "<th>Timpani 8</th>"; end %>
+<%= if @workdetail.timpani_9.present? ; "<th>Timpani 9</th>"; end %>
+<%= if @workdetail.timpani_10.present? ; "<th>Timpani 10</th>"; end %>
+<%= if @workdetail.percussion_1.present? ; "<th>Percussion 1</th>"; end %>
+<%= if @workdetail.percussion_2.present? ; "<th>Percussion 2</th>"; end %>
+<%= if @workdetail.percussion_3.present? ; "<th>Percussion 3</th>"; end %>
+<%= if @workdetail.percussion_4.present? ; "<th>Percussion 4</th>"; end %>
+<%= if @workdetail.percussion_5.present? ; "<th>Percussion 5</th>"; end %>
+<%= if @workdetail.percussion_6.present? ; "<th>Percussion 6</th>"; end %>
+<%= if @workdetail.percussion_7.present? ; "<th>Percussion 7</th>"; end %>
+<%= if @workdetail.percussion_8.present? ; "<th>Percussion 8</th>"; end %>
+<%= if @workdetail.percussion_9.present? ; "<th>Percussion 9</th>"; end %>
+<%= if @workdetail.percussion_10.present? ; "<th>Percussion 10</th>"; end %>
+<%= if @workdetail.percussion_11.present? ; "<th>Percussion 11</th>"; end %>
+<%= if @workdetail.percussion_12.present? ; "<th>Percussion 12</th>"; end %>
+<%= if @workdetail.percussion_13.present? ; "<th>Percussion 13</th>"; end %>
+<%= if @workdetail.percussion_14.present? ; "<th>Percussion 14</th>"; end %>
+<%= if @workdetail.percussion_15.present? ; "<th>Percussion 15</th>"; end %>
+<%= if @workdetail.percussion_16.present? ; "<th>Percussion 16</th>"; end %>
+<%= if @workdetail.percussion_17.present? ; "<th>Percussion 17</th>"; end %>
+<%= if @workdetail.percussion_18.present? ; "<th>Percussion 18</th>"; end %>
+<%= if @workdetail.percussion_19.present? ; "<th>Percussion 19</th>"; end %>
+<%= if @workdetail.percussion_20.present? ; "<th>Percussion 20</th>"; end %>
+<%= if @workdetail.cimbalom.present? ; "<th>Cimbalom</th>"; end %>
+    
+  </tr>
+ <tr>
+<% for workdetail in @workdetails %>
+<%= if @workdetail.movement_name.present? ; "<td>" + workdetail.movement_name + "</td>"; end %>
+<%= if @workdetail.timpani.present? ; "<td>" + workdetail.timpani + "</td>"; end %>
+<%= if @workdetail.timpani_2.present? ; "<td>" + workdetail.timpani_2 + "</td>"; end %>
+<%= if @workdetail.timpani_3.present? ; "<td>" + workdetail.timpani_3 + "</td>"; end %>
+<%= if @workdetail.timpani_4.present? ; "<td>" + workdetail.timpani_4 + "</td>"; end %>
+<%= if @workdetail.timpani_5.present? ; "<td>" + workdetail.timpani_5 + "</td>"; end %>
+<%= if @workdetail.timpani_6.present? ; "<td>" + workdetail.timpani_6 + "</td>"; end %>
+<%= if @workdetail.timpani_7.present? ; "<td>" + workdetail.timpani_7 + "</td>"; end %>
+<%= if @workdetail.timpani_8.present? ; "<td>" + workdetail.timpani_8 + "</td>"; end %>
+<%= if @workdetail.timpani_9.present? ; "<td>" + workdetail.timpani_9 + "</td>"; end %>
+<%= if @workdetail.timpani_10.present? ; "<td>" + workdetail.timpani_10 + "</td>"; end %>
+<%= if @workdetail.percussion_1.present? ; "<td>" + workdetail.percussion_1 + "</td>"; end %>
+<%= if @workdetail.percussion_2.present? ; "<td>" + workdetail.percussion_2 + "</td>"; end %>
+<%= if @workdetail.percussion_3.present? ; "<td>" + workdetail.percussion_3 + "</td>"; end %>
+<%= if @workdetail.percussion_4.present? ; "<td>" + workdetail.percussion_4 + "</td>"; end %>
+<%= if @workdetail.percussion_5.present? ; "<td>" + workdetail.percussion_5 + "</td>"; end %>
+<%= if @workdetail.percussion_6.present? ; "<td>" + workdetail.percussion_6 + "</td>"; end %>
+<%= if @workdetail.percussion_7.present? ; "<td>" + workdetail.percussion_7 + "</td>"; end %>
+<%= if @workdetail.percussion_8.present? ; "<td>" + workdetail.percussion_8 + "</td>"; end %>
+<%= if @workdetail.percussion_9.present? ; "<td>" + workdetail.percussion_9 + "</td>"; end %>
+<%= if @workdetail.percussion_10.present? ; "<td>" + workdetail.percussion_10 + "</td>"; end %>
+<%= if @workdetail.percussion_11.present? ; "<td>" + workdetail.percussion_11 + "</td>"; end %>
+<%= if @workdetail.percussion_12.present? ; "<td>" + workdetail.percussion_12 + "</td>"; end %>
+<%= if @workdetail.percussion_13.present? ; "<td>" + workdetail.percussion_13 + "</td>"; end %>
+<%= if @workdetail.percussion_14.present? ; "<td>" + workdetail.percussion_14 + "</td>"; end %>
+<%= if @workdetail.percussion_15.present? ; "<td>" + workdetail.percussion_15 + "</td>"; end %>
+<%= if @workdetail.percussion_16.present? ; "<td>" + workdetail.percussion_16 + "</td>"; end %>
+<%= if @workdetail.percussion_17.present? ; "<td>" + workdetail.percussion_17 + "</td>"; end %>
+<%= if @workdetail.percussion_18.present? ; "<td>" + workdetail.percussion_18 + "</td>"; end %>
+<%= if @workdetail.percussion_19.present? ; "<td>" + workdetail.percussion_19 + "</td>"; end %>
+<%= if @workdetail.percussion_20.present? ; "<td>" + workdetail.percussion_20 + "</td>"; end %>
+<%= if @workdetail.cimbalom.present? ; "<td>" + workdetail.cimbalom + "</td>"; end %>
+ 
+        
+  </tr>
+<% end %>
+</table>
+<%= if @work.notes.present? ; "<p><b>Notes: </b>" + @work.notes + "</p>"; end %>
+
+<p>
+  <%= link_to 'Back to all works by ' "#{@work.composer.composer_name}" %>
+</p>
+<p>
+  <%= link_to 'New Search', composers_path %>
+</p>

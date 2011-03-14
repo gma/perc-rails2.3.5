@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Percussion Orchestrations</title>
+  <%= stylesheet_link_tag "omnipresent_main", :media => "all" %>
+ 
+</head>
+<BODY>
+<div align="center">
+
+<div id="Flags"> 
+  <ul id="LanguageLinks">
+
+    <li><a href="it/itindex.asp" tabindex="205" accesskey="I" class="Italian">Italiano</a></li>
+    <li><a href="sp/spindex.asp" tabindex="204" accesskey="S" class="Spanish">Espa&ntilde;o</a></li>
+    <li><a href="ge/geindex.asp" tabindex="203" accesskey="G" class="German">Deutsch</a></li>
+    <li><a href="fr/frindex.asp" tabindex="202" accesskey="F" class="French">Fran&ccedil;ais</a></li>
+    <li><a href="index.asp" tabindex="201" accesskey="E" class="English">English</a></li>
+
+  </ul>
+    
+
+</div>
+<!--  Close Flags div  -->
+<div id="Container"> 
+  <div id="Header"></div>
+  <div id="Banner"></div>
+  <div id="MainColumn"> 
+   <div id="main">
+	  <%= yield :layout %>
+	</div>
+  </div>
+  <!--  Close MainColumn div  -->
+  <div id="LeftBar"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation"><%= link_to 'Home', root_path -%></p><br /><br />
+
+		<p class="MainNavigation">
+		  <%= link_to 'Composers Index', composers_path %><br /><br />
+		</p>
+		<p class="MainNavigation">	
+		  <%= link_to 'Works With No Percussion', no_percs_path %>
+		  <%= link_to 'Percussion Notes', perc_notes_path %>
+		  <%= link_to 'Timpani Notes', timp_notes_path %>
+		  <%= link_to 'Figures Explanation', figures_path %><br /><br />
+		</p>
+
+		
+
+		<p class="MainNavigation">
+		  
+		  <%= link_to 'Contact', :action => "contact" %><br /><br />	 
+		    
+		</p>
+
+		<p class="MainNavigation">
+		  <%= link_to 'My Account', :action => "account" %>	 
+		</p>
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer"><a  href="welcome/terms" class="FooterLinks">Terms 
+  &amp; Conditions</a> | <a href="welcome/privacy_policy" class="FooterLinks">Privacy Policy</a> | &copy; Copyright 2004-2011 Ed Cervenka </div>
+<!--  Close FooterBanner div  -->
+</body>
+</html>
+

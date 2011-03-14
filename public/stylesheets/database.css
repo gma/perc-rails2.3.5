@@ -1,0 +1,96 @@
+/* Styles for main page */
+
+#banner {
+	background: #FFF;
+	padding-top: 0px;
+	padding-bottom: 149px;
+	border-top: 3px solid;
+	border-left: 3px solid;
+	color: #666;
+/*	padding-left: 1em;  
+	border-bottom: 2px solid;
+	font: small-caps 50px/50px Verdana, Arial, Helvetica, sans-serif;
+	
+	text-align: center; */
+}
+
+#banner img {
+	float: left;
+}
+
+#columns {
+	background: #EFEAE1;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	border-left: 3px solid #666;
+}
+
+#main {
+	margin-left: 12em;
+	padding-top: 1ex;
+	padding-left: 2em;
+	background: white;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	color:#666;	
+
+}
+
+  blockquote {
+	padding:5px 10px;
+	color:#666;
+	quotes: "“" "”" "‘" "’";
+	background-color:#E4F1F7;
+	font-style:italic;
+	text-align:justify;
+	border:1px dotted #7F848F;
+	margin:0 0 0px;
+  }
+
+  cite {
+	color:#333;
+  }
+
+
+
+#notice {
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}
+
+#side {
+	float: left; 
+	padding-top: 2em;
+	padding-left: 1em;
+	
+	
+	padding-bottom: 13em;
+
+	width:12em;
+	background: #EFEAE1;
+	color: #8D2C06;
+	font: 15px/15px Verdana, Arial, Helvetica, sans-serif;
+}
+
+#side    a {color: #8D2C06;
+	}
+	
+	a:link {text-decoration:none;}   /* unvisited link */
+	a:visited {text-decoration:none;} /* visited link */
+	a:hover {text-decoration:underline;}   /* mouse over link */
+	a:active {text-decoration:underline;}  /* selected link */
+	
+}
+
+#footer {background-color:#8D2C06;
+	border-bottom:3px solid #7F848F;
+	border-left:3px solid #7F848F;
+	border-right:3px solid #7F848F;
+	color:#FFF;
+	padding:2px 0 0;
+	width:774px;
+	margin:0 auto;
+	height:15px;
+	font-size:80%;
+	text-align:center;}

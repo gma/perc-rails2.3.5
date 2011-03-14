@@ -1,0 +1,2 @@
+module PercNotesHelper
+end

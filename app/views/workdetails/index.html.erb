@@ -1,0 +1,88 @@
+<h1>Listing workdetails</h1>
+
+<table>
+  <tr>
+    <th>Work</th>
+    <th>Movement</th>
+    <th>Movement name</th>
+    <th>Timpani</th>
+    <th>Timpani 2</th>
+    <th>Timpani 3</th>
+    <th>Timpani 4</th>
+    <th>Timpani 5</th>
+    <th>Timpani 6</th>
+    <th>Timpani 7</th>
+    <th>Timpani 8</th>
+    <th>Timpani 9</th>
+    <th>Timpani 10</th>
+    <th>Percussion 1</th>
+    <th>Percussion 2</th>
+    <th>Percussion 3</th>
+    <th>Percussion 4</th>
+    <th>Percussion 5</th>
+    <th>Percussion 6</th>
+    <th>Percussion 7</th>
+    <th>Percussion 8</th>
+    <th>Percussion 9</th>
+    <th>Percussion 10</th>
+    <th>Percussion 11</th>
+    <th>Percussion 12</th>
+    <th>Percussion 13</th>
+    <th>Percussion 14</th>
+    <th>Percussion 15</th>
+    <th>Percussion 16</th>
+    <th>Percussion 17</th>
+    <th>Percussion 18</th>
+    <th>Percussion 19</th>
+    <th>Percussion 20</th>
+    <th>Cimbalom</th>
+    <th>Attachment exists</th>
+  </tr>
+
+<% @workdetails.each do |workdetail| %>
+  <tr>
+    <td><%=h workdetail.work_id %></td>
+    <td><%=h workdetail.movement_id %></td>
+    <td><%=h workdetail.movement_name %></td>
+    <td><%=h workdetail.timpani %></td>
+    <td><%=h workdetail.timpani_2 %></td>
+    <td><%=h workdetail.timpani_3 %></td>
+    <td><%=h workdetail.timpani_4 %></td>
+    <td><%=h workdetail.timpani_5 %></td>
+    <td><%=h workdetail.timpani_6 %></td>
+    <td><%=h workdetail.timpani_7 %></td>
+    <td><%=h workdetail.timpani_8 %></td>
+    <td><%=h workdetail.timpani_9 %></td>
+    <td><%=h workdetail.timpani_10 %></td>
+    <td><%=h workdetail.percussion_1 %></td>
+    <td><%=h workdetail.percussion_2 %></td>
+    <td><%=h workdetail.percussion_3 %></td>
+    <td><%=h workdetail.percussion_4 %></td>
+    <td><%=h workdetail.percussion_5 %></td>
+    <td><%=h workdetail.percussion_6 %></td>
+    <td><%=h workdetail.percussion_7 %></td>
+    <td><%=h workdetail.percussion_8 %></td>
+    <td><%=h workdetail.percussion_9 %></td>
+    <td><%=h workdetail.percussion_10 %></td>
+    <td><%=h workdetail.percussion_11 %></td>
+    <td><%=h workdetail.percussion_12 %></td>
+    <td><%=h workdetail.percussion_13 %></td>
+    <td><%=h workdetail.percussion_14 %></td>
+    <td><%=h workdetail.percussion_15 %></td>
+    <td><%=h workdetail.percussion_16 %></td>
+    <td><%=h workdetail.percussion_17 %></td>
+    <td><%=h workdetail.percussion_18 %></td>
+    <td><%=h workdetail.percussion_19 %></td>
+    <td><%=h workdetail.percussion_20 %></td>
+    <td><%=h workdetail.cimbalom %></td>
+    <td><%=h workdetail.attachment_exists %></td>
+    <td><%= link_to 'Show', workdetail %></td>
+    <td><%= link_to 'Edit', edit_workdetail_path(workdetail) %></td>
+    <td><%= link_to 'Destroy', workdetail, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New workdetail', new_workdetail_path %>

@@ -1,0 +1,34 @@
+<h1>Instrument Translations</h1>
+<div class='pagination'>
+  <strong>Jump to:</strong>
+  <%- InstrumentTranslation.pagination_letters.each do |letter| -%>
+    <%= link_to(letter, instrument_translations_path(:letter => letter)) %>
+  <%- end -%>
+</div>
+<br/ >
+<table border=1>
+  <tr>
+    <th>Instrument Name</th>
+    <th>Description</th>
+    <th>French</th>
+    <th>German</th>
+    <th>Spanish</th>
+    <th>Italian</th>
+  </tr>
+
+<% @instrument_translations.each do |instrument_translation| %>
+  <tr>
+    <td><%=h instrument_translation.instrument_name %></td>
+    <td><%=h instrument_translation.description %></td>
+    <td><%=h instrument_translation.french %></td>
+    <td><%=h instrument_translation.german %></td>
+    <td><%=h instrument_translation.spanish %></td>
+    <td><%=h instrument_translation.italian %></td>
+ 
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to All Composers', composers_path %>

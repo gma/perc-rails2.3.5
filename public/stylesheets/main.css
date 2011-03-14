@@ -1,0 +1,56 @@
+body {font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:80%;}
+	
+#Container {margin:0 auto;
+	padding:0;
+	border:3px solid #7F848F;
+	width:774px;}
+	
+/*----------------------------- Header, Banner, MainColumn and Footer DIVs */
+
+#Flags, #Header, #MainColumn, #LeftBar {position:relative;
+	background-color:#FFF;
+	display:block;
+	clear:none;
+	padding:0;
+	margin:0;}
+#Header, #Banner, #Footer {width:774px;}
+#Flags {width:770px;
+	margin:0 auto;
+	text-align:right;
+	height:65px;}
+#Header {height:172px;
+	background:#FFF url(../images/headerbest.jpg) no-repeat;
+	border-bottom:6px solid #8D2C06;
+	}
+
+#LeftBar {width:200px;
+	border-left:3px solid #7F848F;
+	background: #EFEAE1;
+	color: #8D2C06;
+	float:left;
+	text-align:center;}
+#MainColumn {width:565px;
+	
+	float:right;
+	padding:0 20px 0 0;}
+#ClearBottom {height:1px;
+	width:100%;
+	clear:both;
+	background-color:#FFF;}
+#Footer {background-color:#8D2C06;
+	border-bottom:3px solid #7F848F;
+	border-left:3px solid #7F848F;
+	border-right:3px solid #7F848F;
+	color:#FFF;
+	padding:2px 0 0;
+	width:774px;
+	margin:0 auto;
+	height:15px;
+	font-size:80%;
+	text-align:center;}
+

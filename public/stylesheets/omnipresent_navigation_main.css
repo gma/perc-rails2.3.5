@@ -1,0 +1,107 @@
+/* -----------------------------------------------
+
+WOW Design Solutions Ltd
+Author:  Glynn Williams
+Created:  December 2007
+Revision:  
+
+----------------------------- */
+
+a {color:#069;}
+a:link, a:visited, a:hover, a:active, a.MainSiteLink:link, a.MainSiteLink:visited, a.MainSiteLink:active, a.FooterLinks:link, a.FooterLinks:visited, a.FooterLinks:active {text-decoration:none;}
+	
+a.MainSiteLink {font-size:120%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color:#666;}
+
+a.FooterLinks:link, a.FooterLinks:visited, a.FooterLinks:active {color:#FFF;}
+
+a:hover, a.MainSiteLink:hover, a.FooterLinks:hover {text-decoration:underline;}
+a:hover {color:#666;}
+a.MainSiteLink:hover {color:#8D2C06;}
+a.FooterLinks:hover {color:#EFEAE1;}
+
+a.PreviewLink {font-size:120%;
+	display:block;
+	text-align:center;
+	padding:5px;
+	border:1px dotted #7F848F;
+	background-color:#EFEAE1;}
+	
+
+.MainNavigation a, .ActiveLink a {line-height:20px;
+	padding:0 10px 0;
+	color:#8D2C06;
+		display:block;
+		font-size:110%;
+		margin:0;
+		width:169px;}
+.HomeNavigation a {padding:58px 0px 0px 10px;
+	background:#EFEAE1 url(../images/nav_home_up.jpg) no-repeat;
+	background-position:center;
+	color:#8D2C06;
+	display:block;
+	text-align:center;
+	font-size:110%;
+	margin:0;
+	width:169px;}
+.MainNavigation a:link, .MainNavigation a:visited, .MainNavigation a:hover, .MainNavigation a:active, .HomeNavigation a:link, .HomeNavigation a:visited, .HomeNavigation a:hover, .HomeNavigation a:active, .ActiveLink a:link, .ActiveLink a:visited, .ActiveLink a:hover, .ActiveLink a:active {background-color:#EFEAE1;
+	text-decoration:none;}
+.MainNavigation a:hover, .HomeNavigation a:hover {color:#000;
+	text-decoration:none;}
+.MainNavigation a:hover {background:#EFEAE1 url(../images/nav_over_wide.jpg) no-repeat;}
+.HomeNavigation a:hover {background:#EFEAE1 url(../images/nav_home_over.jpg) no-repeat; background-position:center;}
+.MainNavigation a.ActiveLink:link, .MainNavigation a.ActiveLink:visited, .MainNavigation a.ActiveLink:hover, .MainNavigation a.ActiveLink:active {background:#EFEAE1 url(../images/nav_active.jpg) no-repeat;
+	color:#7F848F;}
+
+#LanguageLinks, #LanguageLinks ul {padding:0;
+	margin:0;
+	line-height:36px;
+	list-style:none;}
+#LanguageLinks a, #LanguageLinks li {background:#FFF;
+	display:block;
+	font-size:90%;
+	color:#CCC;
+	margin:0;
+	text-align:center;
+	text-decoration:none;
+	padding:12px 0 0;
+	width:5em;}
+#LanguageLinks li {float:right;}
+#LanguageLinks a:hover {color:#666;
+	background:#FFF;}
+#LanguageLinks a.English:link, #LanguageLinks a.English:visited, #LanguageLinks a.English:active {background:#FFF url(../images/flags/union_jack_up.gif) no-repeat center top;}
+#LanguageLinks a.French:link, #LanguageLinks a.French:visited, #LanguageLinks a.French:active {background:#FFF url(../images/flags/francais_up.gif) no-repeat center top;} 	
+#LanguageLinks a.German:link, #LanguageLinks a.German:visited, #LanguageLinks a.German:active {background:#FFF url(../images/flags/deutsch_up.gif) no-repeat center top;} 	
+#LanguageLinks a.Spanish:link, #LanguageLinks a.Spanish:visited, #LanguageLinks a.Spanish:active {background:#FFF url(../images/flags/espano_up.gif) no-repeat center top;} 	
+#LanguageLinks  a.Italian:link, #LanguageLinks a.Italian:visited, #LanguageLinks a.Italian:active {background:#FFF url(../images/flags/italiano_up.gif) no-repeat center top;} 	
+#LanguageLinks a.English:hover {background:#FFF url(../images/flags/union_jack_over.gif) no-repeat center top;}
+#LanguageLinks a.French:hover {background:#FFF url(../images/flags/francais_over.gif) no-repeat center top;} 	
+#LanguageLinks a.German:hover {background:#FFF url(../images/flags/deutsch_over.gif) no-repeat center top;} 	
+#LanguageLinks a.Spanish:hover {background:#FFF url(../images/flags/espano_over.gif) no-repeat center top;} 	
+#LanguageLinks a.Italian:hover {background:#FFF url(../images/flags/italiano_over.gif) no-repeat center top;} 	
+
+/*Example CSS for the two demo scrollers*/
+
+#pscroller1{
+width: 540px;
+height: 100px;
+border: 1px solid black;
+padding: 5px;
+background-color: lightyellow;
+}
+
+#pscroller2{
+width: 350px;
+height: 20px;
+border: 1px solid black;
+padding: 3px;
+}
+
+#pscroller2 a{
+text-decoration: none;
+}
+
+.someclass{ //class to apply to your scroller(s) if desired
+}
+	

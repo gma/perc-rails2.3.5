@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  composer_id: 1
+  work_name: MyString
+  work_order_id: 1
+  arr_orch: MyString
+  showarrorch: false
+  opus_no: MyString
+  notes: MyString
+  source: MyString
+
+two:
+  composer_id: 1
+  work_name: MyString
+  work_order_id: 1
+  arr_orch: MyString
+  showarrorch: false
+  opus_no: MyString
+  notes: MyString
+  source: MyString

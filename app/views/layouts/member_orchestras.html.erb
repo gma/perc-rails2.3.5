@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+  <title>Percussion Orchestrations</title>
+  <%= stylesheet_link_tag "database", :media => "all" %>
+</head>
+<body id="">
+  <div id="banner">
+	<%= image_tag("logo.jpg") %>
+	<%= @page_title || "Percussion Orchestrations" %>
+  </div>
+  <div id="columns">
+	<div id="side">
+	  <%= link_to 'Home', root_path %><br />
+	
+	<p>
+	  <%= link_to 'About' %><br />
+	  <%= link_to 'Current Member Orchestras', member_orchestras_path %><br />
+	  <%= link_to 'Join' %><br />
+	  <%= link_to 'Contact' %><br />
+	  
+	</p>
+	</div>		
+    <div id="main">
+	  <%= yield :layout %>
+	</div>
+  </div>
+</body>
+</html>

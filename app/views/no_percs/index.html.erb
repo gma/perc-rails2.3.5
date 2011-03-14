@@ -1,0 +1,28 @@
+<h1>Listing Works with No Timpani or Percussion</h1>
+<div class='pagination'>
+  <strong>Jump to:</strong>
+  <%- NoPerc.pagination_letters.each do |letter| -%>
+    <%= link_to(letter, no_percs_path(:letter => letter)) %>
+  <%- end -%>
+</div>
+<br/ >
+<table border=1>
+  <tr>
+    <th>Composer</th>
+    <th>Work</th>
+
+<% @no_percs.each do |no_perc| %>
+
+
+  <tr>
+    <td><%=h no_perc.composer_name %></td>
+    <td><%=h no_perc.work_name %></td>
+
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to All Composers', composers_path %>

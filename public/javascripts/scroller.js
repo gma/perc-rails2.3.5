@@ -1,0 +1,67 @@
+/**************************************
+* http://vertical-scroller.vbarsan.com/
+*    This notice may not be removed 
+**************************************/
+
+//-- Begin Scroller's Parameters and messages -->
+//scroller's width
+var swidth=535;
+
+//scroller's height
+var sheight=370;
+
+
+//scroller's speed 
+var sspeed=12;
+var restart=sspeed;
+var rspeed=sspeed;
+
+//scroller's pause 
+var spause=7000;
+
+//scroller's background
+var sbcolor="white";
+
+//messages: set your own; use as many as you'd like; set up Hyperlinks to
+//URLs as you normally do: <a target=... href="... URL ...">..message..</a>;
+var singletext=new Array();
+
+singletext[0]='<table CELLSPACING="0" CELLPADDING="0"><tr><td height="80px"><table ><tr><td><blockquote>"A flat-out indispensable resource! The information this site provides gives a solid foundation for the percussion for most every piece in the repertoire, all simply located at the click of a mouse. I highly recommend Percussion Orchestrations for anyone in our field searching for reliable, accurate percussion requirements."</blockquote>Boston Symphony Orchestra<br><br><br><blockquote>"Percussion Orchestrations is a wonderful resource for the orchestral percussionist. It is well organized, comprehensive, and will save anyone in charge of percussion section logistics a lot of time. I find it to be highly useful and educational."</blockquote><cite>Jim Ross</cite><br>Chicago Symphony Orchestra </td></tr></table></td></tr></table>';
+singletext[1]='<table><tr><td height="80px"><table><tr><td><blockquote>"We have found your website really useful, both when planning the programs and for the Principal Percussionist. No more guessing how many percussion players will be needed, which instruments will be needed, how to divide the parts and what the unusual instruments are."</blockquote>Oulu Symphony Orchestra, Finland<br><br><br><blockquote>"The Percussion Orchestrations website has been of great help for us and saved a lot of time when we plan our programmes. We have also saved money since it has become easy to stay within our normal number of percussionists or use extra-players in a more economic way"</blockquote>Gävle Symphony Orchestra, Sweden</td></tr></table></td></tr></table>';
+singletext[2]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations is such a valuable resource. It has always proved to be accurate, saving much time when preparing orchestration sheets for concerts. Recommended to me initially by our freelance percussion players!"</blockquote><cite>Georgina Govier</cite><br>Music Librarian, Welsh National Opera<br><br><br><blockquote>"Percussion Orchestrations is an unbelievable site for principal percussionists. I am so pleased that I have found this site as I can now very quickly find a great deal of what is necessary for both the classic and modern percussion repertoire. That is so useful to me as a prinicpal percussionist."</blockquote><cite>Ronald Ent</cite><br>Rotterdam Philharmonic, The Netherlands</td></tr></table></td></tr></table>';
+singletext[3]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations is an outstanding tool in my professional work. I am especially pleased with the fact that the database is constantly being updated"</blockquote><cite>Finn Christensen</cite><br>Principal Percussion, Odense Symphony Orchestra, Denmark<br><br><br><blockquote>"I have added the Percussion Orchestration website to my list of resources for checking and confirming the number of players required for many selections in our literature. Additionally, it is a wonderful resource for helping to see how to divide parts amongst the section."</blockquote><cite>Jim Neglia</cite><br>Orchestra Personnel Manager, New Jersey Symphony Orchestra</td></tr></table></td></tr></table>';
+singletext[4]='<table><tr><td height="80px"><table><tr><td><blockquote>"Unique and precious tool for all musicians, percussionists and conductors. Congratulations!"</blockquote><cite>Jean-François Lézé<cite><br>Solo Timpanist, Orquestra Nacional do Porto, Portugal<br><br><br><blockquote>"I find Percussion Orchestrations extremely helpful not to mention our percussionists. Since we are members of Percussion Orchestrations we are able to give our percussionists specific and reliable information well in advance and it is easier for us to pre-estimate the costs for the percussion players and instruments. So thank you very much for all information we get from your Website and please go on with this. We’re happy."</blockquote>Berner Symphonieorchester, Switzerland </td></tr></table></td></tr></table>';
+singletext[5]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestration is a very good tool and a great help in the work of planning for our group in Oslo Phil. A very "easytouse" web-site I really recommend!"</blockquote><cite>Christian M. Berg</cite><br>Principal Percussionist, Oslo Philharmonic Orchestra, Norway<br><br><br><blockquote>"Percussion Orchestrations is the most comprehensive resource available on the internet for the advanced planning of a percussionists season. Eds website covers most of the major symphonic works and operas movement by movement in a comprehensive and in depth way. This resource has saved me thousands of hours in planning and I highly recommend it to anyone!"</blockquote><cite>Christopher McLaurin</cite><br>Principal Percussionist, Kansas City Symphony</td></tr></table></td></tr></table>';
+singletext[6]='<table><tr><td height="80px"><table><tr><td><blockquote>".. provides orchestra librarians, stage managers and percussionists with a clear listing of percussion requirements for a vast repertoire, broken down by movement, including opera (also broken down by number, easing preparation for excerpt concerts) as well as rapidly growing small ensemble corpus. Over the past year it has grown incredibly in scope and I see it as essential to my work and that of my colleagues."</blockquote><cite>Clovis Lark</cite><br>Librarian, Utah Symphony Orchestra<br><br><br><blockquote>"...a superb site and a fantastic resource for percussionists and orchestras alike."</blockquote>Graham C. Johns<br>Principal Percussion, Royal Liverpool Philharmonic Orchestra</td></tr></table></td></tr></table>';
+singletext[7]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations has proved to be an invaluable tool when it comes to programming and the actual preparation for concerts. Keep up the good work."</blockquote><cite>Christopher Muscat</cite><br>General Manager of Artistic Operations, Malta Philharmonic Orchestra<br><br><br><blockquote>"Again let me thank you for this wonderful site. We have used it in many ways to our utmost satisfaction."</blockquote>Limburg Symphony Orchestra, The Netherlands</td></tr></table></td></tr></table>';
+singletext[8]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations has saved me so much time when researching repertoire for the season.  Thank you for providing such a valuable service to our industry!"</blockquote><cite>David Eyler</cite><br>Principal Timpanist, Fargo-Moorhead Symphony Orchestra, USA<br><br><br><blockquote>"This site is such a great planning resource for percussionists. Highly recommended!"</blockquote><cite>Jim Atwood</cite><br>Timpanist, Louisiana Philharmonic Orchestra</td></tr></table></td></tr></table>';
+singletext[9]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations is an invaluable source. My colleagues and I use it in our Artistic Committee when considering possible programs and I use it to work out what personnel we may need prior to obtaining the parts. Yes, invaluable!"</blockquote><cite>David Knight</cite><br>Principal Timpanist, Guelph Symphony Orchestra, Canada<br><br><br><blockquote>"Muchas gracias Ed por crear Percussion Orchestration, ahora ya no podríamos trabajar sin esta herramienta tan útil!"</blockquote><cite>Juan Aguirre</cite><br>Jefe de Producción, Orquesta Sinfónica de Castilla y León, Spain</td></tr></table></td></tr></table>';
+singletext[10]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations is a tremendous resource and time saving percussion database. I have found it to be a great help in my duties here in the Syracuse Symphony Orchestra and will certainly continue to utilize the vast wealth of info and repertoire in the future.."</blockquote><cite>Michael W. Bull</cite><br>Principal Percussion, Syracuse Symphony Orchestra, USA<br><br><br><blockquote>"Percussion Orchestrations has become a welcome, vital tool for our percussion section. It allows us to carefully strategize staffing needs and part assignments well in advance of rehearsals - a critical function to a non-profit orchestra that relies heavily on volunteer participation. Our membership has paid for itself many times over."</blockquote>Richmond Philharmonic Orchestra, USA</td></tr></table></td></tr></table>';
+singletext[11]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations has been a most valuable and time saving resource to our organisation in logistical planning and programming, especially when running a wide range of projects at the same time. Not only do I have access to the site but also our students have been given separate log on details so they can also use it."</blockquote><cite>Marianne Chapman</cite><br>Concert Operations, Trinity College of Music, UK<br><br><br><blockquote>"Percussion Orchestrations is a very useful tool for our percussion teachers in the preparation of the different orchestral projects during the year."</blockquote>Norwegian Academy of Music, Norway</td></tr></table></td></tr></table>';
+singletext[12]='<table><tr><td height="80px"><table><tr><td><blockquote>"The Percussion Orchestrations website has been an invaluable resource to me when planning concerts and tours for the European Union Youth Orchestra. It is easy to use, informative, accurate and good value for money."</blockquote>European Union Youth Orchestra<br><br><br><blockquote>"Percussion Orchestrations has been invaluable to me in my work with my orchestra, as well as immensely helpful in my teaching and coaching work. It is a most useful site and has saved me a great deal of time and hard work."</blockquote><cite>Annie Oakley</cite><br>Former Principal Percussion, City of Birmingham Symphony Orchestra</td></tr></table></td></tr></table>';
+singletext[13]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations is a wonderful resource! The fact that many works are broken down by movement, or for different numbers of players, is especially helpful. I highly recommend this site."</blockquote><cite>John Shaw</cite><br>Principal Percussion, The Florida Orchestra<br><br><br><blockquote>"I wish to congratulate you on your great Percussion Orchestrations website. It is a tremendous help and will save many hours of work."</blockquote><cite>Warren Johnson</cite><br>Assistant Principal Percussionist, San Antonio Symphony Orchestra, USA</td></tr></table></td></tr></table>';
+singletext[14]='<table><tr><td height="80px"><table><tr><td><blockquote>"Percussion Orchestrations has been, and will continue to be a most valuable reference tool! I especially appreciate that the database is continually being upgraded."</blockquote><cite>Hal Davis</cite><br>Principal Percussionist, Rogue Valley Symphony Orchestra, USA</td></tr></table></td></tr></table>';
+
+//singletext[...]='...';
+//-- end Parameters and message -->
+
+//-- begin: Scroller's Algorithm -->
+var ii=0;
+function goup(){if(sspeed!=rspeed*16){sspeed=sspeed*2;restart=sspeed;}}
+
+function start(){
+if(document.getElementById){ns6div=document.getElementById('iens6div');ns6div.style.top=sheight+"px";ns6div.innerHTML=singletext[0];sizeup=ns6div.offsetHeight;ns6scroll();}
+else 
+if(document.layers){ns4layer=document.ns4div.document.ns4div1;ns4layer.top=sheight;ns4layer.document.write(singletext[0]);ns4layer.document.close();sizeup=ns4layer.document.height;ns4scroll();}
+else 
+if(document.all){iediv=iens6div;iediv.style.pixelTop=sheight+"px";iediv.innerHTML=singletext[0];sizeup=iediv.offsetHeight;iescroll();}}
+function iescroll(){if(iediv.style.pixelTop>0&&iediv.style.pixelTop<=sspeed){iediv.style.pixelTop=0;setTimeout("iescroll()",spause);}else 
+if(iediv.style.pixelTop>=sizeup*-1){iediv.style.pixelTop-=sspeed+"px";setTimeout("iescroll()",100);}else{if(ii==singletext.length-1)ii=0;else ii++;iediv.style.pixelTop=sheight+"px";iediv.innerHTML=singletext[ii];sizeup=iediv.offsetHeight;iescroll();}}
+function ns4scroll(){if(ns4layer.top>0&&ns4layer.top<=sspeed){ns4layer.top=0;setTimeout("ns4scroll()",spause);}else 
+if(ns4layer.top>=sizeup*-1){ns4layer.top-=sspeed;setTimeout("ns4scroll()",100);}else{if(ii==singletext.length-1)ii=0;else ii++;ns4layer.top=sheight;ns4layer.document.write(singletext[ii]);ns4layer.document.close();sizeup=ns4layer.document.height;ns4scroll();}}
+function ns6scroll(){if(parseInt(ns6div.style.top)>0&&parseInt(ns6div.style.top)<=sspeed){ns6div.style.top=0;setTimeout("ns6scroll()",spause);}else 
+if(parseInt(ns6div.style.top)>=sizeup*-1){ns6div.style.top=parseInt(ns6div.style.top)-sspeed+"px";setTimeout("ns6scroll()",100);}
+else{if(ii==singletext.length-1)ii=0;else ii++;
+ns6div.style.top=sheight+"px";ns6div.innerHTML=singletext[ii];sizeup=ns6div.offsetHeight;ns6scroll();}}
+//-- end Algorithm -->
+
