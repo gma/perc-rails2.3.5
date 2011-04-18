@@ -1,0 +1,40 @@
+<h1>Editing work_request</h1>
+
+<% form_for(@work_request) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :job_title %><br />
+    <%= f.text_field :job_title %>
+  </p>
+  <p>
+    <%= f.label :composer_name %><br />
+    <%= f.text_field :composer_name %>
+  </p>
+  <p>
+    <%= f.label :work_name %><br />
+    <%= f.text_field :work_name %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @work_request %> |
+<%= link_to 'Back', work_requests_path %>

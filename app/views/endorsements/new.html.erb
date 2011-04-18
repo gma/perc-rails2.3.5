@@ -1,0 +1,30 @@
+<h1>Please enter your message of endorsement:</h1>
+
+<% form_for(@endorsement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, "Your name:" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :name, "Your email address:" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :name, "Your company name (if applicable):" %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :name, "Your job title:" %><br />
+    <%= f.text_field :job_title %>
+  </p>
+  <p>
+    <%= f.label :name, "Your message of endorsement:" %><br />
+    <%= f.text_area :body, :rows => 8, :cols => 60 %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
+

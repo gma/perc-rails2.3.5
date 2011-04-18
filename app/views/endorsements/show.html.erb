@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @endorsement.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @endorsement.email %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @endorsement.company %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%=h @endorsement.job_title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @endorsement.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_endorsement_path(@endorsement) %> |
+<%= link_to 'Back', endorsements_path %>

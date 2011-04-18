@@ -1,19 +1,23 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
-  
-  map.resources :welcome_revised
+  map.resources :work_requests
 
-  map.root :controller => "welcome"
+  map.resources :endorsements 
   
-  map.resources :figures
+   map.root :controller => "welcome"
   
-  map.resources :timp_notes
   
-  map.resources :perc_notes
+  
+  map.resources :explanatory_notes
   
   map.resources :no_percs
 
   map.resources :instrument_translations
+  
+  map.resources :terms
+  
+  map.resources :privacy_policy
+  
+  map.resources :contact
   
   map.resources :composers
   

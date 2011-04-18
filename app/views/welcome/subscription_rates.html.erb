@@ -1,13 +1,11 @@
-<h1>Subscription Rates</h1>
-<p>Organisations (Professional Orchestras, Conservatories, Music Libraries, Universities)<br />
-  $120/£75/€90 per year</p>
-<p>Part-Time Professional Orchestras (12 concerts per year or less)<br />  
- $50/£30/€35 per year</p>
+<h1><%= t '.title' %></h1>
+<p><%= I18n.t 'welcome.currency.org' %><br /> <%= I18n.t 'welcome.currency.org_content' %><br />
+  $120/£75/€90 <%= I18n.t 'welcome.currency.per_year' %></p>
+<p><%= I18n.t 'welcome.currency.part' %><br /> <%= I18n.t 'welcome.currency.part_content' %><br />  
+ $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
   
-<p>Amateur or Youth Orchestras<br /> $50/£30/€35 per year</p>
-<p>Individuals<br /> $50/£30/€35 per year</p> 
-<p>This gives full access to all the information on the site.</p>
-<p><strong>Please note that Timpanists and Percussionists who are members of
-Professional full time orchestras qualify for the Organisation and not the Individual subscription rate.</p></strong>
+<p><%= I18n.t 'welcome.currency.amateur' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
+<p><%= I18n.t 'welcome.currency.individual' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p> 
 
-<h1><%= link_to 'Click here to join', :action => "join" %></h1>
+<p><strong><%= t '.content1' %></strong></p>
+<h1><%= link_to (t '.join'), :action => "join" %></h1>

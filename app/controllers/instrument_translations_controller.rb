@@ -1,7 +1,7 @@
 require "paginate_alphabetically"
 
 class InstrumentTranslationsController < ApplicationController
-  layout "database"
+  layout "works"
   # GET /instrument_translations
   # GET /instrument_translations.xml
   def index

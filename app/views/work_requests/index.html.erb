@@ -1,0 +1,32 @@
+<h1>Listing work_requests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th>Job title</th>
+    <th>Composer name</th>
+    <th>Work name</th>
+    <th>Date</th>
+  </tr>
+
+<% @work_requests.each do |work_request| %>
+  <tr>
+    <td><%=h work_request.name %></td>
+    <td><%=h work_request.email %></td>
+    <td><%=h work_request.company %></td>
+    <td><%=h work_request.job_title %></td>
+    <td><%=h work_request.composer_name %></td>
+    <td><%=h work_request.work_name %></td>
+    <td><%=h work_request.date %></td>
+    <td><%= link_to 'Show', work_request %></td>
+    <td><%= link_to 'Edit', edit_work_request_path(work_request) %></td>
+    <td><%= link_to 'Destroy', work_request, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New work_request', new_work_request_path %>

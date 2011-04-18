@@ -1,23 +1,21 @@
 <h1>Percussion Orchestrations</h1>
-<p>...is the brainchild of eminent percussionist <%= link_to 'Ed Cervenka', :action => "ed" %>. It is a database of Timpani and Percussion requirements for orchestral, operatic and contemporary repertoire, currently containing 6106 works by 561 different composers, and is continually being added to. Each work included is broken down by movement, and denotes specifically which instruments each player requires, and for more complex works, explanatory notes are included.</p>
+<p><%= t '.content1' %> <%= link_to 'Ed Cervenka', :action => "ed" %><%= t '.content2' %> 6106 <%= t '.works_by' %> 561 <%= t '.content3' %></p>
 
-<h1><%= link_to 'Click here for a free one week trial', :action => "free_trial" %></h1>
+<h1><%= link_to (I18n.t 'welcome.index.trial'), :action => "free_trial" %></h1>
 
-  <h2>Significant Dates</h2>
+  <h2><%= t '.dates' %></h2>
   <ul>
-    <li><strong>January 2004:</strong> Percussion Orchestrations goes online 
-      for the first time containing 1200 works and is launched at the <acronym title="Royal Northern College of Music">RNCM</acronym> 
-      Day of Percussion.</li>
-    <li><strong>May 2004:</strong> The first orchestra joins</li>
-    <li><strong>June 2005:</strong> Percussion Orchestrations reaches 2000 works</li>
-    <li><strong>January 2006:</strong> 10000 hits per week reached</li>
-    <li><strong>September 2007:</strong> 40 orchestras now members</li>
-    <li><strong>October 2007:</strong> 20000 hits per week</li>
-    <li><strong>November 2007:</strong> 3000 works reached</li>
-    <li><strong>2008:</strong> launch of new site, with 
-      translations into French, German, Spanish and Italian</li>
-    <li><strong>January 2010:</strong> 5000 works reached</li>
-    <li><strong>January 2011:</strong> 6000 works reached</li>
-	<li><strong>2011:</strong> launch of new site, with 
-      many additional features</li>
+    <li><strong><%= t '.january' %> 2004: </strong><%= t '.content4' %></li>
+    <li><strong><%= t '.may' %> 2004: </strong><%= I18n.t t '.content5' %></li>
+    <li><strong><%= t '.june' %> 2005: </strong><%= I18n.t t '.content6' %></li>
+    <li><strong><%= t '.january' %> 2006: </strong>10000 <%= t '.hits_reached' %></li>
+    <li><strong><%= t '.september' %> 2007: </strong>40 <%= t '.content7' %></li>
+    <li><strong><%= t '.october' %> 2007: </strong>20000 <%= t '.hits' %></li>
+    <li><strong><%= t '.november' %> 2007: </strong>3000 <%= t '.works_reached' %></li>
+    <li><strong>2008: </strong><%= t '.content8' %></li>
+    <li><strong><%= t '.january' %> 2010: </strong>5000 <%= t '.works_reached' %></li>
+    <li><strong><%= t '.january' %> 2011: </strong>6000 <%= t '.works_reached' %></li>
+	<li><strong>2011: </strong><%= t '.content9' %></li>
   </ul>
+
+

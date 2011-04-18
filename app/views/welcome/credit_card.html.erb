@@ -1,9 +1,9 @@
-<h1>Pay by credit card</h1>
+<h1><%= t '.title' %></h1>
 
-<p>Please select your preferred currency type:</p>
+<p><%= t '.content1' %></p>
+<ul>
+<li><%= link_to (t '.dollars'), :action => "dollars" %></li><br />
 
-<p><%= link_to 'US Dollars', :action => "dollars" %><p />
+<li><%= link_to (t '.pounds'), :action => "pounds" %></li><br />
 
-<p><%= link_to 'Pounds Sterling ', :action => "pounds" %><p />
-
-<p><%= link_to 'Euros', :action => "euros" %><p />
+<li><%= link_to (t '.euros'), :action => "euros" %></li></ul>

@@ -1,0 +1,38 @@
+<h1>Request a work to be added:</h1>
+
+<% form_for(@work_request) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, "Your name:" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email, "Your email address:" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :company, "Your company name (if applicable):" %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :job_title, "Your job title:" %><br />
+    <%= f.text_field :job_title %>
+  </p>
+  <p>
+    <%= f.label :composer_name, "The composer's name:" %><br />
+    <%= f.text_field :composer_name %>
+  </p>
+  <p>
+    <%= f.label :work_name, "The name of the work:" %><br />
+    <%= f.text_field :work_name %>
+  </p>
+  <p>
+    <%= f.label :date, "The date by when you ideally need the work added:" %><br />
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
+

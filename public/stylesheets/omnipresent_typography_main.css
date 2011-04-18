@@ -50,6 +50,40 @@ acronym {cursor:help;
 	text-decoration:none;
 	color:#900;
 	border-bottom:1px dotted #8D2C06;}
+	
+	#MainNav ul
+	{
+		margin: 0 0 0 20px;
+		padding: 0;
+		list-style-type: none;
+		border-left: 1px solid #EFEAE1;
+		text-align:left;
+	}
+
+	#MainNav li
+	{
+		display: inline;
+		padding: 0 10px;
+		border-right: 1px solid #EFEAE1;
+	}
+
+	#MainNav li a
+	{
+		text-decoration: none;
+		color: #EFEAE1;
+	}
+
+	#MainNav li a:hover
+	{
+		text-decoration: none;
+		color: #fff;
+		background-color: #272900;
+	}
+	
+.locale {
+	
+	padding-top: 3em;
+}		
 
 /*----------------------------- Form */
 
@@ -143,6 +177,34 @@ acronym {cursor:help;
 #Members input.FormButtons:hover {background-color:#8D2C06;
 	color:#FFF;
 	border:solid 1px #FFF;}
+
+#Footer ul
+	{
+		margin: 0 0 0 200px;
+		padding: 0;
+		list-style-type: none;
+
+	}
+
+#Footer li
+	{
+		display: inline;
+		padding: 0 10px;
+		border-left: 1px solid #FFF;
+		color: #FFF;
+	}
+
+#Footer li a
+	{
+		text-decoration: none;
+		color: #FFF;
+	}
+
+#Footer li a:hover
+	{
+		text-decoration: underline;
+		color: #fff;
+	}
 	
 /*---------------------- text styles */
 IntrPara {font-weight:bold;

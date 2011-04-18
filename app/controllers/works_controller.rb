@@ -1,6 +1,5 @@
 class WorksController < ApplicationController
- layout "database"
-
+  
   # GET /works/1
   # GET /works/1.xml
    def show

@@ -1,5 +1,5 @@
 <p>
-<h1>Listing works by <%=h @composer.composer_name %></h1>
+<h1><%= I18n.t 'composers.works_title' %> <%=h @composer.composer_name %></h1>
 </p>
 
 <table>
@@ -17,7 +17,7 @@
 
 </table>
 
-
+<br />
 <p>
-<%= link_to 'Back to All Composers', composers_path %>
+<%= link_to (I18n.t 'composers.back_composers'), :controller => 'composers', :letter => 'A' , :action=> 'index' %>
 </p>

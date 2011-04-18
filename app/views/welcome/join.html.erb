@@ -1,20 +1,18 @@
-<h1>Join</h1>
+<h1><%= t '.title' %></h1>
  
-<p><%= link_to 'Click here to pay by credit card with Paypal', :action => "credit_card" %> </p>
-<p><%= link_to 'Click here to pay by direct credit transfer', :action => "credit_transfer" %> </p>
-<p><%= link_to 'Click here to pay by cheque', :action => "cheque" %> </p>
+<ul><li><%= link_to (t '.credit_card'), :action => "credit_card" %></li><br>
+<li><%= link_to (t '.credit_transfer'), :action => "credit_transfer" %> </li><br>
+<li><%= link_to (t '.cheque'), :action => "cheque" %> </li><br></ul>
 
-<h2>Subscription Rates</h2>
-<p>Organisations (Professional Orchestras, Conservatories, Music Libraries, Universities)<br />
-  $120/£75/€90 per year</p>
-<p>Part-Time Professional Orchestras (12 concerts per year or less)<br />  
- $50/£30/€35 per year</p>
+<h2><%= I18n.t 'welcome.subscription_rates.title' %></h2>
+<p><%= I18n.t 'welcome.currency.org' %><br /> <%= I18n.t 'welcome.currency.org_content' %><br />
+  $120/£75/€90 <%= I18n.t 'welcome.currency.per_year' %></p>
+<p><%= I18n.t 'welcome.currency.part' %><br /> <%= I18n.t 'welcome.currency.part_content' %><br />  
+ $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
   
-<p>Amateur or Youth Orchestras<br /> $50/£30/€35 per year</p>
-<p>Individuals<br /> $50/£30/€35 per year</p> 
+<p><%= I18n.t 'welcome.currency.amateur' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
+<p><%= I18n.t 'welcome.currency.individual' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p> 
 
-<p><strong>Please note that Timpanists and Percussionists who are members of
-Professional full time orchestras qualify for this rate and not the Individual rate.</strong></p> 
+<p><strong><%= I18n.t 'welcome.subscription_rates.content1' %></strong></p> 
 
 
-<p>This gives full access to all the information on the site.</p>

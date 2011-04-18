@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title><%= @pagetitle %></title>
+  <%= stylesheet_link_tag "omnipresent_main", :media => "all" %>
+  <%= javascript_include_tag "scroller" %>
+</head>
+<BODY onLoad="start()">
+<div align="center">
+
+
+<div id="Container"> 
+  <div id="Header"></div>
+
+  	<div id="MainNav">
+		<ul>
+			<li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
+			<li><%= link_to I18n.t('layout.mainnav.about'), :action => "about" %></li>
+			<li><%= link_to I18n.t('layout.mainnav.join'), :action => "join" %></li>
+			<li><%= link_to I18n.t('layout.mainnav.contact'), :action => "contact" %></li>
+			<li><%= link_to I18n.t('layout.mainnav.members_login'), :action => "login" %></li>
+		</ul>
+	</div>
+  <div id="MainColumn"> 
+   <div id="main">
+	  <%= yield :layout %>
+	</div>
+  </div>
+  <!--  Close MainColumn div  -->
+  <div id="Menu"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation"><%= link_to I18n.t('layout.menu.home'), root_path -%></p><br /><br />
+
+		<p class="MainNavigation">
+		  	<%= link_to I18n.t('layout.menu.member_orchestras'), :action => "member_orchestras" %>
+			<%= link_to I18n.t('layout.menu.endorsements'), :action => "endorsements" %>
+			<%= link_to I18n.t('layout.menu.free_trial'), :action => "free_trial" %>
+			<%= link_to I18n.t('layout.menu.subscription_rates'), :action => "subscription_rates" %>
+			<%= link_to I18n.t('layout.menu.links'), :action => "links" %>
+		    
+		</p>
+		
+		<% form_tag ' ', :method => 'GET', :class => 'locale' do %>
+		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+		  
+		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+		<% end %>
+
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer"><ul>
+<li><%= link_to 'Terms & Conditions', :action => "terms" %></li>
+<li><%= link_to 'Privacy Policy', :action => "privacy_policy" %></li>
+<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
+</ul></div>
+<!--  Close FooterBanner div  -->
+</body>
+</html>
+

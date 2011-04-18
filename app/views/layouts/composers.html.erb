@@ -1,32 +1,82 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head> 
-  <title>Alphabetical Composers</title>
-  <%= stylesheet_link_tag "omnipresent_main", :media => "all" %>
+<head>
+  <title><%= @pagetitle %></title>
+  <%= stylesheet_link_tag "omnipresent_main", "scaffold", :media => "all" %>
+ 
 </head>
-<body id="">
-  <div id="banner">
-	<%= image_tag("logo.jpg") %>
-	<%= @page_title || "Percussion Orchestrations" %>
-  </div>
-  <div id="columns">
-	<div id="side">
-	  <%= link_to 'Home', root_path %><br />
-	<p>
-	  <%= link_to 'Composers Index', composers_path %><br />
-	</p>
-	<p>
-	  <%= link_to 'Works With No Percussion', no_percs_path %><br />
-	  <%= link_to 'Percussion Notes', perc_notes_path %><br />
-	  <%= link_to 'Timpani Notes', timp_notes_path %><br />
-	  <%= link_to 'Figures Explanation', figures_path %><br />
-	  <%= link_to 'Instrument Translations', instrument_translations_path %>
-	</p>
-	</div>		
-    <div id="main">
+<BODY>
+<div align="center">
+
+
+
+<div id="Container"> 
+  <div id="Header"></div>
+  	<div id="MainNav">
+		<ul>
+				<li><%= link_to I18n.t('layout.mainnav.composers_index'), :controller => 'composers', :letter => 'A' , :action=> 'index' %></li>
+				<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
+				<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
+				<li><%= link_to I18n.t('layout.mainnav.contact'), :controller => 'contact' %></li>
+				<li><%= link_to I18n.t('layout.mainnav.logout') %></li>
+		</ul>
+	</div>
+  <div id="MainColumn"> 
+   <div id="main">
 	  <%= yield :layout %>
 	</div>
   </div>
+  <!--  Close MainColumn div  -->
+  <div id="Menu"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation"><%= link_to I18n.t('layout.menu.home'), root_path -%></p><br /><br />
+
+		<p class="MainNavigation">
+		  <%= link_to I18n.t('layout.menu.write_endorsement'), :controller => 'endorsements', :action => 'new' %>
+		  <%= link_to I18n.t('layout.menu.request'), :controller => 'work_requests', :action => 'new' %>
+	   	  <%= link_to I18n.t('layout.menu.add') %>
+	</p><br /><br />
+	    <p class="MainNavigation">
+		  <%= link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path %>
+		  <%= link_to I18n.t('layout.menu.searches') %>
+		  <%= link_to I18n.t('layout.menu.gig') %>
+		  <%= link_to I18n.t('layout.menu.schedule') %>
+		  <%= link_to I18n.t('layout.menu.planner') %>
+		
+		<br /><br />
+		</p>
+		
+
+		
+
+	
+
+		<p class="MainNavigation">
+		  <%= link_to I18n.t('layout.menu.account'), :action => "account" %>	 
+		</p>
+		
+		<% form_tag ' ', :method => 'GET', :class => 'locale' do %>
+		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+		  
+		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+		<% end %>
+		
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer">
+	<ul>
+	<li><%= link_to 'Terms & Conditions', :controller => "terms" %></li>
+	<li><%= link_to 'Privacy Policy', :controller => "privacy_policy" %></li>
+	<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
+	</ul>
+</div>
+<!--  Close FooterBanner div  -->
 </body>
 </html>
+

@@ -1,8 +1,8 @@
-<h1>Welcome to Percussion Orchestrations</h1>
+<h1><%= t '.title' %></h1>
 
-<p>Percussion Orchestrations is the first ever extensive online database of Timpani and Percussion requirements for orchestral repertoire, which currently contains 6106 works by 561 different composers, and is continually being added to.</p>
+<p><%= t '.content1' %> 6106 <%= t '.works_by' %> 561 <%= t '.content2' %></p>
 
-<h1><%= link_to 'Click here for a free one week trial', :action => "free_trial" %></h1>
+<h1><%= link_to (t '.trial'), :action => "free_trial" %></h1>
 
 
 <table><tr><td>

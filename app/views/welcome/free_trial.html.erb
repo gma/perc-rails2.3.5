@@ -1,13 +1,13 @@
-<h1>Free Trial</h1>
+<h1><%= t '.title' %></h1>
 
-<p>For a free trial, you must start a subscription with paypal, which has a week's trial period. </p>
+<p><%= t '.content1' %></p>
 
-<p>This a no obligation trial, and if you cancel your subscription through paypal within the week trial period you will not be charged.</p>
+<p><%= t '.content2' %></p>
 
-<p>Please select your preferred currency type:</p>
+<p><%= t '.content3' %></p>
 
-<p><%= link_to 'US Dollars', :action => "dollars_trial" %><p />
+<ul><li><%= link_to (t '.dollars'), :action => "dollars_trial" %></li><br>
 
-<p><%= link_to 'Pounds Sterling ', :action => "pounds_trial" %><p />
+<li><%= link_to (t '.pounds'), :action => "pounds_trial" %></li><br>
 
-<p><%= link_to 'Euros', :action => "euros_trial" %><p />
+<li><%= link_to (t '.euros'), :action => "euros_trial" %></li></ul>

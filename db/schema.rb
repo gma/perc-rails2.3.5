@@ -9,10 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303221347) do
+ActiveRecord::Schema.define(:version => 20110409193306) do
 
   create_table "composers", :force => true do |t|
     t.string   "composer_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "endorsements", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company"
+    t.string   "job_title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +75,18 @@ ActiveRecord::Schema.define(:version => 20110303221347) do
     t.boolean  "current_member"
     t.string   "language"
     t.string   "years_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "work_requests", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company"
+    t.string   "job_title"
+    t.string   "composer_name"
+    t.string   "work_name"
+    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

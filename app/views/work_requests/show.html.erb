@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @work_request.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @work_request.email %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @work_request.company %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%=h @work_request.job_title %>
+</p>
+
+<p>
+  <b>Composer name:</b>
+  <%=h @work_request.composer_name %>
+</p>
+
+<p>
+  <b>Work name:</b>
+  <%=h @work_request.work_name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @work_request.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_request_path(@work_request) %> |
+<%= link_to 'Back', work_requests_path %>

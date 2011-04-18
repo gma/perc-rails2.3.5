@@ -1,7 +1,7 @@
 require "paginate_alphabetically"
 
 class ComposersController < ApplicationController
-  layout "database"
+  
   # GET /composers
   # GET /composers.xml
   def index

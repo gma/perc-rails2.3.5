@@ -1,11 +1,11 @@
 
 
 <h1><%= "#{@work.composer.composer_name}" %>: <%=h @work.work_name %> <%=h @work.arr_orch %>  <%=h @work.opus_no %></h1>
-<table border=1>
+<table border=1 cellpadding=3 width=1200>
   <tr>
 	
 		
-<%= if @workdetail.movement_name.present? ; "<th>Movement name</th>"; end %>
+<%= if @workdetail.movement_name.present? ; "<th>Movement Name</th>"; end %>
 <%= if @workdetail.timpani.present? ; "<th>Timpani</th>"; end %>
 <%= if @workdetail.timpani_2.present? ; "<th>Timpani 2</th>"; end %>
 <%= if @workdetail.timpani_3.present? ; "<th>Timpani 3</th>"; end %>
@@ -78,11 +78,14 @@
   </tr>
 <% end %>
 </table>
+<br />
 <%= if @work.notes.present? ; "<p><b>Notes: </b>" + @work.notes + "</p>"; end %>
 
 <p>
-  <%= link_to 'Back to all works by ' "#{@work.composer.composer_name}" %>
+	
+  <%= link_to (I18n.t 'composers.back_works') + " " + "#{@work.composer.composer_name}", :back %>
+  
 </p>
 <p>
-  <%= link_to 'New Search', composers_path %>
+  <%= link_to (I18n.t 'composers.new_search'), composers_path %>
 </p>

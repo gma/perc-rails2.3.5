@@ -81,6 +81,35 @@ a.PreviewLink {font-size:120%;
 #LanguageLinks a.Spanish:hover {background:#FFF url(../images/flags/espano_over.gif) no-repeat center top;} 	
 #LanguageLinks a.Italian:hover {background:#FFF url(../images/flags/italiano_over.gif) no-repeat center top;} 	
 
+
+#LanguageLinksNew, #LanguageLinksNew ul {padding:0;
+	margin:0;
+	line-height:36px;
+	list-style:none;}
+#LanguageLinksNew a, #LanguageLinksNew li {background:#EFEAE1;
+	display:block;
+	font-size:90%;
+	color:#CCC;
+	margin:0;
+	text-align:center;
+	text-decoration:none;
+	padding:12px 0 0;
+	width:5em;}
+#LanguageLinksNew li {float:right;}
+#LanguageLinksNew a:hover {color:#666;
+	background:#EFEAE1;}
+#LanguageLinksNew a.English:link, #LanguageLinksNew a.English:visited, #LanguageLinksNew a.English:active {background:#EFEAE1 url(../images/flags/union_jack_up.gif) no-repeat center top;}
+#LanguageLinksNew a.French:link, #LanguageLinksNew a.French:visited, #LanguageLinksNew a.French:active {background:#EFEAE1 url(../images/flags/francais_up.gif) no-repeat center top;} 	
+#LanguageLinksNew a.German:link, #LanguageLinksNew a.German:visited, #LanguageLinksNew a.German:active {background:#EFEAE1 url(../images/flags/deutsch_up.gif) no-repeat center top;} 	
+#LanguageLinksNew a.Spanish:link, #LanguageLinksNew a.Spanish:visited, #LanguageLinksNew a.Spanish:active {background:#EFEAE1 url(../images/flags/espano_up.gif) no-repeat center top;} 	
+#LanguageLinksNew  a.Italian:link, #LanguageLinksNew a.Italian:visited, #LanguageLinksNew a.Italian:active {background:#EFEAE1 url(../images/flags/italiano_up.gif) no-repeat center top;} 	
+#LanguageLinksNew a.English:hover {background:#EFEAE1 url(../images/flags/union_jack_over.gif) no-repeat center top;}
+#LanguageLinksNew a.French:hover {background:#EFEAE1 url(../images/flags/francais_over.gif) no-repeat center top;} 	
+#LanguageLinksNew a.German:hover {background:#EFEAE1 url(../images/flags/deutsch_over.gif) no-repeat center top;} 	
+#LanguageLinksNew a.Spanish:hover {background:#EFEAE1 url(../images/flags/espano_over.gif) no-repeat center top;} 	
+#LanguageLinksNew a.Italian:hover {background:#EFEAE1 url(../images/flags/italiano_over.gif) no-repeat center top;} 	
+
+
 /*Example CSS for the two demo scrollers*/
 
 #pscroller1{

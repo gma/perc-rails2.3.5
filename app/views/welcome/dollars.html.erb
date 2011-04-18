@@ -1,9 +1,9 @@
-<h1>Please select your membership type:</h1>
+<h1><%= I18n.t 'welcome.currency.title' %>:</h1>
 
-<p><%= link_to 'Organisations' %> (Professional Orchestras, Conservatories, Music Libraries, Universities)<br />
-  $120 per year</p>
-<p><%= link_to 'Part-Time Professional Orchestras' %> (12 concerts per year or less)<br />  
- $50 per year</p>
+<ul><li><%= link_to (I18n.t 'welcome.currency.org') %><br /> <%= I18n.t 'welcome.currency.org_content' %><br />
+  $120 <%= I18n.t 'welcome.currency.per_year' %></li><br />
+<li><%= link_to (I18n.t 'welcome.currency.part') %><br />  <%= I18n.t 'welcome.currency.part_content' %><br />  
+ $50 <%= I18n.t 'welcome.currency.per_year' %></li><br />
   
-<p><%= link_to 'Amateur or Youth Orchestras' %><br /> $50 per year</p>
-<p><%= link_to 'Individuals' %><br /> $50 per year</p>
+<li><%= link_to (I18n.t 'welcome.currency.amateur') %><br /> $50 <%= I18n.t 'welcome.currency.per_year' %></li><br />
+<li><%= link_to (I18n.t 'welcome.currency.individual') %><br /> $50 <%= I18n.t 'welcome.currency.per_year' %></li></ul>
