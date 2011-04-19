@@ -5,8 +5,8 @@ LOCALES_DIRECTORY = "#{RAILS_ROOT}/config/locales/"
 LANGUAGES = {
   
   'English' => 'en',
-  "Français" => 'fr',
+  "Francais" => 'fr',
   "Deutsch" => 'de',
-  "Español" => 'es',
+  "Espanol" => 'es',
   "Italiano" => 'it'
 }
