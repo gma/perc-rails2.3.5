@@ -3075,3 +3075,4 @@ Started GET "/composers?letter=E" for 127.0.0.1 at 2011-04-20 13:00:15 +0100
   [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
 Rendered composers/index.html.erb within layouts/composers (73.2ms)
 Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 8.0ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from <top (required)> at /Users/ed/perc/config/initializers/i18n.rb:3)
