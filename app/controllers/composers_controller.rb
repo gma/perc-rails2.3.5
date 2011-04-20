@@ -17,8 +17,9 @@ class ComposersController < ApplicationController
   # GET /composers/1.xml
   def show
     @composer = Composer.find(params[:id])
-    @works = @composer.works.find(:all, :order => 'work_order_id')
-    @work = @composer.works.find(:first)
+    @works = @composer.works.order("work_order_id")
+    @work = @composer.works.order.first
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @composer }

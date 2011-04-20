@@ -4,6 +4,8 @@
 <table border=1 cellpadding=3 width=1200>
   <tr>
 	
+	
+	
 		
 <%= if @workdetail.movement_name.present? ; "<th>Movement Name</th>"; end %>
 <%= if @workdetail.timpani.present? ; "<th>Timpani</th>"; end %>
@@ -87,5 +89,5 @@
   
 </p>
 <p>
-  <%= link_to (I18n.t 'composers.new_search'), composers_path %>
+  <%= link_to (I18n.t 'composers.new_search'), :controller => 'composers', :letter => 'A' , :action=> 'index' %>
 </p>

@@ -5,8 +5,9 @@ class WorksController < ApplicationController
    def show
      
      @work = Work.find(params[:id])
-     @workdetails = @work.workdetails.find(:all, :order => 'movement_id')
-     @workdetail = @work.workdetails.find(:first)
+     @workdetails = @work.workdetails.order("movement_id")
+ 
+     @workdetail = @work.workdetails.order.first
      respond_to do |format|
        format.html # show.html.erb
        format.xml  { render :xml => @work }
