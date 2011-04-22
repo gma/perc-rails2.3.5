@@ -47,8 +47,9 @@ class EndorsementsController < ApplicationController
 
     respond_to do |format|
       if @endorsement.save
-        EndorsementMailer.message(@endorsement).deliver
-        format.html { redirect_to edit_endorsement_path(@endorsement) }
+        EndorsementMailer.notify(@endorsement).deliver
+        flash[:message] = 'Thanks for your endorsement message which is displayed below'
+        format.html { redirect_to(@endorsement) }
         format.xml  { render :xml => @endorsement, :status => :created, :location => @endorsement }
       else
         format.html { render :action => "new" }

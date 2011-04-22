@@ -3076,3 +3076,703 @@ Started GET "/composers?letter=E" for 127.0.0.1 at 2011-04-20 13:00:15 +0100
 Rendered composers/index.html.erb within layouts/composers (73.2ms)
 Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 8.0ms)
 DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from <top (required)> at /Users/ed/perc/config/initializers/i18n.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 16:24:15 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 16:25:25 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 16:44:56 +0100
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-04-20 16:45:06 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (29.5ms)
+Completed   in 38ms
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00000103b79db0>:0x00000103b800e8>):
+    15: 
+    16:   	<div id="MainNav">
+    17: 		<ul>
+    18: 			<li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
+    19: 			<li><%= link_to I18n.t('layout.mainnav.about'), :action => "about" %></li>
+    20: 			<li><%= link_to I18n.t('layout.mainnav.join'), :action => "join" %></li>
+    21: 			<li><%= link_to I18n.t('layout.mainnav.contact'), :action => "contact" %></li>
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__1677891719364356743_2178673840_3066541702509219681'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.8ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2011-04-20 17:07:02 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (29.5ms)
+Completed   in 39ms
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00000103a6cb20>:0x00000103a6ae60>):
+    15: 
+    16:   	<div id="MainNav">
+    17: 		<ul>
+    18: 			<li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
+    19: 			<li><%= link_to I18n.t('layout.mainnav.about'), :action => "about" %></li>
+    20: 			<li><%= link_to I18n.t('layout.mainnav.join'), :action => "join" %></li>
+    21: 			<li><%= link_to I18n.t('layout.mainnav.contact'), :action => "contact" %></li>
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___2858553842664508391_2178122600_4494416548729357616'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 17:11:11 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2011-04-20 17:12:03 +0100
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/about.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2011-04-20 17:12:34 +0100
+
+ArgumentError (missing :controller):
+  config/routes.rb:4:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-20 17:12:43 +0100
+
+ActionController::RoutingError (No route matches "/welcome/join"):
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-20 17:12:51 +0100
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/join.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 17:32:04 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2011-04-20 17:32:07 +0100
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/about.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-20 17:32:08 +0100
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/join.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/contact" for 127.0.0.1 at 2011-04-20 17:32:10 +0100
+  Processing by WelcomeController#contact as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/contact.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 17:37:14 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 17:49:05 +0100
+
+SyntaxError (/Users/ed/perc/app/controllers/application_controller.rb:16: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 17:50:35 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-22 00:02:56 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mComposer Load (31.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (117.4ms)
+Completed 200 OK in 352ms (Views: 144.2ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-22 00:03:00 +0100
+  Processing by EndorsementsController#new as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered endorsements/new.html.erb within layouts/composers (12.3ms)
+Completed 200 OK in 28ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:03:26 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"Edcervenka@yahoo.com", "company"=>"", "job_title"=>"manager", "body"=>"endorsement message"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (21.0ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'Edcervenka@yahoo.com', '', 'manager', 'endorsement message', '2011-04-21 23:03:27.037087', '2011-04-21 23:03:27.037087')
+Completed   in 139ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/mailers/endorsement_mailer.rb:6:in `message'
+  app/mailers/endorsement_mailer.rb:11:in `message'
+  app/controllers/endorsements_controller.rb:50:in `block in create'
+  app/controllers/endorsements_controller.rb:48:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:07:13 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"Edcervenka@yahoo.com", "company"=>"", "job_title"=>"manager", "body"=>"endorsement message"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'Edcervenka@yahoo.com', '', 'manager', 'endorsement message', '2011-04-21 23:07:13.202236', '2011-04-21 23:07:13.202236')[0m
+Rendered endorsement_mailer/notify.text.erb (28.1ms)
+Completed   in 260ms
+
+ActionView::Template::Error (undefined method `name' for #<Mail::Message:0x0000010401b620>):
+    1: New endorsement from Percussion Orchestrations
+    2: 
+    3: From: <%= message.name %>
+    4: 
+    5: Email: <%= message.email %>
+    6: 
+  app/views/endorsement_mailer/notify.text.erb:3:in `_app_views_endorsement_mailer_notify_text_erb___2103984174326321045_2172272280_3323259056014615787'
+  app/mailers/endorsement_mailer.rb:11:in `notify'
+  app/controllers/endorsements_controller.rb:50:in `block in create'
+  app/controllers/endorsements_controller.rb:48:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:09:41 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"Edcervenka@yahoo.com", "company"=>"", "job_title"=>"manager", "body"=>"endorsement message"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'Edcervenka@yahoo.com', '', 'manager', 'endorsement message', '2011-04-21 23:09:41.977801', '2011-04-21 23:09:41.977801')
+Rendered endorsement_mailer/notify.text.erb (0.6ms)
+Completed   in 83ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: New endorsement from Percussion Orchestrations
+    2: 
+    3: From: <%= @notify.name %>
+    4: 
+    5: Email: <%= @notify.email %>
+    6: 
+  app/views/endorsement_mailer/notify.text.erb:3:in `_app_views_endorsement_mailer_notify_text_erb___2103984174326321045_2172262760_3323259056014615787'
+  app/mailers/endorsement_mailer.rb:11:in `notify'
+  app/controllers/endorsements_controller.rb:50:in `block in create'
+  app/controllers/endorsements_controller.rb:48:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:12:54 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"Edcervenka@yahoo.com", "company"=>"", "job_title"=>"manager", "body"=>"endorsement message"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'Edcervenka@yahoo.com', '', 'manager', 'endorsement message', '2011-04-21 23:12:54.499282', '2011-04-21 23:12:54.499282')[0m
+Rendered endorsement_mailer/notify.text.erb (0.7ms)
+Completed   in 44ms
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    2: 
+    3: From: <%= @endorsement.name %>
+    4: 
+    5: Email: <%= @notify.email %>
+    6: 
+    7: Company: <%= @notify.company %>
+    8: 
+  app/views/endorsement_mailer/notify.text.erb:5:in `_app_views_endorsement_mailer_notify_text_erb___2103984174326321045_2172178960_3323259056014615787'
+  app/mailers/endorsement_mailer.rb:11:in `notify'
+  app/controllers/endorsements_controller.rb:50:in `block in create'
+  app/controllers/endorsements_controller.rb:48:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:13:45 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"Edcervenka@yahoo.com", "company"=>"", "job_title"=>"manager", "body"=>"endorsement message"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'Edcervenka@yahoo.com', '', 'manager', 'endorsement message', '2011-04-21 23:13:46.016739', '2011-04-21 23:13:46.016739')
+Rendered endorsement_mailer/notify.text.erb (0.6ms)
+
+Sent mail to mail@percorch.com (5614ms)
+Date: Fri, 22 Apr 2011 00:13:46 +0100
+From: Edcervenka@yahoo.com
+To: mail@percorch.com
+Message-ID: <4db0ba2a1ed59_84fc81548db09729c@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New endorsement
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New endorsement from Percussion Orchestrations
+
+From: Edward Cervenka
+
+Email: Edcervenka@yahoo.com
+
+Company: 
+
+Job Title: manager
+
+Message: endorsement message
+Redirected to http://localhost:3000/endorsements/45/edit
+Completed 302 Found in 5713ms
+
+
+Started GET "/endorsements/45/edit" for 127.0.0.1 at 2011-04-22 00:13:52 +0100
+  Processing by EndorsementsController#edit as HTML
+  Parameters: {"id"=>"45"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mEndorsement Load (0.2ms)[0m  [1mSELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 45 LIMIT 1[0m
+Rendered endorsements/edit.html.erb within layouts/composers (20.8ms)
+Completed 200 OK in 54ms (Views: 40.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-22 00:18:02 +0100
+  Processing by EndorsementsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mEndorsement Load (1.1ms)[0m  SELECT "endorsements".* FROM "endorsements"
+Rendered endorsements/index.html.erb within layouts/composers (39.8ms)
+Completed 200 OK in 81ms (Views: 68.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/endorsements/38/edit" for 127.0.0.1 at 2011-04-22 00:18:11 +0100
+  Processing by EndorsementsController#edit as HTML
+  Parameters: {"id"=>"38"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mEndorsement Load (0.3ms)[0m  [1mSELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 38 LIMIT 1[0m
+Rendered endorsements/edit.html.erb within layouts/composers (18.5ms)
+Completed 200 OK in 75ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-22 00:18:14 +0100
+  Processing by EndorsementsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mEndorsement Load (1.4ms)[0m  SELECT "endorsements".* FROM "endorsements"
+Rendered endorsements/index.html.erb within layouts/composers (79.9ms)
+Completed 200 OK in 94ms (Views: 82.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-22 00:18:23 +0100
+  Processing by EndorsementsController#new as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered endorsements/new.html.erb within layouts/composers (12.7ms)
+Completed 200 OK in 30ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:18:52 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"edcervenka@yahoo.com", "company"=>"", "job_title"=>"Manager", "body"=>"Test"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'edcervenka@yahoo.com', '', 'Manager', 'Test', '2011-04-21 23:18:52.438130', '2011-04-21 23:18:52.438130')[0m
+Rendered endorsement_mailer/notify.text.erb (0.5ms)
+
+Sent mail to mail@percorch.com (3364ms)
+Date: Fri, 22 Apr 2011 00:18:52 +0100
+From: edcervenka@yahoo.com
+To: mail@percorch.com
+Message-ID: <4db0bb5c726a0_84fc8149d94c973c0@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New endorsement
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New Endorsement from Percussion Orchestrations
+
+From: Edward Cervenka
+
+Email: edcervenka@yahoo.com
+
+Company: 
+
+Job Title: Manager
+
+Message: Test
+Completed   in 3454ms
+
+NoMethodError (undefined method `show_endorsement_path' for #<EndorsementsController:0x00000101af2128>):
+  app/controllers/endorsements_controller.rb:52:in `block (2 levels) in create'
+  app/controllers/endorsements_controller.rb:48:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:21:00 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"edcervenka@yahoo.com", "company"=>"", "job_title"=>"Manager", "body"=>"Test"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'edcervenka@yahoo.com', '', 'Manager', 'Test', '2011-04-21 23:21:00.922934', '2011-04-21 23:21:00.922934')
+Rendered endorsement_mailer/notify.text.erb (0.6ms)
+
+Sent mail to mail@percorch.com (3294ms)
+Date: Fri, 22 Apr 2011 00:21:00 +0100
+From: edcervenka@yahoo.com
+To: mail@percorch.com
+Message-ID: <4db0bbdce8542_84fc8158d48897429@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New endorsement
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New Endorsement from Percussion Orchestrations
+
+From: Edward Cervenka
+
+Email: edcervenka@yahoo.com
+
+Company: 
+
+Job Title: Manager
+
+Message: Test
+Redirected to http://localhost:3000/endorsements/47
+Completed 302 Found in 3379ms
+
+
+Started GET "/endorsements/47" for 127.0.0.1 at 2011-04-22 00:21:04 +0100
+  Processing by EndorsementsController#show as HTML
+  Parameters: {"id"=>"47"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mEndorsement Load (0.2ms)[0m  [1mSELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 47 LIMIT 1[0m
+Rendered endorsements/show.html.erb within layouts/composers (13.8ms)
+Completed 200 OK in 88ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-22 00:32:04 +0100
+  Processing by EndorsementsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mEndorsement Load (1.1ms)[0m  SELECT "endorsements".* FROM "endorsements"
+Rendered endorsements/index.html.erb within layouts/composers (77.8ms)
+Completed 200 OK in 92ms (Views: 80.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-22 00:33:47 +0100
+  Processing by EndorsementsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mEndorsement Load (1.2ms)[0m  [1mSELECT "endorsements".* FROM "endorsements"[0m
+Rendered endorsements/index.html.erb within layouts/composers (81.4ms)
+Completed 200 OK in 96ms (Views: 83.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-22 00:33:51 +0100
+  Processing by EndorsementsController#new as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered endorsements/new.html.erb within layouts/composers (12.6ms)
+Completed 200 OK in 28ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:34:10 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"edward Cervenka", "email"=>"edcervenka@yahoo.com", "company"=>"", "job_title"=>"my job", "body"=>"flash test\r\n"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('edward Cervenka', 'edcervenka@yahoo.com', '', 'my job', 'flash test
+', '2011-04-21 23:34:10.573598', '2011-04-21 23:34:10.573598')
+Rendered endorsement_mailer/notify.text.erb (0.5ms)
+
+Sent mail to mail@percorch.com (3655ms)
+Date: Fri, 22 Apr 2011 00:34:10 +0100
+From: edcervenka@yahoo.com
+To: mail@percorch.com
+Message-ID: <4db0bef29371c_84fc814ba95c975dd@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New endorsement
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New Endorsement from Percussion Orchestrations
+
+From: edward Cervenka
+
+Email: edcervenka@yahoo.com
+
+Company: 
+
+Job Title: my job
+
+Message: flash test
+Redirected to http://localhost:3000/endorsements/48
+Completed 302 Found in 3743ms
+
+
+Started GET "/endorsements/48" for 127.0.0.1 at 2011-04-22 00:34:14 +0100
+  Processing by EndorsementsController#show as HTML
+  Parameters: {"id"=>"48"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mEndorsement Load (0.2ms)[0m  [1mSELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 48 LIMIT 1[0m
+Rendered endorsements/show.html.erb within layouts/composers (14.0ms)
+Completed 200 OK in 71ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/endorsements/48" for 127.0.0.1 at 2011-04-22 00:36:48 +0100
+  Processing by EndorsementsController#show as HTML
+  Parameters: {"id"=>"48"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mEndorsement Load (0.2ms)[0m  SELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 48 LIMIT 1
+Rendered endorsements/show.html.erb within layouts/composers (49.9ms)
+Completed 200 OK in 66ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-22 00:37:02 +0100
+  Processing by EndorsementsController#new as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered endorsements/new.html.erb within layouts/composers (12.9ms)
+Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/endorsements" for 127.0.0.1 at 2011-04-22 00:37:13 +0100
+  Processing by EndorsementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "endorsement"=>{"name"=>"Edward Cervenka", "email"=>"edcervenka@yahoo.com", "company"=>"", "job_title"=>"test", "body"=>"test"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Edward Cervenka', 'edcervenka@yahoo.com', '', 'test', 'test', '2011-04-21 23:37:13.362064', '2011-04-21 23:37:13.362064')[0m
+Rendered endorsement_mailer/notify.text.erb (0.6ms)
+
+Sent mail to mail@percorch.com (3242ms)
+Date: Fri, 22 Apr 2011 00:37:13 +0100
+From: edcervenka@yahoo.com
+To: mail@percorch.com
+Message-ID: <4db0bfa95f89e_84fc817ddfe497658@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New endorsement
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New Endorsement from Percussion Orchestrations
+
+From: Edward Cervenka
+
+Email: edcervenka@yahoo.com
+
+Company: 
+
+Job Title: test
+
+Message: test
+Redirected to http://localhost:3000/endorsements/49
+Completed 302 Found in 3290ms
+
+
+Started GET "/endorsements/49" for 127.0.0.1 at 2011-04-22 00:37:16 +0100
+  Processing by EndorsementsController#show as HTML
+  Parameters: {"id"=>"49"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mEndorsement Load (0.2ms)[0m  SELECT "endorsements".* FROM "endorsements" WHERE "endorsements"."id" = 49 LIMIT 1
+Rendered endorsements/show.html.erb within layouts/composers (13.8ms)
+Completed 200 OK in 70ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-22 00:37:28 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (80.2ms)
+Completed 200 OK in 98ms (Views: 76.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/work_requests/new" for 127.0.0.1 at 2011-04-22 00:37:42 +0100
+  Processing by WorkRequestsController#new as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered work_requests/new.html.erb within layouts/composers (14.2ms)
+Completed 200 OK in 51ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/work_requests" for 127.0.0.1 at 2011-04-22 00:45:08 +0100
+  Processing by WorkRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "work_request"=>{"name"=>"Edward Cervenka", "email"=>"ed_cervenka@hotmail.com", "company"=>"Percorch", "job_title"=>"Jobtitle", "composer_name"=>"Some composer", "work_name"=>"Some work", "date"=>"asap"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Edward Cervenka', 'ed_cervenka@hotmail.com', 'Percorch', 'Jobtitle', 'Some composer', 'Some work', 'asap', '2011-04-21 23:45:08.630061', '2011-04-21 23:45:08.630061')[0m
+Completed   in 40ms
+
+NameError (undefined local variable or method `endorsement' for #<WorkRequestMailer:0x00000102eca060>):
+  app/mailers/work_request_mailer.rb:10:in `notify'
+  app/controllers/work_requests_controller.rb:48:in `block in create'
+  app/controllers/work_requests_controller.rb:46:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started POST "/work_requests" for 127.0.0.1 at 2011-04-22 00:46:21 +0100
+  Processing by WorkRequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1va7zpyTz8TisZMYiMs2W8QP48Sew+XqVo85MG23pFs=", "work_request"=>{"name"=>"Edward Cervenka", "email"=>"ed_cervenka@hotmail.com", "company"=>"Percorch", "job_title"=>"Jobtitle", "composer_name"=>"Some composer", "work_name"=>"Some work", "date"=>"asap"}, "commit"=>"Submit"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Edward Cervenka', 'ed_cervenka@hotmail.com', 'Percorch', 'Jobtitle', 'Some composer', 'Some work', 'asap', '2011-04-21 23:46:21.136163', '2011-04-21 23:46:21.136163')
+Rendered work_request_mailer/notify.text.erb (0.6ms)
+
+Sent mail to mail@percorch.com (3307ms)
+Date: Fri, 22 Apr 2011 00:46:21 +0100
+From: ed_cervenka@hotmail.com
+To: mail@percorch.com
+Message-ID: <4db0c1cd28e9d_84fc814f297497765@Edward-Cervenkas-MacBook-Pro.local.mail>
+Subject: New Work Request
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+New work request from Percussion Orchestrations
+
+From: Edward Cervenka
+
+Email: ed_cervenka@hotmail.com
+
+Company: Percorch
+
+Job Title: Jobtitle
+
+Composer Name: Some composer
+
+Work Name: Some work
+
+Date required by: asap
+
+
+
+
+Redirected to http://localhost:3000/work_requests/6
+Completed 302 Found in 3361ms
+
+
+Started GET "/work_requests/6" for 127.0.0.1 at 2011-04-22 00:46:24 +0100
+  Processing by WorkRequestsController#show as HTML
+  Parameters: {"id"=>"6"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mWorkRequest Load (0.2ms)[0m  [1mSELECT "work_requests".* FROM "work_requests" WHERE "work_requests"."id" = 6 LIMIT 1[0m
+Rendered work_requests/show.html.erb within layouts/composers (15.5ms)
+Completed 200 OK in 48ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/instrument_translations" for 127.0.0.1 at 2011-04-22 00:47:01 +0100
+  Processing by InstrumentTranslationsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[35mInstrumentTranslation Load (24.8ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1
+  [1m[36mInstrumentTranslation Load (1.4ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name LIKE 'A%') ORDER BY instrument_name[0m
+  [1m[35mInstrumentTranslation Load (14.1ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations"
+Rendered instrument_translations/index.html.erb within layouts/works (57.6ms)
+Completed 200 OK in 162ms (Views: 97.3ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-22 00:47:11 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (42.0ms)
+Completed 200 OK in 60ms (Views: 38.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/contact/index" for 127.0.0.1 at 2011-04-22 00:48:12 +0100
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (5.0ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-22 00:48:16 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.5ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-22 00:48:19 +0100
+  Processing by NoPercsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mNoPerc Load (47.9ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.5ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (1.7ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (28.1ms)
+Completed 200 OK in 205ms (Views: 62.0ms | ActiveRecord: 50.1ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-22 00:48:28 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mComposer Load (1.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.0ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (43.0ms)
+Completed 200 OK in 105ms (Views: 39.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-22 00:57:29 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mComposer Load (1.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (48.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (85.0ms)
+Completed 200 OK in 102ms (Views: 39.1ms | ActiveRecord: 50.2ms)

@@ -1,6 +1,11 @@
 Perc::Application.routes.draw do 
   root :to => 'welcome#index'
   
+  get "welcome/index"
+  
+  get "contact/index"
+  
+  
   resources :work_requests
 
   resources :endorsements 

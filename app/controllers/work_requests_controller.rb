@@ -45,8 +45,8 @@ class WorkRequestsController < ApplicationController
 
     respond_to do |format|
       if @work_request.save
-        WorkRequestMailer.message(@work_request).deliver
-        flash[:notice] = 'WorkRequest was successfully created.'
+        WorkRequestMailer.notify(@work_request).deliver
+        flash[:message] = 'Thankyou for your work request which is displayed below'
         format.html { redirect_to(@work_request) }
         format.xml  { render :xml => @work_request, :status => :created, :location => @work_request }
       else

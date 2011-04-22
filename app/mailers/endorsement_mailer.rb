@@ -3,7 +3,7 @@ class EndorsementMailer < ActionMailer::Base
   default_url_options[:host] = "localhost:3000"
   
 
-  def message(endorsement)
+  def notify(endorsement)
     @endorsement = endorsement
     mail(:to => "mail@percorch.com",
          :subject => "New endorsement",

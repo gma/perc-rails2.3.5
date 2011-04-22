@@ -1,14 +1,12 @@
 class WorkRequestMailer < ActionMailer::Base
-  
+    default :from => "mail@percorch.com"
+    default_url_options[:host] = "localhost:3000"
 
-  def message(work_request)
-    
-    body       :message => work_request
-    subject    "New work request"
-    recipients "mail@percorch.com"
-    from       work_request.email
-    sent_on    Time.now
-    
-   
+
+    def notify(work_request)
+      @work_request = work_request
+      mail(:to => "mail@percorch.com",
+           :subject => "New Work Request",
+           :from => work_request.email)   
+    end
   end
-end

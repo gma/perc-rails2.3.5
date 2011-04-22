@@ -1,0 +1,559 @@
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by WorkRequestsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mWorkRequest Load (0.2ms)[0m  [1mSELECT "work_requests".* FROM "work_requests"[0m
+SQLite3::SQLException: no such table: work_requests: SELECT "work_requests".* FROM "work_requests"
+Completed   in 55ms
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by WorkRequestsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mWorkRequest Load (0.3ms)[0m  [1mSELECT "work_requests".* FROM "work_requests"[0m
+SQLite3::SQLException: no such table: work_requests: SELECT "work_requests".* FROM "work_requests"
+Completed   in 48ms
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/cheque.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/about.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 55ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/about.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 53ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 56ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 38ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (13.2ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (11.2ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (11.1ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  Processing by InstrumentTranslationsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+  [1m[36mInstrumentTranslation Load (0.2ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1[0m
+SQLite3::SQLException: no such table: instrument_translations: SELECT  "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1
+Completed   in 151ms
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (10.6ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 52ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered contact/index.html.erb within layouts/composers (11.4ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 55ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 43ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
