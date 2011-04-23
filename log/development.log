@@ -3776,3 +3776,1099 @@ uninitialized constant ApplicationController::LOCALES_DIRECTORY
   [1m[35mComposer Load (48.9ms)[0m  SELECT "composers".* FROM "composers"
 Rendered composers/index.html.erb within layouts/composers (85.0ms)
 Completed 200 OK in 102ms (Views: 39.1ms | ActiveRecord: 50.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 19:43:54 +0100
+  Processing by WelcomeController#index as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-22 19:43:57 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-22 19:52:01 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-22 19:52:05 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-22 19:52:09 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/subscription_rates.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-22 19:52:13 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/subscription_rates.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-22 19:52:27 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+uninitialized constant ApplicationController::LOCALES_DIRECTORY
+Rendered welcome/subscription_rates.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:23:18 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (90.8ms)
+Completed 200 OK in 126ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:23:22 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=de" for 127.0.0.1 at 2011-04-23 00:23:29 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"de"}
+Rendered welcome/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:23:38 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2011-04-23 00:23:58 +0100
+  Processing by WelcomeController#about as HTML
+Rendered welcome/about.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:24:01 +0100
+  Processing by WelcomeController#about as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/about.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 00:24:04 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/join.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:24:34 +0100
+  Processing by WelcomeController#join as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/join.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:25:28 +0100
+  Processing by WelcomeController#join as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/join.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:25:30 +0100
+  Processing by WelcomeController#join as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/join.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:25:33 +0100
+  Processing by WelcomeController#join as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/join.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:25:38 +0100
+  Processing by WelcomeController#join as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/join.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:25:40 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:41:05 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (44.0ms)
+Completed   in 49ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    42: 		    
+    43: 		</p>
+    44: 		
+    45: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    46: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    47: 		  
+    48: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+  app/views/layouts/application.html.erb:45:in `_app_views_layouts_application_html_erb__3413540118251771532_2174346920__588896671486807389'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:41:33 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:41:43 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed   in 11ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    42: 		    
+    43: 		</p>
+    44: 		
+    45: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    46: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    47: 		  
+    48: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+  app/views/layouts/application.html.erb:45:in `_app_views_layouts_application_html_erb__3413540118251771532_2174573340__588896671486807389'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:43:17 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:44:09 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:44:31 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (19.5ms)
+Completed   in 25ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    41: 		    
+    42: 		</p>
+    43: 		
+    44: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    45: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    46: 		  
+    47: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+  app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb___3935189297322951306_2158269380__4435408585549675587'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:52:03 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 00:52:23 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/index.html.erb within layouts/application (23.5ms)
+Completed   in 29ms
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    42: 		</p>
+    43: 		
+    44: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    45: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    46: 		  
+    47: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+    48: 		<% end %>
+  app/views/layouts/application.html.erb:45:in `block in _app_views_layouts_application_html_erb__806650846190267667_2174374700__2602550009475266002'
+  app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__806650846190267667_2174374700__2602550009475266002'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 00:52:36 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed   in 10ms
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    42: 		</p>
+    43: 		
+    44: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    45: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    46: 		  
+    47: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+    48: 		<% end %>
+  app/views/layouts/application.html.erb:45:in `block in _app_views_layouts_application_html_erb__806650846190267667_2162564220__2602550009475266002'
+  app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__806650846190267667_2162564220__2602550009475266002'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (38.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:53:17 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed   in 10ms
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    42: 		</p>
+    43: 		
+    44: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+    45: 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+    46: 		  
+    47: 		  <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+    48: 		<% end %>
+  app/views/layouts/application.html.erb:45:in `block in _app_views_layouts_application_html_erb__806650846190267667_2174367020__2602550009475266002'
+  app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__806650846190267667_2174367020__2602550009475266002'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 00:53:42 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 01:01:46 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 01:01:50 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=de" for 127.0.0.1 at 2011-04-23 01:01:57 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"de"}
+Rendered welcome/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 01:04:51 +0100
+  Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:04:54 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (2.2ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 01:04:59 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+Rendered welcome/_rates.html.erb (1.4ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 01:05:52 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+Rendered welcome/_rates.html.erb (1.3ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:06:00 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/join.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:06:47 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/join.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:06:51 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (1.1ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:07:21 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:08:12 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:08:16 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/join.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:10:25 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered welcome/_terms.html.erb (1.6ms)
+Rendered welcome/terms.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 01:12:22 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (27.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (9.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (46.7ms)
+Completed 200 OK in 869ms (Views: 93.8ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:12:28 +0100
+  Processing by TermsController#index as HTML
+Rendered terms/index.html.erb within layouts/composers (29.3ms)
+Completed   in 32ms
+
+ActionView::Template::Error (Missing partial views/welcome/terms with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render 'views/welcome/terms' %>
+  app/views/terms/index.html.erb:1:in `_app_views_terms_index_html_erb__1656143383875136122_2152517480_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.9ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:13:48 +0100
+  Processing by TermsController#index as HTML
+Rendered terms/index.html.erb within layouts/composers (2.3ms)
+Completed   in 5ms
+
+ActionView::Template::Error (Missing partial ../welcome/terms with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render '../welcome/terms' %>
+  app/views/terms/index.html.erb:1:in `_app_views_terms_index_html_erb__1656143383875136122_2171098980_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:15:33 +0100
+  Processing by TermsController#index as HTML
+Rendered terms/index.html.erb within layouts/composers (2.4ms)
+Completed   in 5ms
+
+ActionView::Template::Error (Missing partial ~/welcome/terms with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render '~/welcome/terms' %>
+  app/views/terms/index.html.erb:1:in `_app_views_terms_index_html_erb__1656143383875136122_2159286840_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 01:21:19 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.0ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (42.3ms)
+Completed 200 OK in 58ms (Views: 38.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 01:21:22 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:21:25 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/subscription_rates.html.erb within layouts/application (2.6ms)
+Completed   in 8ms
+
+ActionView::Template::Error (Missing partial welcome/rates with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <h1><%= t '.title' %></h1>
+    2: <%= render 'rates' %>
+    3: <h1><%= link_to (t 'welcome.subscription_rates.join'), :action => "join" %></h1>
+  app/views/welcome/subscription_rates.html.erb:2:in `_app_views_welcome_subscription_rates_html_erb__3209234134042296202_2171233660_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:21:41 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/join.html.erb within layouts/application (3.4ms)
+Completed   in 9ms
+
+ActionView::Template::Error (Missing partial welcome/rates with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    5: <li><%= link_to (t '.cheque'), :action => "cheque" %> </li><br></ul>
+    6: 
+    7: <h2><%= I18n.t 'welcome.subscription_rates.title' %></h2>
+    8: <%= render 'rates' %>
+  app/views/welcome/join.html.erb:8:in `_app_views_welcome_join_html_erb__4071385734062513530_2159563060_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:29:32 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered welcome/terms.html.erb within layouts/application (2.5ms)
+Completed   in 8ms
+
+ActionView::Template::Error (Missing partial welcome/terms with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render 'terms' %>
+  app/views/welcome/terms.html.erb:1:in `_app_views_welcome_terms_html_erb___2537625500212491901_2171824860_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 01:29:38 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (8.8ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (45.8ms)
+Completed 200 OK in 89ms (Views: 67.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:29:41 +0100
+  Processing by TermsController#index as HTML
+Rendered terms/_terms.html.erb (1.6ms)
+Rendered terms/index.html.erb within layouts/composers (7.6ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 01:30:36 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:30:38 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:30:41 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/join.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:30:47 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered welcome/terms.html.erb within layouts/application (2.3ms)
+Completed   in 7ms
+
+ActionView::Template::Error (Missing partial welcome/terms with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render 'terms' %>
+  app/views/welcome/terms.html.erb:1:in `_app_views_welcome_terms_html_erb___2537625500212491901_2170554140_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:31:42 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered welcome/terms.html.erb within layouts/application (2.5ms)
+Completed   in 7ms
+
+ActionView::Template::Error (Missing partial terms/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/ed/perc/app/views", "/Users/ed/perc/vendor/plugins/paginate_alphabetically-0.2.3/app/views", "/Users/ed/perc/vendor/plugins/dynamic_form/app/views"):
+    1: <%= render 'terms/index' %>
+  app/views/welcome/terms.html.erb:1:in `_app_views_welcome_terms_html_erb___2537625500212491901_2158848300_3392973897867466150'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (39.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.4ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:36:41 +0100
+  Processing by WelcomeController#terms as HTML
+ERROR: compiling _app_views_welcome_terms_html_erb___2537625500212491901_2171132060_3392973897867466150 RAISED /Users/ed/perc/app/views/welcome/terms.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting ')'
+...fer.append= ( render :partial 'shared/terms' );@output_buffe...
+...                               ^
+Function body:           def _app_views_welcome_terms_html_erb___2537625500212491901_2171132060_3392973897867466150(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "welcome/terms";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append= ( render :partial 'shared/terms' );@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__1825566158449354800__process_action__4387006385521626378__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered welcome/terms.html.erb within layouts/application (0.7ms)
+Completed   in 6ms
+
+ActionView::Template::Error (/Users/ed/perc/app/views/welcome/terms.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting ')'
+...fer.append= ( render :partial 'shared/terms' );@output_buffe...
+...                               ^):
+    1: <%= render :partial 'shared/terms' %>
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:38:06 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.9ms)
+Rendered welcome/terms.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 01:39:07 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (8.5ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (47.3ms)
+Completed 200 OK in 76ms (Views: 55.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:39:10 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (40.4ms)
+Rendered terms/index.html.erb within layouts/composers (46.4ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 01:42:35 +0100
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered privacy_policy/index.html.erb within layouts/composers (6.7ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:42:44 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered terms/index.html.erb within layouts/composers (7.9ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 01:42:53 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.7ms)
+Rendered terms/index.html.erb within layouts/composers (8.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 01:42:59 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/terms" for 127.0.0.1 at 2011-04-23 01:43:01 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.5ms)
+Rendered welcome/terms.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/privacy_policy" for 127.0.0.1 at 2011-04-23 01:43:04 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:43:10 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 01:43:14 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/join.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/subscription_rates" for 127.0.0.1 at 2011-04-23 01:43:23 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 01:43:32 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 10:02:43 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (83.9ms)
+Completed 200 OK in 116ms (Views: 97.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/composers/225" for 127.0.0.1 at 2011-04-23 10:02:48 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"225"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 225 LIMIT 1
+  [1m[36mWork Load (33.0ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 225) LIMIT 1[0m
+  [1m[35mWork Load (5.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 225) ORDER BY work_order_id
+Rendered composers/show.html.erb within layouts/composers (62.0ms)
+Completed 200 OK in 362ms (Views: 74.6ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/works/3783" for 127.0.0.1 at 2011-04-23 10:02:51 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"3783"}
+  [1m[36mWork Load (0.6ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 3783 LIMIT 1[0m
+  [1m[35mWorkdetail Load (186.1ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3783) LIMIT 1
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 225 LIMIT 1[0m
+  [1m[35mWorkdetail Load (50.4ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3783) ORDER BY movement_id
+Rendered works/show.html.erb within layouts/works (147.4ms)
+Completed 200 OK in 477ms (Views: 149.1ms | ActiveRecord: 237.2ms)
+
+
+Started GET "/composers?letter=B" for 127.0.0.1 at 2011-04-23 10:04:28 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"B"}
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'B%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (8.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (60.2ms)
+Completed 200 OK in 113ms (Views: 55.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/composers/38" for 127.0.0.1 at 2011-04-23 10:04:32 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1[0m
+  [1m[35mWork Load (13.8ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 38) LIMIT 1
+  [1m[36mWork Load (78.0ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 38) ORDER BY work_order_id[0m
+Rendered composers/show.html.erb within layouts/composers (111.2ms)
+Completed 200 OK in 197ms (Views: 36.2ms | ActiveRecord: 92.0ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:04:35 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (1.0ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (13.2ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (111.9ms)
+Completed 200 OK in 188ms (Views: 101.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:07:46 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (0.9ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (12.6ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (151.1ms)
+Completed 200 OK in 188ms (Views: 141.1ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:09:17 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (1.1ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (12.5ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (110.0ms)
+Completed 200 OK in 187ms (Views: 100.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:12:11 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (1.0ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (12.3ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (110.5ms)
+Completed 200 OK in 184ms (Views: 101.0ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:12:58 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (0.9ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (46.7ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (145.4ms)
+Completed 200 OK in 221ms (Views: 101.4ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/works/282" for 127.0.0.1 at 2011-04-23 10:15:47 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 282 LIMIT 1
+  [1m[36mWorkdetail Load (1.0ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (12.1ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 282) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (108.7ms)
+Completed 200 OK in 197ms (Views: 99.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/works/1586" for 127.0.0.1 at 2011-04-23 10:16:02 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1586"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 1586 LIMIT 1
+  [1m[36mWorkdetail Load (3.9ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1586) LIMIT 1[0m
+  [1m[35mComposer Load (0.3ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (10.2ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1586) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (105.5ms)
+Completed 200 OK in 184ms (Views: 98.5ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/works/280" for 127.0.0.1 at 2011-04-23 10:16:20 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"280"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 280 LIMIT 1
+  [1m[36mWorkdetail Load (0.9ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 280) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 38 LIMIT 1
+  [1m[36mWorkdetail Load (11.7ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 280) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (145.6ms)
+Completed 200 OK in 183ms (Views: 136.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-23 10:17:00 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[35mNoPerc Load (39.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+  [1m[36mNoPerc Load (0.4ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mNoPerc Load (1.8ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+Rendered no_percs/index.html.erb within layouts/composers (70.4ms)
+Completed 200 OK in 215ms (Views: 104.2ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/no_percs?letter=W" for 127.0.0.1 at 2011-04-23 10:17:03 +0100
+  Processing by NoPercsController#index as HTML
+  Parameters: {"letter"=>"W"}
+  [1m[35mNoPerc Load (17.9ms)[0m  SELECT "no_percs".* FROM "no_percs"
+  [1m[36mNoPerc Load (0.9ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'W%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (74.6ms)
+Completed 200 OK in 128ms (Views: 77.1ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/no_percs?letter=Z" for 127.0.0.1 at 2011-04-23 10:17:06 +0100
+  Processing by NoPercsController#index as HTML
+  Parameters: {"letter"=>"Z"}
+  [1m[36mNoPerc Load (17.5ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.8ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'Z%') ORDER BY composer_name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+Rendered no_percs/index.html.erb within layouts/composers (76.2ms)
+Completed 200 OK in 127ms (Views: 78.5ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/instrument_translations" for 127.0.0.1 at 2011-04-23 10:17:18 +0100
+  Processing by InstrumentTranslationsController#index as HTML
+  [1m[35mInstrumentTranslation Load (26.2ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1
+  [1m[36mInstrumentTranslation Load (1.4ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name LIKE 'A%') ORDER BY instrument_name[0m
+  [1m[35mInstrumentTranslation Load (13.9ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations"
+Rendered instrument_translations/index.html.erb within layouts/works (103.6ms)
+Completed 200 OK in 190ms (Views: 123.1ms | ActiveRecord: 41.5ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 10:17:34 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (8.3ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (93.7ms)
+Completed 200 OK in 128ms (Views: 107.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/composers?utf8=%E2%9C%93&locale=fr" for 127.0.0.1 at 2011-04-23 10:17:42 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"fr"}
+  [1m[36mComposer Load (0.8ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.8ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'D%') ORDER BY composer_name
+  [1m[36mComposer Load (6.8ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (36.5ms)
+Completed 200 OK in 56ms (Views: 33.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/composers?utf8=%E2%9C%93&locale=en" for 127.0.0.1 at 2011-04-23 10:17:55 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"utf8"=>"✓", "locale"=>"en"}
+  [1m[35mComposer Load (0.8ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mComposer Load (0.8ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'D%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (36.9ms)
+Completed 200 OK in 100ms (Views: 33.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-23 10:18:08 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (17.5ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.2ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (1.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (28.3ms)
+Completed 200 OK in 122ms (Views: 30.7ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:18:11 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (11.5ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 10:18:35 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.8ms)
+Rendered terms/index.html.erb within layouts/composers (8.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 10:18:57 +0100
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered privacy_policy/index.html.erb within layouts/composers (6.7ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 10:21:41 +0100
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered privacy_policy/index.html.erb within layouts/composers (6.8ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 10:21:47 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered terms/index.html.erb within layouts/composers (7.9ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 10:23:00 +0100
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered terms/index.html.erb within layouts/composers (7.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 10:23:20 +0100
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.7ms)
+Rendered privacy_policy/index.html.erb within layouts/composers (7.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:23:25 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:26:49 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (50.2ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:27:13 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.6ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:27:40 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.8ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:32:00 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:32:32 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/explanatory_notes" for 127.0.0.1 at 2011-04-23 10:32:48 +0100
+  Processing by ExplanatoryNotesController#index as HTML
+Rendered explanatory_notes/index.html.erb within layouts/composers (10.6ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-23 10:33:02 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (17.9ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.3ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (1.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (30.2ms)
+Completed 200 OK in 123ms (Views: 32.5ms | ActiveRecord: 19.3ms)

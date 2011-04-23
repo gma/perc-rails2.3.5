@@ -1,11 +1,3 @@
 <h1><%= t '.title' %></h1>
-<p><%= I18n.t 'welcome.currency.org' %><br /> <%= I18n.t 'welcome.currency.org_content' %><br />
-  $120/£75/€90 <%= I18n.t 'welcome.currency.per_year' %></p>
-<p><%= I18n.t 'welcome.currency.part' %><br /> <%= I18n.t 'welcome.currency.part_content' %><br />  
- $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
-  
-<p><%= I18n.t 'welcome.currency.amateur' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p>
-<p><%= I18n.t 'welcome.currency.individual' %><br /> $50/£30/€35 <%= I18n.t 'welcome.currency.per_year' %></p> 
-
-<p><strong><%= t '.content1' %></strong></p>
-<h1><%= link_to (t '.join'), :action => "join" %></h1>
+<%= render 'rates' %>
+<h1><%= link_to (t 'welcome.subscription_rates.join'), :action => "join" %></h1>
