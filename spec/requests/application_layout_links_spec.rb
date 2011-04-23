@@ -106,4 +106,32 @@ describe "ApplicationLayoutLinks" do
     get '/terms'
     response.should have_selector('title', :content => "Percussion Orchestrations Terms & Conditions")
   end
-end
+  
+  it  "should have the right links on the layout" do
+      visit root_path
+      click_link "Home"
+      response.should have_selector('title', :content => "Home")
+      click_link "About"
+      response.should have_selector('title', :content => "About")
+      click_link "Contact"
+      response.should have_selector('title', :content => "Contact")
+      click_link "Endorsements"
+      response.should have_selector('title', :content => "Endorsements")
+      click_link "Free Trial"
+      response.should have_selector('title', :content => "Percussion Orchestrations Free Trial")
+      click_link "Join"
+      response.should have_selector('title', :content => "Join")
+      click_link "Links"
+      response.should have_selector('title', :content => "Links")
+      click_link "Member Orchestras"
+      response.should have_selector('title', :content => "Percussion Orchestrations Member Orchestras")
+      click_link "Privacy Policy"
+      response.should have_selector('title', :content => "Percussion Orchestrations Privacy Policy")
+      click_link "Subscription Rates"
+      response.should have_selector('title', :content => "Percussion Orchestrations Subscription Rates")
+      click_link "Terms & Conditions"
+      response.should have_selector('title', :content => "Percussion Orchestrations Terms & Conditions")
+  end
+end  
+      
+ 

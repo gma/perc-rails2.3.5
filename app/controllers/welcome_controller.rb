@@ -48,7 +48,7 @@ class WelcomeController < ApplicationController
     @pagetitle = "Percussion Orchestrations Free Trial" 
   end 
   
-  def index
+  def home
     @pagetitle = "Percussion Orchestrations Homepage"
   end 
   

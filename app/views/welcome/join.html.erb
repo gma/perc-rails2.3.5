@@ -1,8 +1,8 @@
 <h1><%= t '.title' %></h1>
  
-<ul><li><%= link_to (t '.credit_card'), :action => "credit_card" %></li><br>
-<li><%= link_to (t '.credit_transfer'), :action => "credit_transfer" %> </li><br>
-<li><%= link_to (t '.cheque'), :action => "cheque" %> </li><br></ul>
+<ul><li><%= link_to (t '.credit_card'), credit_card_path %></li><br>
+<li><%= link_to (t '.credit_transfer'), credit_transfer_path %> </li><br>
+<li><%= link_to (t '.cheque'), cheque_path  %> </li><br></ul>
 
 <h2><%= I18n.t 'welcome.subscription_rates.title' %></h2>
 <%= render 'rates' %>

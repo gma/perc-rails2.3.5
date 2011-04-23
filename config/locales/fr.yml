@@ -111,7 +111,7 @@ fr:
       dollars: "$ US Dollars"
       pounds: "£ Livres Sterling"
       euros: "€ Euros"             
-    index:
+    home:
       title: "Bienvenue à Percussion Orchestrations" 
       content1: "Percussion Orchestrations est la première base de données en ligne qui recense les besoins en Percussion et Timbales nécessaires à l'éxecution d'oeuvres pour orchestre. Elle contient"    
       works_by: "oeuvres par" 

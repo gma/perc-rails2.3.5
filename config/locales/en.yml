@@ -114,7 +114,7 @@ en:
       dollars: "US Dollars"
       pounds: "Pounds Sterling"
       euros: "Euros"                                     
-    index:
+    home:
       title: "Welcome to Percussion Orchestrations"  
       content1: "Percussion Orchestrations is the first ever extensive online database of Timpani and Percussion requirements for orchestral repertoire, which currently contains"    
       works_by: "works by" 
