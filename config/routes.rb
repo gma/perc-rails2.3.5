@@ -1,9 +1,29 @@
 Perc::Application.routes.draw do 
-  root :to => 'welcome#index'
-  
   get "welcome/index"
+  match '/about', :to => 'welcome#about'
+  match '/cheque', :to => 'welcome#cheque'
+  match '/contact', :to => 'welcome#contact'
+  match '/credit_card', :to => 'welcome#credit_card'
+  match '/credit_transfer', :to => 'welcome#credit_transfer'
+  match '/dollars', :to => 'welcome#dollars'
+  match '/dollars_trial', :to => 'welcome#dollars_trial'
+  match '/ed', :to => 'welcome#ed'
+  match '/endorsements', :to => 'welcome#endorsements'
+  match '/euros', :to => 'welcome#euros'
+  match '/euros_trial', :to => 'welcome#euros_trial'
+  match '/free_trial', :to => 'welcome#free_trial'
+  match '/join', :to => 'welcome#join'
+  match '/links', :to => 'welcome#links'
+  match '/member_orchestras', :to => 'welcome#member_orchestras'
+  match '/pounds', :to => 'welcome#pounds'
+  match '/pounds_trial', :to => 'welcome#pounds_trial'
+  match '/privacy_policy', :to => 'welcome#privacy_policy'
+  match '/subscription_rates', :to => 'welcome#subscription_rates'
+  match '/terms', :to => 'welcome#terms'
   
-  get "contact/index"
+  
+  
+
   
   
   resources :work_requests
@@ -76,7 +96,7 @@ Perc::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 

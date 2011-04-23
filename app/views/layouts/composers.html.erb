@@ -19,8 +19,8 @@
 				<li><%= link_to I18n.t('layout.mainnav.composers_index'), :controller => 'composers', :letter => 'A' , :action=> 'index' %></li>
 				<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
 				<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
-				<li><%= link_to I18n.t('layout.mainnav.contact'), :controller => 'contact' %></li>
-				<li><%= link_to I18n.t('layout.mainnav.logout') %></li>
+				<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+				<li><%= link_to I18n.t('layout.mainnav.logout'), '#' %></li>
 		</ul>
 	</div>
   <div id="MainColumn"> 
@@ -35,16 +35,16 @@
  		  <p class="HomeNavigation"><%= link_to I18n.t('layout.menu.home'), root_path -%></p><br /><br />
 
 		<p class="MainNavigation">
-		  <%= link_to I18n.t('layout.menu.write_endorsement'), :controller => 'endorsements', :action => 'new' %>
-		  <%= link_to I18n.t('layout.menu.request'), :controller => 'work_requests', :action => 'new' %>
-	   	  <%= link_to I18n.t('layout.menu.add') %>
+		  <%= link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path  %>
+		  <%= link_to I18n.t('layout.menu.request'), new_work_request_path %>
+	   	  <%= link_to I18n.t('layout.menu.add'), '#' %>
 	</p><br /><br />
 	    <p class="MainNavigation">
 		  <%= link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path %>
-		  <%= link_to I18n.t('layout.menu.searches') %>
-		  <%= link_to I18n.t('layout.menu.gig') %>
-		  <%= link_to I18n.t('layout.menu.schedule') %>
-		  <%= link_to I18n.t('layout.menu.planner') %>
+		  <%= link_to I18n.t('layout.menu.searches'), '#' %>
+		  <%= link_to I18n.t('layout.menu.gig'), '#' %>
+		  <%= link_to I18n.t('layout.menu.schedule'), '#' %>
+		  <%= link_to I18n.t('layout.menu.planner'), '#' %>
 		
 		<br /><br />
 		</p>
@@ -55,7 +55,7 @@
 	
 
 		<p class="MainNavigation">
-		  <%= link_to I18n.t('layout.menu.account'), :action => "account" %>	 
+		  <%= link_to I18n.t('layout.menu.account'), '#' %>	 
 		</p>
 		
 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
@@ -73,8 +73,8 @@
 <!--  Close Container div  -->
 <div id="Footer">
 	<ul>
-	<li><%= link_to 'Terms & Conditions', :controller => "terms" %></li>
-	<li><%= link_to 'Privacy Policy', :controller => "privacy_policy" %></li>
+	<li><%= link_to 'Terms & Conditions', terms_path %></li>
+	<li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
 	<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
 	</ul>
 </div>

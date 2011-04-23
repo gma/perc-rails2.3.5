@@ -557,3 +557,343 @@ Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.0ms)
   Processing by WelcomeController#terms as HTML
 uninitialized constant ApplicationController::LOCALES_DIRECTORY
 Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+Rendered contact/index.html.erb within layouts/composers (11.8ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.7ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (1.0ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#index as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 18:46:16 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+Rendered contact/index.html.erb within layouts/composers (10.6ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (3.0ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 207ms (Views: 207.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 29ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#index as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (1.0ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#index as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-23 19:43:13 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+SQLite3::SQLException: no such table: composers: SELECT  "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+Completed   in 107ms
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-23 19:43:14 +0100
+  Processing by EndorsementsController#new as HTML
+Completed   in 1ms

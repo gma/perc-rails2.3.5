@@ -16,10 +16,10 @@
   	<div id="MainNav">
 		<ul>
 			<li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
-			<li><%= link_to I18n.t('layout.mainnav.about'), :action => "about" %></li>
-			<li><%= link_to I18n.t('layout.mainnav.join'), :action => "join" %></li>
-			<li><%= link_to I18n.t('layout.mainnav.contact'), :action => "contact" %></li>
-			<li><%= link_to I18n.t('layout.mainnav.members_login'), :action => "login" %></li>
+			<li><%= link_to I18n.t('layout.mainnav.about'), about_path %></li>
+			<li><%= link_to I18n.t('layout.mainnav.join'), join_path  %></li>
+			<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+			<li><%= link_to I18n.t('layout.mainnav.members_login'), '#'  %></li>
 		</ul>
 	</div>
   <div id="MainColumn"> 
@@ -33,11 +33,11 @@
  		  <p class="HomeNavigation"><%= link_to I18n.t('layout.menu.home'), root_path -%></p><br /><br />
 
 		<p class="MainNavigation">
-		  	<%= link_to I18n.t('layout.menu.member_orchestras'), :action => "member_orchestras" %>
-			<%= link_to I18n.t('layout.menu.endorsements'), :action => "endorsements" %>
-			<%= link_to I18n.t('layout.menu.free_trial'), :action => "free_trial" %>
-			<%= link_to I18n.t('layout.menu.subscription_rates'), :action => "subscription_rates" %>
-			<%= link_to I18n.t('layout.menu.links'), :action => "links" %>
+		  	<%= link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
+			<%= link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
+			<%= link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
+			<%= link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
+			<%= link_to I18n.t('layout.menu.links'), links_path %>
 		    
 		</p>
 		
@@ -55,8 +55,8 @@
 </div>
 <!--  Close Container div  -->
 <div id="Footer"><ul>
-<li><%= link_to 'Terms & Conditions', :action => "terms" %></li>
-<li><%= link_to 'Privacy Policy', :action => "privacy_policy" %></li>
+<li><%= link_to 'Terms & Conditions', terms_path %></li>
+<li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
 <li>&copy; Copyright 2004-2011 Ed Cervenka</li>
 </ul></div>
 <!--  Close FooterBanner div  -->

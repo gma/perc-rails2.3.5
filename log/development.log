@@ -4872,3 +4872,847 @@ Started GET "/no_percs" for 127.0.0.1 at 2011-04-23 10:33:02 +0100
   [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
 Rendered no_percs/index.html.erb within layouts/composers (30.2ms)
 Completed 200 OK in 123ms (Views: 32.5ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 17:38:45 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-23 17:38:49 +0100
+  Processing by WelcomeController#about as HTML
+Rendered welcome/about.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 17:38:52 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.9ms)
+Rendered welcome/join.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/join" for 127.0.0.1 at 2011-04-23 17:49:38 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/join.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 17:49:40 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-23 17:49:42 +0100
+  Processing by WelcomeController#about as HTML
+Rendered welcome/about.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-23 17:49:44 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/join.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-23 17:49:46 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-23 17:49:58 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Rendered welcome/member_orchestras.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 33ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-23 17:50:01 +0100
+  Processing by WelcomeController#endorsements as HTML
+Rendered welcome/endorsements.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-23 17:50:02 +0100
+  Processing by WelcomeController#free_trial as HTML
+Rendered welcome/free_trial.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 17:50:05 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-23 17:50:07 +0100
+  Processing by WelcomeController#links as HTML
+Rendered welcome/links.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-23 17:52:55 +0100
+  Processing by WelcomeController#links as HTML
+Rendered welcome/links.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-23 17:52:57 +0100
+  Processing by WelcomeController#links as HTML
+Rendered welcome/links.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 17:52:58 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-23 17:53:00 +0100
+  Processing by WelcomeController#free_trial as HTML
+Rendered welcome/free_trial.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-23 17:53:02 +0100
+  Processing by WelcomeController#endorsements as HTML
+Rendered welcome/endorsements.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-23 17:53:05 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Rendered welcome/member_orchestras.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-23 17:53:12 +0100
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 17:53:16 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.8ms)
+Rendered welcome/terms.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 17:53:23 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 17:53:29 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered welcome/terms.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 17:57:17 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.5ms)
+Rendered welcome/terms.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 17:57:27 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 17:57:33 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.7ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 17:57:48 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (24.6ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.8ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (43.6ms)
+Completed 200 OK in 240ms (Views: 40.3ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 17:57:52 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered welcome/terms.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-23 17:58:02 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Rendered welcome/subscription_rates.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 17:58:32 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.5ms)
+Rendered welcome/terms.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 17:58:43 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:07:05 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.8ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (50.6ms)
+Completed 200 OK in 178ms (Views: 47.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-23 19:07:11 +0100
+  Processing by EndorsementsController#new as HTML
+Rendered endorsements/new.html.erb within layouts/composers (13.9ms)
+Completed 200 OK in 52ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-23 19:08:12 +0100
+  Processing by EndorsementsController#new as HTML
+Rendered endorsements/new.html.erb within layouts/composers (12.1ms)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/work_requests/new" for 127.0.0.1 at 2011-04-23 19:08:19 +0100
+  Processing by WorkRequestsController#new as HTML
+Rendered work_requests/new.html.erb within layouts/composers (15.8ms)
+Completed 200 OK in 95ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/work_requests/new" for 127.0.0.1 at 2011-04-23 19:10:16 +0100
+  Processing by WorkRequestsController#new as HTML
+Rendered work_requests/new.html.erb within layouts/composers (13.7ms)
+Completed 200 OK in 27ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-23 19:10:19 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 519ms (Views: 518.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/work_requests/new" for 127.0.0.1 at 2011-04-23 19:11:34 +0100
+  Processing by WorkRequestsController#new as HTML
+Rendered work_requests/new.html.erb within layouts/composers (13.0ms)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2011-04-23 19:11:38 +0100
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.8ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.8ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'D%') ORDER BY composer_name
+  [1m[36mComposer Load (6.8ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (36.2ms)
+Completed 200 OK in 56ms (Views: 32.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-23 19:11:45 +0100
+  Processing by EndorsementsController#new as HTML
+Rendered endorsements/new.html.erb within layouts/composers (12.6ms)
+Completed 200 OK in 63ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2011-04-23 19:11:47 +0100
+  Processing by ComposersController#index as HTML
+  [1m[35mComposer Load (1.0ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mComposer Load (0.7ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'D%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.3ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (75.7ms)
+Completed 200 OK in 95ms (Views: 71.4ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 19:13:27 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 19:13:29 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered welcome/terms.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:14:19 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (39.5ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.8ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (41.7ms)
+Completed 200 OK in 124ms (Views: 65.1ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/composers/4" for 127.0.0.1 at 2011-04-23 19:14:26 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 4 LIMIT 1
+  [1m[36mWork Load (18.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 4) LIMIT 1[0m
+  [1m[35mWork Load (5.2ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 4) ORDER BY work_order_id
+Rendered composers/show.html.erb within layouts/composers (24.5ms)
+Completed 200 OK in 209ms (Views: 23.2ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/works/7" for 127.0.0.1 at 2011-04-23 19:14:27 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mWork Load (0.4ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 7 LIMIT 1[0m
+  [1m[35mWorkdetail Load (24.3ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 7) LIMIT 1
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 4 LIMIT 1[0m
+  [1m[35mWorkdetail Load (157.5ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 7) ORDER BY movement_id
+Rendered works/show.html.erb within layouts/works (288.5ms)
+Completed 200 OK in 350ms (Views: 135.6ms | ActiveRecord: 182.4ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-23 19:14:31 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:16:27 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.2ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (80.9ms)
+Completed 200 OK in 109ms (Views: 90.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 19:16:34 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (2.4ms)
+Rendered welcome/terms.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 97ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 19:16:56 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:18:21 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (40.1ms)
+Completed 200 OK in 55ms (Views: 36.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-23 19:18:24 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.6ms)
+Rendered welcome/terms.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers/485" for 127.0.0.1 at 2011-04-23 19:18:34 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"485"}
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 485 LIMIT 1[0m
+  [1m[35mWork Load (20.9ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 485) LIMIT 1
+  [1m[36mWork Load (0.6ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 485) ORDER BY work_order_id[0m
+Rendered composers/show.html.erb within layouts/composers (54.4ms)
+Completed 200 OK in 106ms (Views: 58.5ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/works/3617" for 127.0.0.1 at 2011-04-23 19:18:36 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"3617"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 3617 LIMIT 1
+  [1m[36mWorkdetail Load (9.5ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3617) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 485 LIMIT 1
+  [1m[36mWorkdetail Load (7.8ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3617) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (138.5ms)
+Completed 200 OK in 202ms (Views: 152.3ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-23 19:18:49 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.6ms)
+Rendered welcome/privacy_policy.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:21:17 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[35mComposer Load (1.3ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (7.2ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (41.7ms)
+Completed 200 OK in 94ms (Views: 37.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:23:50 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[35mComposer Load (1.3ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (7.3ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+ERROR: compiling _app_views_layouts_composers_html_erb__801300775916144905_2161010140__3466639666149551922 RAISED /Users/ed/perc/app/views/layouts/composers.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+..._index'), composers_path?letter=A );@output_buffer.safe_conc...
+...                               ^
+Function body:           def _app_views_layouts_composers_html_erb__801300775916144905_2161010140__3466639666149551922(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/composers";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>');@output_buffer.append= ( @pagetitle );@output_buffer.safe_concat('</title>
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag "omnipresent_main", "scaffold", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat(' 
+</head>
+<BODY>
+<div align="center">
+
+
+
+<div id="Container"> 
+  <div id="Header"></div>
+  	<div id="MainNav">
+		<ul>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.composers_index'), composers_path?letter=A );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.no_perc'), no_percs_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.contact'), contact_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.logout') );@output_buffer.safe_concat('</li>
+		</ul>
+	</div>
+  <div id="MainColumn"> 
+   <div id="main">
+	<p>');@output_buffer.append= ( flash[:message] );@output_buffer.safe_concat('</p>
+	  ');@output_buffer.append= ( yield :layout );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</div>
+  </div>
+  <!--  Close MainColumn div  -->
+  <div id="Menu"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation">');@output_buffer.append= ( link_to I18n.t('layout.menu.home'), root_path );@output_buffer.safe_concat('</p><br /><br />
+
+		<p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.request'), new_work_request_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	   	  ');@output_buffer.append= ( link_to I18n.t('layout.menu.add'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p><br /><br />
+	    <p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.searches'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.gig'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.schedule'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.planner'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		
+		<br /><br />
+		</p>
+		
+
+		
+
+	
+
+		<p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.account'), '#' );@output_buffer.safe_concat('	 
+');@output_buffer.safe_concat('		</p>
+		
+		');@output_buffer.append=  form_tag ' ', :method => 'GET', :class => 'locale' do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  
+		  ');@output_buffer.append= ( javascript_tag "$$('.locale input').each(Element.hide)" );@output_buffer.safe_concat('
+');		 end 
+@output_buffer.safe_concat('		
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer">
+	<ul>
+	<li>');@output_buffer.append= ( link_to 'Terms & Conditions', terms_path );@output_buffer.safe_concat('</li>
+	<li>');@output_buffer.append= ( link_to 'Privacy Policy', privacy_policy_path );@output_buffer.safe_concat('</li>
+	<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
+	</ul>
+</div>
+<!--  Close FooterBanner div  -->
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/ed/perc/app/controllers/composers_controller.rb:10:in `index'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__1996570012366850952__process_action__846642494511078425__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered composers/index.html.erb within layouts/composers (536.8ms)
+Completed   in 552ms
+
+ActionView::Template::Error (/Users/ed/perc/app/views/layouts/composers.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+..._index'), composers_path?letter=A );@output_buffer.safe_conc...
+...                               ^):
+    16:   <div id="Header"></div>
+    17:   	<div id="MainNav">
+    18: 		<ul>
+    19: 				<li><%= link_to I18n.t('layout.mainnav.composers_index'), composers_path?letter=A %></li>
+    20: 				<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
+    21: 				<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
+    22: 				<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (34.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:24:44 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[35mComposer Load (1.3ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (7.0ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+ERROR: compiling _app_views_layouts_composers_html_erb__801300775916144905_2163093440__3466639666149551922 RAISED /Users/ed/perc/app/views/layouts/composers.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+..._index'), composers_path?letter :A );@output_buffer.safe_con...
+...                               ^
+Function body:           def _app_views_layouts_composers_html_erb__801300775916144905_2163093440__3466639666149551922(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/composers";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>');@output_buffer.append= ( @pagetitle );@output_buffer.safe_concat('</title>
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag "omnipresent_main", "scaffold", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat(' 
+</head>
+<BODY>
+<div align="center">
+
+
+
+<div id="Container"> 
+  <div id="Header"></div>
+  	<div id="MainNav">
+		<ul>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.composers_index'), composers_path?letter :A );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.no_perc'), no_percs_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.contact'), contact_path );@output_buffer.safe_concat('</li>
+				<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.logout') );@output_buffer.safe_concat('</li>
+		</ul>
+	</div>
+  <div id="MainColumn"> 
+   <div id="main">
+	<p>');@output_buffer.append= ( flash[:message] );@output_buffer.safe_concat('</p>
+	  ');@output_buffer.append= ( yield :layout );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</div>
+  </div>
+  <!--  Close MainColumn div  -->
+  <div id="Menu"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation">');@output_buffer.append= ( link_to I18n.t('layout.menu.home'), root_path );@output_buffer.safe_concat('</p><br /><br />
+
+		<p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.request'), new_work_request_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	   	  ');@output_buffer.append= ( link_to I18n.t('layout.menu.add'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</p><br /><br />
+	    <p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.searches'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.gig'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.schedule'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.planner'), '#' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		
+		<br /><br />
+		</p>
+		
+
+		
+
+	
+
+		<p class="MainNavigation">
+		  ');@output_buffer.append= ( link_to I18n.t('layout.menu.account'), '#' );@output_buffer.safe_concat('	 
+');@output_buffer.safe_concat('		</p>
+		
+		');@output_buffer.append=  form_tag ' ', :method => 'GET', :class => 'locale' do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  
+		  ');@output_buffer.append= ( javascript_tag "$$('.locale input').each(Element.hide)" );@output_buffer.safe_concat('
+');		 end 
+@output_buffer.safe_concat('		
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer">
+	<ul>
+	<li>');@output_buffer.append= ( link_to 'Terms & Conditions', terms_path );@output_buffer.safe_concat('</li>
+	<li>');@output_buffer.append= ( link_to 'Privacy Policy', privacy_policy_path );@output_buffer.safe_concat('</li>
+	<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
+	</ul>
+</div>
+<!--  Close FooterBanner div  -->
+</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/ed/perc/app/controllers/composers_controller.rb:10:in `index'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__1996570012366850952__process_action__846642494511078425__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered composers/index.html.erb within layouts/composers (79.7ms)
+Completed   in 94ms
+
+ActionView::Template::Error (/Users/ed/perc/app/views/layouts/composers.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+..._index'), composers_path?letter :A );@output_buffer.safe_con...
+...                               ^):
+    16:   <div id="Header"></div>
+    17:   	<div id="MainNav">
+    18: 		<ul>
+    19: 				<li><%= link_to I18n.t('layout.mainnav.composers_index'), composers_path?letter :A %></li>
+    20: 				<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
+    21: 				<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
+    22: 				<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.8ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-23 19:41:28 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (48.8ms)
+Completed 200 OK in 181ms (Views: 45.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-23 19:41:50 +0100
+  Processing by WelcomeController#endorsements as HTML
+Rendered welcome/endorsements.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements/new" for 127.0.0.1 at 2011-04-23 19:41:58 +0100
+  Processing by EndorsementsController#new as HTML
+Rendered endorsements/new.html.erb within layouts/composers (11.8ms)
+Completed 200 OK in 78ms (Views: 34.5ms | ActiveRecord: 0.0ms)
