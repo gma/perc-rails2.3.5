@@ -21,10 +21,10 @@
   	<div id="MainNav">
 		<ul>
 			
-			<li><%= link_to I18n.t('layout.mainnav.composers_index'), :controller => 'composers', :letter => 'A' , :action=> 'index' %></li>
+			<li><%= link_to I18n.t('layout.mainnav.composers_index'), composers_path(:letter => 'A') %></li>
 			<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
 			<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
-			<li><%= link_to I18n.t('layout.mainnav.contact'), :controller => 'contact' %></li>
+			<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
 			<li><%= link_to I18n.t('layout.mainnav.logout') %></li>
 			
 			

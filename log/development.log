@@ -5902,3 +5902,159 @@ Started GET "/free_trial" for 127.0.0.1 at 2011-04-23 23:02:57 +0100
   Processing by WelcomeController#free_trial as HTML
 Rendered welcome/free_trial.html.erb within layouts/application (5.1ms)
 Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (13.3ms)[0m  CREATE TABLE "composers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.1ms)[0m  CREATE TABLE "endorsements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "instrument_translations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "instrument_name" varchar(255), "description" varchar(255), "french" varchar(255), "german" varchar(255), "spanish" varchar(255), "italian" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "no_percs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "work_name" varchar(255), "work_count" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE INDEX "no_percs_index" ON "no_percs" ("composer_name", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m  CREATE TABLE "unicode_test" ("unicode1" varchar(25), "unicode2" varchar(25)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "street_address_1" varchar(255), "street_address_2" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "work_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "composer_name" varchar(255), "work_name" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE "workdetails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "work_id" integer, "movement_id" integer, "movement_name" varchar(255), "timpani" varchar(255), "timpani_2" varchar(255), "timpani_3" varchar(255), "timpani_4" varchar(255), "timpani_5" varchar(255), "timpani_6" varchar(255), "timpani_7" varchar(255), "timpani_8" varchar(255), "timpani_9" varchar(255), "timpani_10" varchar(255), "percussion_1" varchar(255), "percussion_2" varchar(255), "percussion_3" varchar(255), "percussion_4" varchar(255), "percussion_5" varchar(255), "percussion_6" varchar(255), "percussion_7" varchar(255), "percussion_8" varchar(255), "percussion_9" varchar(255), "percussion_10" varchar(255), "percussion_11" varchar(255), "percussion_12" varchar(255), "percussion_13" varchar(255), "percussion_14" varchar(255), "percussion_15" varchar(255), "percussion_16" varchar(255), "percussion_17" varchar(255), "percussion_18" varchar(255), "percussion_19" varchar(255), "percussion_20" varchar(255), "cimbalom" varchar(255), "attachment_exists" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_id" integer, "work_name" varchar(255), "work_order_id" integer, "arr_orch" varchar(255), "showarrorch" boolean, "opus_no" varchar(255), "notes" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE INDEX "works_index" ON "works" ("composer_id", "work_order_id", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110409193306')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217192717')
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217195324')[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217203927')
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110221145455')[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110221162621')
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110303221347')[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110409132326')
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-24 21:23:53 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (35.0ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (48.9ms)
+Completed 200 OK in 212ms (Views: 45.8ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-24 21:24:00 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (39.6ms)
+Completed 200 OK in 55ms (Views: 35.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/composers/256" for 127.0.0.1 at 2011-04-24 21:25:42 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"256"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 256 LIMIT 1
+  [1m[36mWork Load (27.3ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 256) LIMIT 1[0m
+  [1m[35mWork Load (1.5ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 256) ORDER BY work_order_id
+Rendered composers/show.html.erb within layouts/composers (18.8ms)
+Completed 200 OK in 148ms (Views: 36.8ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/works/1738" for 127.0.0.1 at 2011-04-24 21:25:44 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1738"}
+  [1m[36mWork Load (0.4ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 1738 LIMIT 1[0m
+  [1m[35mWorkdetail Load (81.5ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1738) LIMIT 1
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 256 LIMIT 1[0m
+  [1m[35mWorkdetail Load (180.1ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1738) ORDER BY movement_id
+Rendered works/show.html.erb within layouts/works (310.2ms)
+Completed 200 OK in 429ms (Views: 133.4ms | ActiveRecord: 262.3ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-24 21:25:48 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (40.5ms)
+Completed 200 OK in 56ms (Views: 36.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 21:27:16 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 21:28:07 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 21:28:21 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
