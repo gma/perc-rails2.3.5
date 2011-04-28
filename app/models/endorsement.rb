@@ -16,6 +16,8 @@
 class Endorsement < ActiveRecord::Base
   attr_accessible :name, :email, :company, :job_title, :body
   
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  
   validates_presence_of :name, :email, :job_title, :body
-  validates_format_of :email, :with => /^(\S+)@(\S+)\.(\S+)$/
+  validates_format_of :email, :with => email_regex
 end

@@ -6740,3 +6740,585 @@ Started GET "/terms" for 127.0.0.1 at 2011-04-24 21:18:30 +0100
   Processing by WelcomeController#terms as HTML
 Rendered shared/_terms.html.erb (0.6ms)
 Completed 200 OK in 55ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+  Processing by ContactController#index as HTML
+Rendered contact/index.html.erb within layouts/composers (10.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.7ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 51ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (5.6ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Example Name', 'example@example.com', NULL, 'Example job title', 'Example message of endorsement', '2011-04-24 21:27:11.159641', '2011-04-24 21:27:11.159641')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Example Name', 'edcervenka@yahoo.com', NULL, 'Example job title', 'Example composer name', 'Example work name', 'Example date', '2011-04-24 21:27:11.353884', '2011-04-24 21:27:11.353884')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:27:11 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-24 22:27:12 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Example Name', 'edcervenka@yahoo.com', NULL, 'Example job title', 'Example composer name', 'Example work name', 'Example date', '2011-04-24 21:29:10.763627', '2011-04-24 21:29:10.763627')
+  Processing by ContactController#index as HTML
+Rendered contact/index.html.erb within layouts/composers (11.7ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.8ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 51ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (123.1ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Example Name', 'example@example.com', NULL, 'Example job title', 'Example message of endorsement', '2011-04-24 21:31:33.441669', '2011-04-24 21:31:33.441669')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Example Name', 'edcervenka@yahoo.com', NULL, 'Example job title', 'Example composer name', 'Example work name', 'Example date', '2011-04-24 21:31:33.741192', '2011-04-24 21:31:33.741192')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 123.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-24 22:31:33 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 55ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-24 22:31:34 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (34.8ms)[0m  INSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:28:23.226452', '2011-04-26 21:28:23.226452')
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>nil}
+Completed   in 1ms
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:28:23.480018', '2011-04-26 21:28:23.480018')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>nil}
+Completed   in 0ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:29:55.536159', '2011-04-26 21:29:55.536159')
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-26 21:29:55", updated_at: "2011-04-26 21:29:55">}
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1[0m
+  [1m[35mWork Load (11.9ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id[0m
+Rendered composers/show.html.erb within layouts/composers (112.7ms)
+Completed 200 OK in 190ms (Views: 159.3ms | ActiveRecord: 13.0ms)
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:29:55.820471', '2011-04-26 21:29:55.820471')
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-26 21:29:55", updated_at: "2011-04-26 21:29:55">}
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1
+  [1m[36mWork Load (0.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id[0m
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (10.6ms)
+Completed 200 OK in 81ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:32:14.178122', '2011-04-26 21:32:14.178122')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-26 21:32:14", updated_at: "2011-04-26 21:32:14">}
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.2ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 1.2ms)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-26 21:32:14.219195', '2011-04-26 21:32:14.219195')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-26 21:32:14", updated_at: "2011-04-26 21:32:14">}
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+  Processing by InstrumentTranslationsController#index as HTML
+  [1m[36mInstrumentTranslation Load (16.2ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1[0m
+  [1m[35mInstrumentTranslation Load (0.2ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name LIKE 'A%') ORDER BY instrument_name
+  [1m[36mInstrumentTranslation Load (0.1ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations"[0m
+Rendered instrument_translations/index.html.erb within layouts/works (11.6ms)
+Completed 200 OK in 122ms (Views: 57.4ms | ActiveRecord: 16.6ms)
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (0.2ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (24.9ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (0.2ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mNoPerc Load (0.1ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (12.1ms)
+Completed 200 OK in 115ms (Views: 42.7ms | ActiveRecord: 25.5ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "works" ("composer_id", "work_name", "work_order_id", "arr_orch", "showarrorch", "opus_no", "notes", "source", "created_at", "updated_at") VALUES (NULL, 'Some Work', NULL, NULL, NULL, NULL, NULL, NULL, '2011-04-26 21:44:22.789744', '2011-04-26 21:44:22.789744')
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>#<Work id: 1, composer_id: nil, work_name: "Some Work", work_order_id: nil, arr_orch: nil, showarrorch: nil, opus_no: nil, notes: nil, source: nil, created_at: "2011-04-26 21:44:22", updated_at: "2011-04-26 21:44:22">}
+  [1m[36mWork Load (0.8ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 1 LIMIT 1[0m
+  [1m[35mWorkdetail Load (0.2ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1) LIMIT 1
+Rendered works/show.html.erb within layouts/works (81.9ms)
+Completed   in 104ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "works" ("composer_id", "work_name", "work_order_id", "arr_orch", "showarrorch", "opus_no", "notes", "source", "created_at", "updated_at") VALUES (NULL, 'Some Work', NULL, NULL, NULL, NULL, NULL, NULL, '2011-04-26 21:44:23.313450', '2011-04-26 21:44:23.313450')[0m
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>#<Work id: 1, composer_id: nil, work_name: "Some Work", work_order_id: nil, arr_orch: nil, showarrorch: nil, opus_no: nil, notes: nil, source: nil, created_at: "2011-04-26 21:44:23", updated_at: "2011-04-26 21:44:23">}
+  [1m[35mWork Load (0.8ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 1 LIMIT 1
+  [1m[36mWorkdetail Load (0.2ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1) LIMIT 1[0m
+Completed   in 4ms
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "works" ("composer_id", "work_name", "work_order_id", "arr_orch", "showarrorch", "opus_no", "notes", "source", "created_at", "updated_at") VALUES (1, 'Some Work', NULL, NULL, NULL, NULL, NULL, NULL, '2011-04-26 21:46:09.323365', '2011-04-26 21:46:09.323365')
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>#<Work id: 1, composer_id: 1, work_name: "Some Work", work_order_id: nil, arr_orch: nil, showarrorch: nil, opus_no: nil, notes: nil, source: nil, created_at: "2011-04-26 21:46:09", updated_at: "2011-04-26 21:46:09">}
+  [1m[36mWork Load (0.8ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 1 LIMIT 1[0m
+  [1m[35mWorkdetail Load (0.2ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1) LIMIT 1
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1[0m
+Rendered works/show.html.erb within layouts/works (66.1ms)
+Completed   in 75ms
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "works" ("composer_id", "work_name", "work_order_id", "arr_orch", "showarrorch", "opus_no", "notes", "source", "created_at", "updated_at") VALUES (1, 'Some Work', NULL, NULL, NULL, NULL, NULL, NULL, '2011-04-26 21:46:09.498395', '2011-04-26 21:46:09.498395')
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>#<Work id: 1, composer_id: 1, work_name: "Some Work", work_order_id: nil, arr_orch: nil, showarrorch: nil, opus_no: nil, notes: nil, source: nil, created_at: "2011-04-26 21:46:09", updated_at: "2011-04-26 21:46:09">}
+  [1m[36mWork Load (0.7ms)[0m  [1mSELECT "works".* FROM "works" WHERE "works"."id" = 1 LIMIT 1[0m
+  [1m[35mWorkdetail Load (0.2ms)[0m  SELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 1) LIMIT 1
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1[0m
+Completed   in 4ms
+  Processing by EndorsementsController#new as HTML
+Rendered endorsements/new.html.erb within layouts/composers (17.9ms)
+Completed 200 OK in 62ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+  Processing by WorkRequestsController#new as HTML
+Rendered work_requests/new.html.erb within layouts/composers (21.3ms)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.0ms)

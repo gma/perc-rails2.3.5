@@ -6058,3 +6058,123 @@ Started GET "/contact" for 127.0.0.1 at 2011-04-24 21:28:21 +0100
   Processing by WelcomeController#contact as HTML
 Rendered welcome/contact.html.erb within layouts/application (4.5ms)
 Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-24 23:33:39 +0100
+  Processing by WelcomeController#contact as HTML
+Rendered welcome/contact.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 337ms (Views: 313.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-24 23:33:49 +0100
+  Processing by WelcomeController#about as HTML
+Rendered welcome/about.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-24 23:33:52 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.9ms)
+Rendered welcome/join.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-24 23:34:02 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (27.5ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (9.0ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (108.0ms)
+Completed 200 OK in 318ms (Views: 131.9ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-24 23:34:20 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (47.0ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.5ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (1.8ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (84.3ms)
+Completed 200 OK in 203ms (Views: 122.1ms | ActiveRecord: 49.3ms)
+
+
+Started GET "/no_percs?letter=S" for 127.0.0.1 at 2011-04-24 23:34:27 +0100
+  Processing by NoPercsController#index as HTML
+  Parameters: {"letter"=>"S"}
+  [1m[36mNoPerc Load (18.7ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (3.6ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'S%') ORDER BY composer_name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+Rendered no_percs/index.html.erb within layouts/composers (76.5ms)
+Completed 200 OK in 156ms (Views: 99.9ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-26 23:33:28 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (86.7ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.0ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (49.0ms)
+Completed 200 OK in 261ms (Views: 45.9ms | ActiveRecord: 93.6ms)
+
+
+Started GET "/composers/256" for 127.0.0.1 at 2011-04-26 23:33:32 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"256"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 256 LIMIT 1
+  [1m[36mWork Load (26.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 256) LIMIT 1[0m
+  [1m[35mWork Load (1.3ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 256) ORDER BY work_order_id
+Rendered composers/show.html.erb within layouts/composers (18.4ms)
+Completed 200 OK in 124ms (Views: 20.9ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-26 23:33:35 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (41.4ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (75.1ms)
+Completed 200 OK in 90ms (Views: 36.7ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/composers/3" for 127.0.0.1 at 2011-04-26 23:37:41 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1[0m
+  [1m[35mWork Load (26.9ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 3) LIMIT 1
+  [1m[36mWork Load (0.7ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 3) ORDER BY work_order_id[0m
+Rendered composers/show.html.erb within layouts/composers (18.1ms)
+Completed 200 OK in 116ms (Views: 20.9ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/works/3" for 127.0.0.1 at 2011-04-26 23:37:45 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (12.4ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (186.1ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (278.1ms)
+Completed 200 OK in 361ms (Views: 95.4ms | ActiveRecord: 199.1ms)
+
+
+Started GET "/composers/3" for 127.0.0.1 at 2011-04-26 23:37:54 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1
+  [1m[36mWork Load (0.5ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 3) LIMIT 1[0m
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 3) ORDER BY work_order_id
+Rendered composers/show.html.erb within layouts/composers (16.7ms)
+Completed 200 OK in 48ms (Views: 19.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-26 23:37:56 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (43.2ms)
+Completed 200 OK in 58ms (Views: 38.9ms | ActiveRecord: 8.4ms)

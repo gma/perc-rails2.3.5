@@ -1,11 +1,6 @@
-
-
 <h1><%= "#{@work.composer.composer_name}" %>: <%=h @work.work_name %> <%=h @work.arr_orch %>  <%=h @work.opus_no %></h1>
 <table border=1 cellpadding=3 width=1200>
   <tr>
-	
-
-	
 		
 <%= if @workdetail.movement_name.present? ; "<th>Movement Name</th>".html_safe; end %>
 <%= if @workdetail.timpani.present? ; "<th>Timpani</th>".html_safe; end %>

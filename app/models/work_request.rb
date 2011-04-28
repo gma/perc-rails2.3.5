@@ -18,6 +18,8 @@
 class WorkRequest < ActiveRecord::Base
   attr_accessible :name, :email, :company, :job_title, :composer_name, :work_name, :date
   
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  
   validates_presence_of :name, :job_title, :composer_name, :work_name, :date
-  validates_format_of :email, :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates_format_of :email, :with => email_regex
 end

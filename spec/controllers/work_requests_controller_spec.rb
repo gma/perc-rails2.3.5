@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe InstrumentTranslationsController do
-render_views
-
-  describe "GET 'index'" do
+describe WorkRequestsController do
+  render_views
+  
+  describe "GET 'new" do
     it "should be successful" do
-      get 'index'
+      get 'new'
       response.should be_success
     end
   end
