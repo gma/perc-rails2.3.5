@@ -22,20 +22,16 @@ body {font-family:Verdana, Arial, Helvetica, sans-serif;
 	
 /*----------------------------- Header, Banner, MainColumn and Footer DIVs */
 
-#Flags, #Header, #MainNav, #Banner, #MainColumn, #LeftBar, #Navigation, {position:relative;
+#Header, #MainNav, #Banner, #MainColumn, #LeftBar, #Navigation, {position:relative;
 	background-color:#FFF;
 	clear:none;
 	padding:0;
 	margin:0;}
 	
-#FlagsNew {background-color:#EFEAE1;}	
+	
 #Header, #MainNav {width:774px;}
 
-#Flags {width:770px;
-	margin:0 auto;
-	text-align:right;
-	clear:both;
-	height:65px;}
+
 #Header {height:137px;
 	background:#FFF url(../images/new_banner.jpg) no-repeat;
 	border-bottom: 5px solid #8D2C06;}
@@ -65,11 +61,7 @@ body {font-family:Verdana, Arial, Helvetica, sans-serif;
 	margin-bottom:10px;
 	text-align:center;}
 	
-#FlagsNew 	{width:189px;
-		margin:0 auto;
-		text-align:right;
-		clear:both;
-		height:65px;}
+
 	
 #Navigation p {margin:0;
 	padding:0;

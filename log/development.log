@@ -6894,3 +6894,372 @@ Migrating to AddSaltToUsers (20110429113951)
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429003525')[0m
   [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110429010150')
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429112149')[0m
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-04-29 15:28:29 +0100
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-04-29 15:43:27 +0100
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (152.9ms)
+Completed 200 OK in 237ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 15:57:09 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (15.8ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (6.7ms)
+Rendered users/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 315ms (Views: 20.8ms | ActiveRecord: 15.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 15:58:21 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (8.1ms)
+ERROR: compiling _app_views_layouts_application_html_erb___3058010337733853049_2182041020__1170281729811452660 RAISED /Users/ed/perc/app/views/layouts/application.html.erb:6: syntax error, unexpected ':', expecting ')'
+..."omnipresent_main", "scaffold":media => "all" );@output_buff...
+...                               ^
+Function body:           def _app_views_layouts_application_html_erb___3058010337733853049_2182041020__1170281729811452660(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE HTML>
+<html>
+<head>
+  <title>');@output_buffer.append= ( @title );@output_buffer.safe_concat('</title>
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag "omnipresent_main", "scaffold":media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "scroller" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<BODY onLoad="start()">
+<div align="center">
+
+
+<div id="Container"> 
+  <div id="Header"></div>
+
+  	<div id="MainNav">
+		<ul>
+			<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.home'), root_path );@output_buffer.safe_concat('</li>
+			<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.about'), about_path );@output_buffer.safe_concat('</li>
+			<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.join'), join_path  );@output_buffer.safe_concat('</li>
+			<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.contact'), contact_path );@output_buffer.safe_concat('</li>
+			<li>');@output_buffer.append= ( link_to I18n.t('layout.mainnav.members_login'), '#'  );@output_buffer.safe_concat('</li>
+		</ul>
+	</div>
+  <div id="MainColumn"> 
+   <div id="main">
+	  ');@output_buffer.append= ( yield :layout );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</div>
+  </div>
+  <!--  Close MainColumn div  -->
+  <div id="Menu"> 
+    <div id="Navigation"> 
+ 		  <p class="HomeNavigation">');@output_buffer.append= ( link_to I18n.t('layout.menu.home'), root_path );@output_buffer.safe_concat('</p><br /><br />
+
+		<p class="MainNavigation">
+		  	');@output_buffer.append= ( link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( link_to I18n.t('layout.menu.endorsements'),  endorsements_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( link_to I18n.t('layout.menu.free_trial'), free_trial_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( link_to I18n.t('layout.menu.links'), links_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		    
+		</p>
+		
+		');@output_buffer.append=  form_tag ' ', :method => 'GET', :class => 'locale' do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  ');@output_buffer.append= ( select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		  
+		  ');@output_buffer.append= ( javascript_tag "$$('.locale input').each(Element.hide)" );@output_buffer.safe_concat('
+');		 end 
+@output_buffer.safe_concat('
+    </div>
+    <!--  Close Navigation div  -->
+ 
+  </div>
+  <!--  Close LeftBar div  -->
+</div>
+<!--  Close Container div  -->
+<div id="Footer"><ul>
+<li>');@output_buffer.append= ( link_to 'Terms & Conditions', terms_path );@output_buffer.safe_concat('</li>
+<li>');@output_buffer.append= ( link_to 'Privacy Policy', privacy_policy_path );@output_buffer.safe_concat('</li>
+<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
+</ul></div>
+<!--  Close FooterBanner div  -->
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</body>
+</html>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/perc/app/controllers/users_controller.rb:19:in `create'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__3553288222508388316__process_action__3813736256995938285__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/new.html.erb within layouts/application (64.1ms)
+Completed   in 181ms
+
+ActionView::Template::Error (/Users/ed/perc/app/views/layouts/application.html.erb:6: syntax error, unexpected ':', expecting ')'
+..."omnipresent_main", "scaffold":media => "all" );@output_buff...
+...                               ^):
+    3: <head>
+    4:   <title><%= @title %></title>
+    5:   <%= csrf_meta_tag %>
+    6:   <%= stylesheet_link_tag "omnipresent_main", "scaffold":media => "all" %>
+    7:   <%= javascript_include_tag "scroller" %>
+    8: </head>
+    9: <BODY onLoad="start()">
+  app/controllers/users_controller.rb:19:in `create'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 15:58:45 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (6.8ms)
+Rendered users/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 47ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 15:58:52 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (6.9ms)
+Rendered users/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 56ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 16:12:24 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (9.8ms)
+Rendered users/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 90ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-29 16:14:32 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJNQgmB2K/tqnnv3XCQM8+sSU0OA73C9Y0cypyarw3o=", "user"=>{"first_name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (6.9ms)
+Rendered users/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 53ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+  [1m[36mSQL (18.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "composers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "endorsements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "instrument_translations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "instrument_name" varchar(255), "description" varchar(255), "french" varchar(255), "german" varchar(255), "spanish" varchar(255), "italian" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "no_percs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "work_name" varchar(255), "work_count" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE INDEX "no_percs_index" ON "no_percs" ("composer_name", "work_name")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "unicode_test" ("unicode1" varchar(25), "unicode2" varchar(25)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE "work_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "composer_name" varchar(255), "work_name" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "workdetails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "work_id" integer, "movement_id" integer, "movement_name" varchar(255), "timpani" varchar(255), "timpani_2" varchar(255), "timpani_3" varchar(255), "timpani_4" varchar(255), "timpani_5" varchar(255), "timpani_6" varchar(255), "timpani_7" varchar(255), "timpani_8" varchar(255), "timpani_9" varchar(255), "timpani_10" varchar(255), "percussion_1" varchar(255), "percussion_2" varchar(255), "percussion_3" varchar(255), "percussion_4" varchar(255), "percussion_5" varchar(255), "percussion_6" varchar(255), "percussion_7" varchar(255), "percussion_8" varchar(255), "percussion_9" varchar(255), "percussion_10" varchar(255), "percussion_11" varchar(255), "percussion_12" varchar(255), "percussion_13" varchar(255), "percussion_14" varchar(255), "percussion_15" varchar(255), "percussion_16" varchar(255), "percussion_17" varchar(255), "percussion_18" varchar(255), "percussion_19" varchar(255), "percussion_20" varchar(255), "cimbalom" varchar(255), "attachment_exists" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_id" integer, "work_name" varchar(255), "work_order_id" integer, "arr_orch" varchar(255), "showarrorch" boolean, "opus_no" varchar(255), "notes" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE INDEX "works_index" ON "works" ("composer_id", "work_order_id", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429113951')[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217192717')
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217195324')[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217203927')
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110221145455')[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110221162621')
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110409132326')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110409193306')
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429003525')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110429010150')
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429112149')[0m
+  [1m[36mSQL (11.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+Migrating to AddPasswordToUsers (20110429112149)
+Migrating to AddSaltToUsers (20110429113951)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("composers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("endorsements")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("instrument_translations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('no_percs_index')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("unicode_test")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m

@@ -8,6 +8,57 @@ Revision:
 ----------------------------- */
 
 /*----------------------------- tags */
+body { background-color: #fff; color: #333; }
+
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+
+
+
+
 #MainColumn p {line-height:14pt;
 	color:#666;
 	margin:0;
@@ -85,98 +136,6 @@ acronym {cursor:help;
 	padding-top: 3em;
 }		
 
-/*----------------------------- Form */
-
-#Alphabetical {padding:0 5px 5px;
-	border:none;
-	border-collapse:collapse;
-	text-align:center;
-	font-size:80%;
-	background-color:#FFF;	
-	color:#333;}
-#Alphabetical fieldset {border:none;
-	border-collapse:collapse;}
-#Alphabetical select.ATOZ {padding:1px 2px;
-	margin:0;
-	text-align:center;
-	font-size:100%;}
-
-.StandardForms {background-color:#CED4D8;
-	padding:0 5px 5px;
-	border:none;
-	float:left;
-	display:inline;
-	width:232px;
-	font-size:90%;
-	border:solid 1px #000;
-	text-align:left;
-	margin:0 25px 10px 0;
-	color:#333;}
-.StandardForms fieldset {border:solid 1px #8D2C06;
-	padding:5px;
-	margin:0}
-.StandardForms legend {color:#8D2C06;
-	font-weight:bold;}
-.StandardForms input.formInputField {background-color:#E9E9EB;
-	padding:0;
-	margin:0;
-	border:solid 1px #000;}
-.StandardForms input.formInputField:hover {background-color:#FFF;
-	color:#000;}
-.StandardForms input.FormButtons {background-color:#CED4D8;
-	text-align:center;
-	padding:0 3px;
-	margin:0;
-	color:#333;
-	border:solid 1px #333;}
-.StandardForms input.FormButtons:hover {background-color:#8D2C06;
-	color:#FFF;
-	border:solid 1px #FFF;}
-
-#Members {padding:0 5px 5px;
-	border:none;
-	float:left;
-	left:10px;
-	position:relative;
-	text-align:center;
-	font-size:80%;
-	width:119px;
-	margin:0;
-	background:#B8BFBF url(../images/form_bg.jpg) no-repeat center;	
-	color:#333;
-	border:solid 1px #8D2C06;}
-#Members fieldset {padding:5px;
-	text-align:center;
-	margin:0;
-	border:solid 1px #666;}
-#Members legend {padding:2px 0 0;
-	color:#8D2C06;
-	margin:0 auto;
-	text-align:center;
-	font-weight:bold;}
-#Members label {padding:0 0 2px 0;
-	margin:0;
-	display:block;
-	font-weight:bold;}
-#Members input.formInputField {border:solid 1px #8D2C06;
-	margin-bottom:3px;
-	font-size:92%;
-	text-align:center;
-	background-color:#EFEAE1;
-	width:98%;}
-#Members input.formInputField:hover {background-color:#FFF;
-	color:#000;}
-#Members input.FormButtons {background-color:#EFEAE1;
-	color:#8D2C06;
-	font-size:92%;
-	width:100%;
-	padding:1px 0;
-	margin:0;
-	text-align:center;
-	border:solid 1px #8D2C06;}
-#Members input.FormButtons:hover {background-color:#8D2C06;
-	color:#FFF;
-	border:solid 1px #FFF;}
 
 #Footer ul
 	{
@@ -209,3 +168,6 @@ acronym {cursor:help;
 /*---------------------- text styles */
 IntrPara {font-weight:bold;
 	font-size:115%;}
+
+
+	
