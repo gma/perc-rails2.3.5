@@ -1,4 +1,5 @@
 Perc::Application.routes.draw do 
+  
   get "welcome/home"
   match '/about', :to => 'welcome#about'
   match '/cheque', :to => 'welcome#cheque'
@@ -19,7 +20,10 @@ Perc::Application.routes.draw do
   match '/pounds_trial', :to => 'welcome#pounds_trial'
   match '/privacy_policy', :to => 'welcome#privacy_policy'
   match '/subscription_rates', :to => 'welcome#subscription_rates'
-  match '/terms', :to => 'welcome#terms' 
+  match '/terms', :to => 'welcome#terms'
+  match '/signup', :to => 'users#new' 
+  
+  resources :users
   
   resources :work_requests
 

@@ -95,6 +95,11 @@ describe "ApplicationLayoutLinks" do
   it "should have a Privacy Policy page at '/privacy_policy'" do
     get '/privacy_policy'
     response.should have_selector('title', :content => "Percussion Orchestrations Privacy Policy")
+  end  
+  
+  it "should have a signup page at '/signup'" do
+    get '/signup'
+    response.should have_selector('title', :content => "Percussion Orchestrations Registration")
   end
   
   it "should have a Subscription Rates page at '/subscription_rates'" do

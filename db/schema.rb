@@ -1,15 +1,16 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of Active Record to incrementally modify your database, and
-# then regenerate this schema definition.
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your database schema. If you need
-# to create the application database on another system, you should be using db:schema:load, not running
-# all the migrations from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409193306) do
+ActiveRecord::Schema.define(:version => 20110429113951) do
 
   create_table "composers", :force => true do |t|
     t.string   "composer_name"
@@ -55,29 +56,14 @@ ActiveRecord::Schema.define(:version => 20110409193306) do
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
-    t.string   "last_name"
-    t.string   "organisation_name"
-    t.string   "web_address"
-    t.string   "street_address_1"
-    t.string   "street_address_2"
-    t.string   "town_or_city"
-    t.string   "zip"
-    t.string   "state_or_county"
-    t.string   "country"
-    t.string   "phone_no"
     t.string   "email"
-    t.string   "password"
-    t.datetime "join_date"
-    t.string   "membership_type"
-    t.string   "payment_type"
-    t.string   "currency"
-    t.boolean  "cancelled"
-    t.boolean  "current_member"
-    t.string   "language"
-    t.string   "years_paid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
   create_table "work_requests", :force => true do |t|
     t.string   "name"

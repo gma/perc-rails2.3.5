@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ComposersController do
   render_views
   
-  describe "GET 'index'" do
+  describe "GET 'composers#index'" do
     it "should be successful" do
       get 'index'
       response.should be_success
