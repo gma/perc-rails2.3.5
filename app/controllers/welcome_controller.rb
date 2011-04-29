@@ -1,91 +1,91 @@
 class WelcomeController < ApplicationController
   
   def about
-    @pagetitle = "About Percussion Orchestrations" 
+    @title = "About Percussion Orchestrations" 
   end
   
   def cheque
-    @pagetitle = "Pay By Cheque" 
+    @title = "Pay By Cheque" 
   end
   
   def contact
-    @pagetitle = "Percussion Orchestrations Contact Page" 
+    @title = "Percussion Orchestrations Contact Page" 
   end
   
   def credit_card
-    @pagetitle = "Pay By Credit Card" 
+    @title = "Pay By Credit Card" 
   end
   
   def credit_transfer
-    @pagetitle = "Pay By Direct Credit Transfer" 
+    @title = "Pay By Direct Credit Transfer" 
   end
   
   def dollars
-    @pagetitle = "Pay In Dollars" 
+    @title = "Pay In Dollars" 
   end 
   
   def dollars_trial
-    @pagetitle = "Pay In Dollars" 
+    @title = "Pay In Dollars" 
   end 
    
   def ed
-    @pagetitle = "About Ed Cervenka" 
+    @title = "About Ed Cervenka" 
   end
   
   def endorsements
-    @pagetitle = "Percussion Orchestrations Endorsements" 
+    @title = "Percussion Orchestrations Endorsements" 
   end
 
   def euros
-    @pagetitle = "Pay In Euros" 
+    @title = "Pay In Euros" 
   end 
 
   def euros_trial
-    @pagetitle = "Pay In Euros" 
+    @title = "Pay In Euros" 
   end  
 
   def free_trial
-    @pagetitle = "Percussion Orchestrations Free Trial" 
+    @title = "Percussion Orchestrations Free Trial" 
   end 
   
   def home
-    @pagetitle = "Percussion Orchestrations Homepage"
+    @title = "Percussion Orchestrations Homepage"
   end 
   
   def join
-    @pagetitle = "Join Percussion Orchestrations" 
+    @title = "Join Percussion Orchestrations" 
   end 
    
   def links
-    @pagetitle = "Percussion Orchestrations Links" 
+    @title = "Percussion Orchestrations Links" 
   end  
      
   def members_login
-    @pagetitle = "Members Login Page" 
+    @title = "Members Login Page" 
   end
   
   def member_orchestras
-    @pagetitle = "Percussion Orchestrations Member Orchestras" 
+    @title = "Percussion Orchestrations Member Orchestras" 
   end
 
   def pounds
-    @pagetitle = "Pay In Pounds Sterling" 
+    @title = "Pay In Pounds Sterling" 
   end 
 
   def pounds_trial
-    @pagetitle = "Pay In Pounds Sterling" 
+    @title = "Pay In Pounds Sterling" 
   end  
   
   def privacy_policy
-    @pagetitle = "Percussion Orchestrations Privacy Policy" 
+    @title = "Percussion Orchestrations Privacy Policy" 
   end 
 
   def subscription_rates
-    @pagetitle = "Percussion Orchestrations Subscription Rates" 
+    @title = "Percussion Orchestrations Subscription Rates" 
   end 
   
   def terms
-    @pagetitle = "Percussion Orchestrations Terms & Conditions" 
+    @title = "Percussion Orchestrations Terms & Conditions" 
   end
   
 end
