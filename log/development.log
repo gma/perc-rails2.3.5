@@ -6178,3 +6178,242 @@ Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-26 23:37:56 +0100
   [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
 Rendered composers/index.html.erb within layouts/composers (43.2ms)
 Completed 200 OK in 58ms (Views: 38.9ms | ActiveRecord: 8.4ms)
+  [1m[36mSQL (21.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (19.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateUsers (20110303221347)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to RemoveVariousFromUsers (20110428143252)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "street_address_1" varchar(255), "street_address_2" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.7ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "street_address_2" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.6ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "street_address_2" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "town_or_city" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "current_member" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110428143252')[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateUsers (20110303221347)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to RemoveVariousFromUsers (20110428143252)
+Migrating to AddDetailsToUsers (20110428143449)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (23.7ms)[0m  [1mALTER TABLE "users" ADD "address" text[0m
+  [1m[35mSQL (0.3ms)[0m  ALTER TABLE "users" ADD "active_member" boolean
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110428143449')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (20.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (5.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (7.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (19.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateUsers (20110303221347)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to RemoveVariousFromUsers (20110428143252)
+Migrating to AddDetailsToUsers (20110428143449)
+Migrating to RemoveStateOrCountyFromUsers (20110428145038)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (81.1ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "zip" varchar(255), "state_or_county" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime, "address" text, "active_member" boolean) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.7ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "organisation_name" varchar(255), "web_address" varchar(255), "zip" varchar(255), "country" varchar(255), "phone_no" varchar(255), "email" varchar(255), "password" varchar(255), "join_date" datetime, "membership_type" varchar(255), "payment_type" varchar(255), "currency" varchar(255), "cancelled" boolean, "language" varchar(255), "years_paid" varchar(255), "created_at" datetime, "updated_at" datetime, "address" text, "active_member" boolean) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110428145038')[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-28 19:52:38 +0100
+  Processing by WelcomeController#home as HTML
+Rendered welcome/home.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-29 01:04:42 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (49.8ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (61.4ms)
+Completed 200 OK in 374ms (Views: 58.2ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-29 01:04:54 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (91.6ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.5ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (1.7ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (28.4ms)
+Completed 200 OK in 156ms (Views: 30.7ms | ActiveRecord: 93.7ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2011-04-29 01:04:59 +0100
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.9ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.8ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'D%') ORDER BY composer_name
+  [1m[36mComposer Load (7.0ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (36.3ms)
+Completed 200 OK in 102ms (Views: 32.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/no_percs" for 127.0.0.1 at 2011-04-29 01:05:48 +0100
+  Processing by NoPercsController#index as HTML
+  [1m[35mNoPerc Load (40.7ms)[0m  SELECT "no_percs".* FROM "no_percs"
+  [1m[36mNoPerc Load (0.2ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mNoPerc Load (1.7ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+Rendered no_percs/index.html.erb within layouts/composers (27.9ms)
+Completed 200 OK in 153ms (Views: 76.7ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-29 01:05:52 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[35mComposer Load (16.6ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (47.5ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (87.4ms)
+Completed 200 OK in 118ms (Views: 43.0ms | ActiveRecord: 64.1ms)
