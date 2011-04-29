@@ -6417,3 +6417,230 @@ Started GET "/composers?letter=A" for 127.0.0.1 at 2011-04-29 01:05:52 +0100
   [1m[36mComposer Load (47.5ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
 Rendered composers/index.html.erb within layouts/composers (87.4ms)
 Completed 200 OK in 118ms (Views: 43.0ms | ActiveRecord: 64.1ms)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110429003525')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("composers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("endorsements")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("instrument_translations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('no_percs_index')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("unicode_test")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "composers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "endorsements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "instrument_translations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "instrument_name" varchar(255), "description" varchar(255), "french" varchar(255), "german" varchar(255), "spanish" varchar(255), "italian" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "no_percs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "work_name" varchar(255), "work_count" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE INDEX "no_percs_index" ON "no_percs" ("composer_name", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE TABLE "unicode_test" ("unicode1" varchar(25), "unicode2" varchar(25)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "work_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "composer_name" varchar(255), "work_name" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE "workdetails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "work_id" integer, "movement_id" integer, "movement_name" varchar(255), "timpani" varchar(255), "timpani_2" varchar(255), "timpani_3" varchar(255), "timpani_4" varchar(255), "timpani_5" varchar(255), "timpani_6" varchar(255), "timpani_7" varchar(255), "timpani_8" varchar(255), "timpani_9" varchar(255), "timpani_10" varchar(255), "percussion_1" varchar(255), "percussion_2" varchar(255), "percussion_3" varchar(255), "percussion_4" varchar(255), "percussion_5" varchar(255), "percussion_6" varchar(255), "percussion_7" varchar(255), "percussion_8" varchar(255), "percussion_9" varchar(255), "percussion_10" varchar(255), "percussion_11" varchar(255), "percussion_12" varchar(255), "percussion_13" varchar(255), "percussion_14" varchar(255), "percussion_15" varchar(255), "percussion_16" varchar(255), "percussion_17" varchar(255), "percussion_18" varchar(255), "percussion_19" varchar(255), "percussion_20" varchar(255), "cimbalom" varchar(255), "attachment_exists" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_id" integer, "work_name" varchar(255), "work_order_id" integer, "arr_orch" varchar(255), "showarrorch" boolean, "opus_no" varchar(255), "notes" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE INDEX "works_index" ON "works" ("composer_id", "work_order_id", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (28.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429003525')[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217192717')
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217195324')[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217203927')
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110221145455')[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110221162621')
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110409132326')[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110409193306')
+  [1m[36mSQL (6.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (44.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110429010150')[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-04-29 02:06:29 +0100
+
+AbstractController::ActionNotFound (The action '1' could not be found for UsersController):
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2011-04-29 02:06:46 +0100
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('edcervenka@yaho.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (24.4ms)[0m  [1mINSERT INTO "users" ("first_name", "email", "created_at", "updated_at") VALUES ('Ed', 'edcervenka@yaho.com', '2011-04-29 01:08:31.262147', '2011-04-29 01:08:31.262147')[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-04-29 02:08:44 +0100
+
+AbstractController::ActionNotFound (The action '1' could not be found for UsersController):
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-04-29 02:09:37 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (78.6ms)
+Completed   in 186ms
+
+ActionView::Template::Error (undefined method `name' for #<User:0x0000010447c570>):
+    1: <%= @user.name %>, <%= @user.email %>
+  app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___1830699805906025091_2183374760_4012832538849484476'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-04-29 02:10:04 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 61ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-04-29 02:11:13 +0100
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
