@@ -7322,3 +7322,596 @@ Completed 200 OK in 62ms (Views: 56.3ms | ActiveRecord: 0.0ms)
   Processing by WorkRequestsController#new as HTML
 Rendered work_requests/new.html.erb within layouts/composers (21.3ms)
 Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (10.4ms)
+Completed 200 OK in 65ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-29 12:22:16.535897', '2011-04-29 12:22:16.535897')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-29 12:22:16", updated_at: "2011-04-29 12:22:16">}
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 1.2ms)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-29 12:22:16.634036', '2011-04-29 12:22:16.634036')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-29 12:22:16", updated_at: "2011-04-29 12:22:16">}
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (0.2ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.1ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (0.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+ERROR: compiling _app_views_no_percs_index_html_erb__1412295288529808824_2181484360__2215294912880604685 RAISED /Users/ed/perc/app/views/no_percs/index.html.erb:28: syntax error, unexpected tLPAREN_ARG, expecting keyword_do or '{' or '('
+...ll Composers', composers_path (:letter => 'A') );@output_buf...
+...                               ^
+/Users/ed/perc/app/views/no_percs/index.html.erb:28: syntax error, unexpected tASSOC, expecting ')'
+...rs', composers_path (:letter => 'A') );@output_buffer.to_s
+...                               ^
+/Users/ed/perc/app/views/no_percs/index.html.erb:28: syntax error, unexpected ')', expecting keyword_end
+...mposers_path (:letter => 'A') );@output_buffer.to_s
+...                               ^
+Function body:           def _app_views_no_percs_index_html_erb__1412295288529808824_2181484360__2215294912880604685(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "no_percs/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Listing Works with No Timpani or Percussion</h1>
+<div class=\'pagination\'>
+  <strong>Jump to:</strong>
+');@output_buffer.append_if_string=    NoPerc.pagination_letters.each do |letter| 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( link_to(letter, no_percs_path(:letter => letter)) );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('</div>
+<br/ >
+<table border=1>
+  <tr>
+    <th>Composer</th>
+    <th>Work</th>
+
+');@output_buffer.append_if_string=  @no_percs.each do |no_perc| 
+@output_buffer.safe_concat('
+
+  <tr>
+    <td>');@output_buffer.append= (h no_perc.composer_name );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= (h no_perc.work_name );@output_buffer.safe_concat('</td>
+
+
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+
+<br />
+
+');@output_buffer.append= ( link_to 'Back to All Composers', composers_path (:letter => 'A') );@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/ed/perc/app/controllers/no_percs_controller.rb:10:in `index'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__240055245371933986__process_action__1229208672851712897__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/testing.rb:12:in `process_with_new_base_test'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:412:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:47:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/test_case.rb:350:in `get'
+/Users/ed/perc/spec/controllers/no_percs_controller_spec.rb:8:in `block (3 levels) in <top (required)>'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:49:in `instance_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:49:in `block (2 levels) in run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:106:in `with_around_hooks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:46:in `block in run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:99:in `block in with_pending_capture'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:98:in `catch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:98:in `with_pending_capture'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example.rb:45:in `run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:262:in `block in run_examples'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:258:in `map'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:258:in `run_examples'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:232:in `run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `block in run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `map'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/example_group.rb:233:in `run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `block (2 levels) in run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `map'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:27:in `block in run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/reporter.rb:12:in `report'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/command_line.rb:24:in `run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:55:in `run_in_process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:46:in `run'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rspec-core-2.5.1/lib/rspec/core/runner.rb:10:in `block in autorun'
+Completed   in 59ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-29 13:22:16 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.7ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-29 13:22:17 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (1.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  Processing by NoPercsController#index as HTML
+  [1m[36mNoPerc Load (0.2ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+  [1m[35mNoPerc Load (0.1ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1
+  [1m[36mNoPerc Load (0.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mNoPerc Load (0.1ms)[0m  SELECT "no_percs".* FROM "no_percs"
+Rendered no_percs/index.html.erb within layouts/composers (10.5ms)
+Completed 200 OK in 61ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+  Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mComposer Load (0.2ms)[0m  [1mSELECT "composers".* FROM "composers"[0m
+Rendered composers/index.html.erb within layouts/composers (10.9ms)
+Completed 200 OK in 60ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-29 12:23:41.810149', '2011-04-29 12:23:41.810149')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-29 12:23:41", updated_at: "2011-04-29 12:23:41">}
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.2ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "composers" ("composer_name", "created_at", "updated_at") VALUES ('Some Composer', '2011-04-29 12:23:41.891011', '2011-04-29 12:23:41.891011')[0m
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>#<Composer id: 1, composer_name: "Some Composer", created_at: "2011-04-29 12:23:41", updated_at: "2011-04-29 12:23:41">}
+  [1m[35mComposer Load (0.1ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 1 LIMIT 1
+  [1m[36mWork Load (0.1ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 1) LIMIT 1[0m
+  [1m[35mWork Load (0.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 1) ORDER BY work_order_id
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+  Processing by ContactController#index as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by EndorsementsController#new as HTML
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+  Processing by ExplanatoryNotesController#index as HTML
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+  Processing by InstrumentTranslationsController#index as HTML
+  [1m[36mInstrumentTranslation Load (0.2ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name >= 'a') ORDER BY instrument_name LIMIT 1[0m
+  [1m[35mInstrumentTranslation Load (0.1ms)[0m  SELECT "instrument_translations".* FROM "instrument_translations" WHERE (instrument_name LIKE 'A%') ORDER BY instrument_name
+  [1m[36mInstrumentTranslation Load (0.3ms)[0m  [1mSELECT "instrument_translations".* FROM "instrument_translations"[0m
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+  Processing by NoPercsController#index as HTML
+  [1m[35mNoPerc Load (0.2ms)[0m  SELECT "no_percs".* FROM "no_percs"
+  [1m[36mNoPerc Load (0.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs" WHERE (composer_name >= 'a') ORDER BY composer_name LIMIT 1[0m
+  [1m[35mNoPerc Load (0.1ms)[0m  SELECT "no_percs".* FROM "no_percs" WHERE (composer_name LIKE 'A%') ORDER BY composer_name
+  [1m[36mNoPerc Load (0.1ms)[0m  [1mSELECT "no_percs".* FROM "no_percs"[0m
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+  Processing by PrivacyPolicyController#index as HTML
+Rendered shared/_privacy_policy.html.erb (0.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  Processing by TermsController#index as HTML
+Rendered shared/_terms.html.erb (1.7ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 95ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  Processing by WorkRequestsController#new as HTML
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "endorsements" ("name", "email", "company", "job_title", "body", "created_at", "updated_at") VALUES ('Example Name', 'example@example.com', NULL, 'Example job title', 'Example message of endorsement', '2011-04-29 12:23:42.602379', '2011-04-29 12:23:42.602379')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "work_requests" ("name", "email", "company", "job_title", "composer_name", "work_name", "date", "created_at", "updated_at") VALUES ('Example Name', 'edcervenka@yahoo.com', NULL, 'Example job title', 'Example composer name', 'Example work name', 'Example date', '2011-04-29 12:23:42.691670', '2011-04-29 12:23:42.691670')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cheque" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#cheque as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_card" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#credit_card as HTML
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/credit_transfer" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#credit_transfer as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#dollars as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dollars_trial" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#dollars_trial as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ed" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#ed as HTML
+Completed 200 OK in 51ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-29 13:23:42 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#euros as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/euros_trial" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#euros_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#pounds as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pounds_trial" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#pounds_trial as HTML
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#home as HTML
+Completed 200 OK in 4ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#about as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#contact as HTML
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#endorsements as HTML
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_trial" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#free_trial as HTML
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#join as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#links as HTML
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/member_orchestras" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#member_orchestras as HTML
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy_policy" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#privacy_policy as HTML
+Rendered shared/_privacy_policy.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscription_rates" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#subscription_rates as HTML
+Rendered welcome/_rates.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2011-04-29 13:23:43 +0100
+  Processing by WelcomeController#terms as HTML
+Rendered shared/_terms.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
