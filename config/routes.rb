@@ -1,5 +1,7 @@
 Perc::Application.routes.draw do 
   
+  get "sessions/new"
+
   get "welcome/home"
   match '/about', :to => 'welcome#about'
   match '/cheque', :to => 'welcome#cheque'
@@ -22,6 +24,10 @@ Perc::Application.routes.draw do
   match '/subscription_rates', :to => 'welcome#subscription_rates'
   match '/terms', :to => 'welcome#terms'
   match '/signup', :to => 'users#new' 
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
+  resources :sessions, :only => [:new, :create, :destroy]
   
   resources :users
   

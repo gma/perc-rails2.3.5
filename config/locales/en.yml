@@ -8,11 +8,11 @@ en:
       about: "About"
       join: "Join"
       contact: "Contact"
-      members_login: "Members Login"  
+      login: "Sign in"  
       composers_index: "Composers Index"
       no_perc: "Works With No Percussion"
       notes: "Explanatory Notes"
-      logout: "Logout"    
+      logout: "Sign out"    
     menu:
       home: "Home"  
       member_orchestras: "Member Orchestras" 
