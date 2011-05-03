@@ -32,6 +32,7 @@
 	</div>
   <div id="MainColumn"> 
    <div id="main">
+	<p><%= flash[:notice] %></p>
 	<p><%= flash.now[:error] %></p>
 	  <%= yield :layout %>
 	</div>
