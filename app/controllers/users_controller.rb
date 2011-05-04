@@ -18,15 +18,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.authenticate(params[:session][:email],
-                             params[:session][:password])
-    if user.nil?
-      flash.now[:error] = "Invalid email/password combination."
-      @title = "Sign in"
-      render 'new'
+    @user = User.new(params[:user])
+    if @user.save
+      redirect_to @user
     else
-      sign_in user
-      redirect_back_or user
+      @title = "Percussion Orchestrations Registration"
+      render 'new'
     end
   end
   

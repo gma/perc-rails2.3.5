@@ -1,31 +1,54 @@
 # == Schema Information
-# Schema version: 20110429003525
+# Schema version: 20110503234641
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  first_name :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer         not null, primary key
+#  first_name         :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  admin              :boolean
+#  last_name          :string(255)
+#  organisation_name  :string(255)
+#  job_title          :string(255)
+#  address            :text
+#  zip                :string(255)
+#  country            :string(255)
+#  membership_type    :string(255)
+#  currency           :string(255)
+#  language           :string(255)
+#  trial_member       :boolean
+#  payment_type       :string(255)
+#  trial_used         :boolean
+#  years_paid         :string(255)
+#  cancelled          :boolean
+#  active_member      :boolean
 #
 
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :first_name, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :address, :zip, :country, :email, :password, :password_confirmation
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   validates :first_name, :presence => true,
                          :length   => { :maximum => 50 }
+  validates :last_name,  :presence => true,
+                         :length   => { :maximum => 50 } 
+  validates :address,    :presence => true 
+  validates :zip,        :presence => true 
+  validates :country,    :presence => true                                            
   validates :email,      :presence => true,
                          :format   => { :with => email_regex },
                          :uniqueness => { :case_sensitive => false }
                          # Automatically create the virtual attribute 'password_confirmation'.
-  validates :password, :presence     => true,
-                       :confirmation => true,
-                       :length       => { :within => 6..40 }
+  validates :password,   :presence     => true,
+                         :confirmation => true,
+                         :length       => { :within => 6..40 }
                        
   before_save :encrypt_password
   

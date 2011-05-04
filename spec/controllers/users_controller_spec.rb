@@ -17,8 +17,8 @@ describe UsersController do
 
       before(:each) do
         @user = test_sign_in(Factory(:user))
-        second = Factory(:user, :first_name => "Bob", :email => "another@example.com")
-        third  = Factory(:user, :first_name => "Ben", :email => "another@example.net")
+        second = Factory(:user, :first_name => "Bob", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "another@example.com")
+        third  = Factory(:user, :first_name => "Ben", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "another@example.net")
 
         @users = [@user, second, third]
       end
@@ -67,6 +67,26 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector("h1", :content => @user.first_name)
     end
+    
+    it "should include the user's last name" do
+      get :show, :id => @user
+      response.should have_selector("h1", :content => @user.last_name)
+    end
+    
+    it "should include the user's address" do
+      get :show, :id => @user
+      response.should have_selector("p", :content => @user.address)
+    end
+    
+    it "should include the user's zip code" do
+      get :show, :id => @user
+      response.should have_selector("p", :content => @user.zip)
+    end
+    
+    it "should include the user's country" do
+      get :show, :id => @user
+      response.should have_selector("p", :content => @user.country)
+    end
         
   end        
 
@@ -85,6 +105,26 @@ describe UsersController do
       get :new
       response.should have_selector("input[name='user[first_name]'][type='text']")
     end  
+    
+    it "should have a last name field" do
+      get :new
+      response.should have_selector("input[name='user[last_name]'][type='text']")
+    end
+    
+    it "should have an address field" do
+      get :new
+      response.should have_selector("input[name='user[address]'][type='text_area']")
+    end
+    
+    it "should have a zip field" do
+      get :new
+      response.should have_selector("input[name='user[zip]'][type='text']")
+    end
+    
+    it "should have a country field" do
+      get :new
+      response.should have_selector("input[name='user[country]'][type='text']")
+    end
     
     it "should have an email field" do
       get :new
@@ -108,7 +148,7 @@ describe UsersController do
     describe "failure" do
       
       before(:each) do
-        @attr = { :first_name => "", :email => "", :password => "", 
+        @attr = { :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :email => "", :password => "", 
                   :password_confirmation => "" }
       end
       
@@ -132,7 +172,7 @@ describe UsersController do
     describe "success" do
       
       before(:each) do
-        @attr = { :first_name => "New User", :email => "user@example.com",
+        @attr = { :first_name => "New User", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "user@example.com",
                   :password => "foobar", :password_confirmation => "foobar" }
       end
       
@@ -177,7 +217,7 @@ describe UsersController do
     describe "failure" do
     
       before(:each) do
-        @attr = { :email => "", :first_name => "", :password => "",
+        @attr = { :email => "", :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :password => "",
                   :password_confirmation => "" }
       end
       
@@ -195,7 +235,7 @@ describe UsersController do
     describe "success" do
 
       before(:each) do
-        @attr = { :first_name => "New Name", :email => "user@example.org",
+        @attr = { :first_name => "New Name", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "user@example.org",
                   :password => "barbaz", :password_confirmation => "barbaz" }
       end
 
@@ -203,6 +243,10 @@ describe UsersController do
         put :update, :id => @user, :user => @attr
         @user.reload
         @user.first_name.should  == @attr[:first_name]
+        @user.last_name.should  == @attr[:last_name]
+        @user.address.should  == @attr[:address] 
+        @user.zip.should  == @attr[:zip]
+        @user.country.should  == @attr[:country]  
         @user.email.should == @attr[:email]
       end
 

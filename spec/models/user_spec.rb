@@ -5,6 +5,10 @@ describe User do
   before(:each) do
     @attr = { 
       :first_name => "Example User", 
+      :last_name => "Surname",
+      :address => "Some address",
+      :zip => "Some postcode",
+      :country => "Some country",
       :email => "user@example.com",
       :password => "foobar",
       :password_confirmation => "foobar"
@@ -20,6 +24,26 @@ describe User do
     no_first_name_user.should_not be_valid
   end
   
+  it "should require a last name" do
+    no_last_name_user = User.new(@attr.merge(:last_name => ""))
+    no_last_name_user.should_not be_valid
+  end
+  
+  it "should require an address" do
+    no_address_user = User.new(@attr.merge(:address => ""))
+    no_address_user.should_not be_valid
+  end
+  
+  it "should require a zip code" do
+    no_zip_user = User.new(@attr.merge(:zip => ""))
+    no_zip_user.should_not be_valid
+  end
+  
+  it "should require a country" do
+    no_country_user = User.new(@attr.merge(:country => ""))
+    no_country_user.should_not be_valid
+  end
+  
   it "should require an email address" do
     no_email_user = User.new(@attr.merge(:email => ""))
     no_email_user.should_not be_valid
@@ -30,6 +54,12 @@ describe User do
     long_first_name_user = User.new(@attr.merge(:first_name => long_first_name))
     long_first_name_user.should_not be_valid
   end 
+  
+  it "should reject last names that are too long" do
+    long_last_name = "a" * 51
+    long_last_name_user = User.new(@attr.merge(:last_name => long_last_name))
+    long_last_name_user.should_not be_valid
+  end
   
   it "should accept valid email addresses" do
     addresses = %w[user@foo.com THE_USER@foo.bar.org first.last@foo.jp]
