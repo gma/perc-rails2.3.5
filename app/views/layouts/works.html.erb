@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Percussion Orchestrations</title>
@@ -18,18 +17,7 @@
 	<tr><td id="imga"><img src="../images/new_banner_left.jpg"></td><td id="imgb"><img src="../images/new_banner_center.jpg"></td><td id="imgc"><img src="../images/new_banner_right.jpg"></td></tr>
 	</table>
   </div>	
-  	<div id="MainNav">
-		<ul>
-			
-			<li><%= link_to I18n.t('layout.mainnav.composers_index'), composers_path(:letter => 'A') %></li>
-			<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
-			<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
-			<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
-			<li><%= link_to I18n.t('layout.mainnav.logout'), signout_path, :method => :delete %></li>
-			
-			
-		</ul>
-	</div>
+  	<%= render 'layouts/mainnav' %>
   <div id="MainColumn"> 
    <div id="main">
 	  <%= yield :layout %>
@@ -41,13 +29,7 @@
 </div>
 <!--  Close Container div  -->
 <div id="FooterContainer">
-	<div id="Footer">
-		<ul>
-		<li><%= link_to 'Terms & Conditions', terms_path %></li>
-		<li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
-		<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
-		</ul>
-	</div>
+<%= render 'layouts/footer' %>
 <!--  Close Footer div  -->
 </div>
 <%= debug(params) if Rails.env.development? %>

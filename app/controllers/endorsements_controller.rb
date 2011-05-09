@@ -1,5 +1,5 @@
 class EndorsementsController < ApplicationController
-  layout "composers"
+  
   # GET /endorsements
   # GET /endorsements.xml
   

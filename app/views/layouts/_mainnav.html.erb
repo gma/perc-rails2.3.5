@@ -1,0 +1,27 @@
+<div id="MainNav">
+	<ul>
+		<% if signed_in? %>
+		   <% if current_user.active_member? %>
+		     
+		     <li><%= link_to I18n.t('layout.mainnav.composers_index'), composers_path(:letter => 'A') %></li>
+		     <li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
+		     <li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
+		     <li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+		   <% else %>
+		     <li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
+		     <li><%= link_to I18n.t('layout.mainnav.about'), about_path %></li>
+		     <li><%= link_to I18n.t('layout.mainnav.join'), join_path  %></li>
+		     <li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+		  <% end %>
+		<% end %>			
+		<% if signed_in? %>
+		  <li><%= link_to I18n.t('layout.mainnav.logout'), signout_path  %></li>
+		<% else %>
+		  <li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
+		  <li><%= link_to I18n.t('layout.mainnav.about'), about_path %></li>
+		  <li><%= link_to I18n.t('layout.mainnav.join'), join_path  %></li>
+		  <li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
+		  <li><%= link_to I18n.t('layout.mainnav.login'), signin_path  %></li> 
+		<% end %>			
+	</ul>
+</div>

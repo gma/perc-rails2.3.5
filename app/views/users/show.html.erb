@@ -4,12 +4,16 @@
 </h1>
 <p><%= @user.organisation_name %></p>
 <p><%= @user.job_title %></p>
+Address:
 <p><%= @user.address %></p>
+Zip:
 <p><%= @user.zip %></p>
+Country:
 <p><%= @user.country %></p>
+Phone no:
 <p><%= @user.phone_number %></p>
 <p>Active member: <%= @user.active_member %></p>
 <p>Admin: <%= @user.admin %></p>
 
 
-<%= link_to "Edit user", edit_user_path %>
+<%= link_to "Change my details", edit_user_path %>

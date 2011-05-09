@@ -1,7 +1,7 @@
 require "paginate_alphabetically"
 
 class NoPercsController < ApplicationController
-  layout "composers"
+  
   # GET /no_percs
   # GET /no_percs.xml
   def index

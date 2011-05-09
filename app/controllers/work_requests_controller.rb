@@ -1,5 +1,5 @@
 class WorkRequestsController < ApplicationController
-  layout "composers"
+  
   # GET /work_requests
   # GET /work_requests.xml
   def index

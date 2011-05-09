@@ -13,24 +13,19 @@
 <div id="Container"> 
   <div id="Header"></div>
 
-  	<div id="MainNav">
-		<ul>
-			<li><%= link_to I18n.t('layout.mainnav.home'), root_path -%></li>
-			<li><%= link_to I18n.t('layout.mainnav.about'), about_path %></li>
-			<li><%= link_to I18n.t('layout.mainnav.join'), join_path  %></li>
-			<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
-			<% if signed_in? %>
-			<li><%= link_to I18n.t('layout.mainnav.logout'), signout_path, :method => :delete %></li>
-			<li><%= link_to "Members Home", composers_path(:letter => 'A') %></li>
-			<% else %>
-			<li><%= link_to I18n.t('layout.mainnav.login'), signin_path  %></li>
-			<% end %>	
-		</ul>
-	</div>
+<%= render 'layouts/mainnav' %>
+	
   <div id="MainColumn"> 
    <div id="main">
+	<% if flash[:message] %>
+	<h1><%= flash[:message] %></h1>
+	<% end %>
+	<% if flash[:notice] %>
 	<p><%= flash[:notice] %></p>
+	<% end %>
+	<% if flash[:error] %>
 	<p><%= flash.now[:error] %></p>
+	<% end %>
 	
 	  <%= yield :layout %>
 	</div>
@@ -41,13 +36,49 @@
  		  <p class="HomeNavigation"><%= link_to I18n.t('layout.menu.home'), root_path -%></p><br /><br />
 
 		<p class="MainNavigation">
-		  	<%= link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
-			<%= link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
-			<%= link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
-			<%= link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
-			<%= link_to I18n.t('layout.menu.links'), links_path %>
-		    
-		</p>
+			<% if signed_in? %>
+			   <% if current_user.active_member? %>
+			   <%= link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path  %>
+			   <%= link_to I18n.t('layout.menu.request'), new_work_request_path %>
+		   	   <%= link_to I18n.t('layout.menu.add'), '#' %>
+		       </p><br /><br />
+		       <p class="MainNavigation">
+			   <%= link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path %>
+			   <%= link_to I18n.t('layout.menu.searches'), '#' %>
+			   <%= link_to I18n.t('layout.menu.gig'), '#' %>
+			   <%= link_to I18n.t('layout.menu.schedule'), '#' %>
+			   <%= link_to I18n.t('layout.menu.planner'), '#' %>
+			   
+			   </p>
+			   
+			  <% else %>
+			  <%= link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
+			  <%= link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
+			  <%= link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
+			  <%= link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
+			  <%= link_to I18n.t('layout.menu.links'), links_path %>
+			  <% end %>
+			  <p class="MainNavigation">
+				<br /><br />
+			   <%= link_to I18n.t('layout.menu.account'), '#' %>	 
+			   </p>
+			<% end %>
+			
+			<% if !signed_in? %>
+			   
+			  <%= link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
+			  <%= link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
+			  <%= link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
+			  <%= link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
+			  <%= link_to I18n.t('layout.menu.links'), links_path %>
+			</p>
+			 <% end %>
+			 
+			
+		
+			 
+			
+		
 		
 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
 		  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
@@ -62,11 +93,7 @@
   <!--  Close LeftBar div  -->
 </div>
 <!--  Close Container div  -->
-<div id="Footer"><ul>
-<li><%= link_to 'Terms & Conditions', terms_path %></li>
-<li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
-<li>&copy; Copyright 2004-2011 Ed Cervenka</li>
-</ul></div>
+<%= render 'layouts/footer' %>
 <!--  Close FooterBanner div  -->
 <%= debug(params) if Rails.env.development? %>
 </body>

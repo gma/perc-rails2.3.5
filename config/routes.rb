@@ -41,12 +41,6 @@ Perc::Application.routes.draw do
 
   resources :instrument_translations
 
-  resources :terms
-
-  resources :privacy_policy
-
-  resources :contact
-
   resources :composers
 
   resources :works
