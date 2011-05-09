@@ -6,6 +6,7 @@ class AddVariousToUsers < ActiveRecord::Migration
     add_column :users, :address, :text
     add_column :users, :zip, :string
     add_column :users, :country, :string
+    add_column :users, :phone_no, :string
     add_column :users, :membership_type, :string
     add_column :users, :currency, :string
     add_column :users, :language, :string
@@ -26,6 +27,7 @@ class AddVariousToUsers < ActiveRecord::Migration
     remove_column :users, :currency
     remove_column :users, :membership_type
     remove_column :users, :country
+    remove_column :users, :phone_no, :string
     remove_column :users, :zip
     remove_column :users, :address
     remove_column :users, :job_title

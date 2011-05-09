@@ -20,7 +20,7 @@
 				<li><%= link_to I18n.t('layout.mainnav.no_perc'), no_percs_path %></li>
 				<li><%= link_to I18n.t('layout.mainnav.notes'), explanatory_notes_path %></li>
 				<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
-				<li><%= link_to I18n.t('layout.mainnav.logout'), '#' %></li>
+				<li><%= link_to I18n.t('layout.mainnav.logout'), signout_path, :method => :delete %></li>
 		</ul>
 	</div>
   <div id="MainColumn"> 

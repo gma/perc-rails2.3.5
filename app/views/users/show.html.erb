@@ -1,10 +1,15 @@
 <h1>
-  <%= @user.first_name %>
+<%= @user.first_name %>
 <%= @user.last_name %>
 </h1>
-
+<p><%= @user.organisation_name %></p>
+<p><%= @user.job_title %></p>
 <p><%= @user.address %></p>
 <p><%= @user.zip %></p>
 <p><%= @user.country %></p>
+<p><%= @user.phone_number %></p>
+<p>Active member: <%= @user.active_member %></p>
+<p>Admin: <%= @user.admin %></p>
 
 
+<%= link_to "Edit user", edit_user_path %>

@@ -17,6 +17,7 @@
 #  address            :text
 #  zip                :string(255)
 #  country            :string(255)
+#  phone_no           :string(255)
 #  membership_type    :string(255)
 #  currency           :string(255)
 #  language           :string(255)
@@ -31,24 +32,25 @@
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :first_name, :last_name, :address, :zip, :country, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :organisation_name, :job_title, :address, :zip, :country, :phone_number, :email, :password, :password_confirmation, :active_member, :admin
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
-  validates :first_name, :presence => true,
-                         :length   => { :maximum => 50 }
-  validates :last_name,  :presence => true,
-                         :length   => { :maximum => 50 } 
-  validates :address,    :presence => true 
-  validates :zip,        :presence => true 
-  validates :country,    :presence => true                                            
-  validates :email,      :presence => true,
-                         :format   => { :with => email_regex },
-                         :uniqueness => { :case_sensitive => false }
-                         # Automatically create the virtual attribute 'password_confirmation'.
-  validates :password,   :presence     => true,
-                         :confirmation => true,
-                         :length       => { :within => 6..40 }
+  validates :first_name,   :presence => true,
+                           :length   => { :maximum => 50 }
+  validates :last_name,    :presence => true,
+                           :length   => { :maximum => 50 }                       
+  validates :address,      :presence => true                       
+  validates :zip,          :presence => true 
+  validates :country,      :presence => true  
+  validates :phone_number, :presence => true                                             
+  validates :email,        :presence => true,
+                           :format   => { :with => email_regex },
+                           :uniqueness => { :case_sensitive => false }
+                           # Automatically create the virtual attribute 'password_confirmation'.
+  validates :password,     :presence     => true,
+                           :confirmation => true,
+                           :length       => { :within => 6..40 }
                        
   before_save :encrypt_password
   

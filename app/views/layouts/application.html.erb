@@ -20,14 +20,11 @@
 			<li><%= link_to I18n.t('layout.mainnav.join'), join_path  %></li>
 			<li><%= link_to I18n.t('layout.mainnav.contact'), contact_path %></li>
 			<% if signed_in? %>
-			<li><%= link_to I18n.t('layout.mainnav.logout'), signout_path, :method => :delete %>  %></li>
+			<li><%= link_to I18n.t('layout.mainnav.logout'), signout_path, :method => :delete %></li>
+			<li><%= link_to "Members Home", composers_path(:letter => 'A') %></li>
 			<% else %>
 			<li><%= link_to I18n.t('layout.mainnav.login'), signin_path  %></li>
-			<% end %>
-			<% if signed_in? %>
-			<li><%= link_to "Members Area", current_user %></li>
-			<% end %>
-			
+			<% end %>	
 		</ul>
 	</div>
   <div id="MainColumn"> 

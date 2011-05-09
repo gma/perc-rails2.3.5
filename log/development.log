@@ -7271,3 +7271,1834 @@ Migrating to AddSaltToUsers (20110429113951)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+Migrating to AddPasswordToUsers (20110429112149)
+Migrating to AddSaltToUsers (20110429113951)
+Migrating to AddAdminToUsers (20110503191834)
+Migrating to AddVariousToUsers (20110503232403)
+Migrating to AddActiveMemberToUsers (20110503234641)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("composers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("endorsements")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("instrument_translations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('no_percs_index')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("unicode_test")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddActiveMemberToUsers (20110503234641)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean, "active_member" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.6ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110503234641'[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddVariousToUsers (20110503232403)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.6ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255), "organisation_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean, "last_name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110503232403'[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddAdminToUsers (20110503191834)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.6ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110503191834'[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+Migrating to AddPasswordToUsers (20110429112149)
+Migrating to AddSaltToUsers (20110429113951)
+Migrating to AddAdminToUsers (20110503191834)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110503191834')
+Migrating to AddVariousToUsers (20110503232403)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "users" ADD "last_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "organisation_name" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "job_title" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "address" text
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "zip" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "country" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "phone_no" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "membership_type" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "currency" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "language" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "trial_member" boolean[0m
+  [1m[35mSQL (1.1ms)[0m  ALTER TABLE "users" ADD "payment_type" varchar(255)
+  [1m[36mSQL (0.3ms)[0m  [1mALTER TABLE "users" ADD "trial_used" boolean[0m
+  [1m[35mSQL (0.3ms)[0m  ALTER TABLE "users" ADD "years_paid" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "cancelled" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110503232403')
+Migrating to AddActiveMemberToUsers (20110503234641)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "active_member" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110503234641')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("composers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("endorsements")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("instrument_translations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('no_percs_index')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("unicode_test")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+
+
+Started GET "/users/112/edit" for 127.0.0.1 at 2011-05-04 22:54:00 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered users/edit.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 154ms (Views: 64.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/112" for 127.0.0.1 at 2011-05-04 22:54:06 +0100
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "user"=>{"first_name"=>"Edward", "last_name"=>"Cervenka", "organisation_name"=>"", "address"=>"30 Wyverne Rd\r\nChorlton\r\nManchester", "zip"=>"M21 0ZN", "country"=>"United Kingdon", "phone_no"=>"", "email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"1", "admin"=>"1"}, "commit"=>"Update", "id"=>"112"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('edcervenka@yahoo.com')) AND ("users".id <> 112) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (4.8ms)
+Rendered users/edit.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 169ms (Views: 25.8ms | ActiveRecord: 1.7ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+Migrating to AddPasswordToUsers (20110429112149)
+Migrating to AddSaltToUsers (20110429113951)
+Migrating to AddAdminToUsers (20110503191834)
+Migrating to AddVariousToUsers (20110503232403)
+Migrating to AddActiveMemberToUsers (20110503234641)
+Migrating to RemovePhoneNoFromUsers (20110504215656)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (32.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f', "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "phone_no" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean, "active_member" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35mSQL (0.6ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f', "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean, "active_member" boolean DEFAULT 'f') [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110504215656')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("composers")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("endorsements")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("instrument_translations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("no_percs")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('no_percs_index')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("unicode_test")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("work_requests")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("workdetails")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('works_index')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComposers (20110217192717)
+Migrating to CreateWorks (20110217195324)
+Migrating to CreateWorkdetails (20110217203927)
+Migrating to CreateInstrumentTranslations (20110221145455)
+Migrating to CreateNoPercs (20110221162621)
+Migrating to CreateEndorsements (20110409132326)
+Migrating to CreateWorkRequests (20110409193306)
+Migrating to CreateUsers (20110429003525)
+Migrating to AddEmailUniquenessIndex (20110429010150)
+Migrating to AddPasswordToUsers (20110429112149)
+Migrating to AddSaltToUsers (20110429113951)
+Migrating to AddAdminToUsers (20110503191834)
+Migrating to AddVariousToUsers (20110503232403)
+Migrating to AddActiveMemberToUsers (20110503234641)
+Migrating to RemovePhoneNoFromUsers (20110504215656)
+Migrating to AddPhoneNumberToUsers (20110504215753)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "phone_number" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110504215753')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("composers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("endorsements")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("instrument_translations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('no_percs_index')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("unicode_test")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("work_requests")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("workdetails")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("works")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('works_index')[0m
+  [1m[36mSQL (19.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "composers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.1ms)[0m  CREATE TABLE "endorsements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE TABLE "instrument_translations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "instrument_name" varchar(255), "description" varchar(255), "french" varchar(255), "german" varchar(255), "spanish" varchar(255), "italian" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "no_percs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_name" varchar(255), "work_name" varchar(255), "work_count" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("no_percs")[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE INDEX "no_percs_index" ON "no_percs" ("composer_name", "work_name")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "unicode_test" ("unicode1" varchar(25), "unicode2" varchar(25)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "admin" boolean DEFAULT 'f', "last_name" varchar(255), "organisation_name" varchar(255), "job_title" varchar(255), "address" text, "zip" varchar(255), "country" varchar(255), "membership_type" varchar(255), "currency" varchar(255), "language" varchar(255), "trial_member" boolean, "payment_type" varchar(255), "trial_used" boolean, "years_paid" varchar(255), "cancelled" boolean, "active_member" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.9ms)[0m  CREATE TABLE "work_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "company" varchar(255), "job_title" varchar(255), "composer_name" varchar(255), "work_name" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.9ms)[0m  CREATE TABLE "workdetails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "work_id" integer, "movement_id" integer, "movement_name" varchar(255), "timpani" varchar(255), "timpani_2" varchar(255), "timpani_3" varchar(255), "timpani_4" varchar(255), "timpani_5" varchar(255), "timpani_6" varchar(255), "timpani_7" varchar(255), "timpani_8" varchar(255), "timpani_9" varchar(255), "timpani_10" varchar(255), "percussion_1" varchar(255), "percussion_2" varchar(255), "percussion_3" varchar(255), "percussion_4" varchar(255), "percussion_5" varchar(255), "percussion_6" varchar(255), "percussion_7" varchar(255), "percussion_8" varchar(255), "percussion_9" varchar(255), "percussion_10" varchar(255), "percussion_11" varchar(255), "percussion_12" varchar(255), "percussion_13" varchar(255), "percussion_14" varchar(255), "percussion_15" varchar(255), "percussion_16" varchar(255), "percussion_17" varchar(255), "percussion_18" varchar(255), "percussion_19" varchar(255), "percussion_20" varchar(255), "cimbalom" varchar(255), "attachment_exists" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "composer_id" integer, "work_name" varchar(255), "work_order_id" integer, "arr_orch" varchar(255), "showarrorch" boolean, "opus_no" varchar(255), "notes" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("works")[0m
+  [1m[35mSQL (2.1ms)[0m  CREATE INDEX "works_index" ON "works" ("composer_id", "work_order_id", "work_name")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110504215753')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217192717')
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110217195324')[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110217203927')
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110221145455')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110221162621')
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110409132326')[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110409193306')
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429003525')[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110429010150')
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110429112149')[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110429113951')
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110503191834')[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110503232403')
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110503234641')[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110504215656')
+
+
+Started POST "/users/112" for 127.0.0.1 at 2011-05-04 23:17:24 +0100
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "user"=>{"first_name"=>"Edward", "last_name"=>"Cervenka", "organisation_name"=>"", "address"=>"30 Wyverne Rd\r\nChorlton\r\nManchester", "zip"=>"M21 0ZN", "country"=>"United Kingdon", "phone_no"=>"", "email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"1", "admin"=>"1"}, "commit"=>"Update", "id"=>"112"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+WARNING: Can't mass-assign protected attributes: phone_no
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('edcervenka@yahoo.com')) AND ("users".id <> 112) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (2.1ms)
+Rendered users/edit.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 150ms (Views: 60.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/112" for 127.0.0.1 at 2011-05-04 23:17:35 +0100
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "user"=>{"first_name"=>"Edward", "last_name"=>"Cervenka", "organisation_name"=>"", "job_title"=>"", "address"=>"30 Wyverne Rd\r\nChorlton\r\nManchester", "zip"=>"M21 0ZN", "country"=>"United Kingdon", "phone_number"=>"07976 710175", "email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"1", "admin"=>"1"}, "commit"=>"Update", "id"=>"112"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('edcervenka@yahoo.com')) AND ("users".id <> 112) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "job_title" = '', "phone_number" = '07976 710175', "updated_at" = '2011-05-04 22:17:35.850220' WHERE "users"."id" = 112
+Redirected to http://localhost:3000/users/112
+Completed 302 Found in 400ms
+
+
+Started GET "/users/112" for 127.0.0.1 at 2011-05-04 23:17:36 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 90ms (Views: 11.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-05-04 23:43:20 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (79.9ms)
+Completed 200 OK in 105ms (Views: 83.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-05-04 23:44:35 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+Rendered users/new.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 140ms (Views: 79.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-04 23:45:19 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "user"=>{"first_name"=>"Active Member", "last_name"=>"Active Member", "organisation_name"=>"", "job_title"=>"", "address"=>"Active Member", "zip"=>"Active Member", "country"=>"Active Member", "phone_number"=>"Active Member", "email"=>"active@percorch.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"1", "admin"=>"0"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('active@percorch.com')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("first_name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin", "last_name", "organisation_name", "job_title", "address", "zip", "country", "membership_type", "currency", "language", "trial_member", "payment_type", "trial_used", "years_paid", "cancelled", "active_member", "phone_number") VALUES ('Active Member', 'active@percorch.com', '2011-05-04 22:45:19.797513', '2011-05-04 22:45:19.797513', '0d7855357c5463ee77a9832da4a81e4ff807573309e32ad2c192b492d491d33d', 'cbb47b39eddf4fd6e3efeee7ab13298fd5b6e73ac9c34f40fd66c8cdaa729e17', 'f', 'Active Member', '', '', 'Active Member', 'Active Member', 'Active Member', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 't', 'Active Member')
+Redirected to http://localhost:3000/users/113
+Completed 302 Found in 95ms
+
+
+Started GET "/users/113" for 127.0.0.1 at 2011-05-04 23:45:20 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 89ms (Views: 11.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/113/edit" for 127.0.0.1 at 2011-05-04 23:45:30 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.5ms)
+Rendered users/edit.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 117ms (Views: 23.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2011-05-04 23:45:41 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:45:41 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (93.4ms)
+Completed 200 OK in 221ms (Views: 219.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-04 23:46:02 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:46:02 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (76.9ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:46:08 +0100
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 84ms (Views: 83.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-05-04 23:46:12 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered users/new.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 136ms (Views: 79.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-04 23:47:01 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "user"=>{"first_name"=>"Non active member", "last_name"=>"Non active member", "organisation_name"=>"Non active member", "job_title"=>"Non active member", "address"=>"Non active member", "zip"=>"Non active member", "country"=>"Non active member", "phone_number"=>"Non active member", "email"=>"nonactive@percorch.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"0", "admin"=>"0"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('nonactive@percorch.com')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("first_name", "email", "created_at", "updated_at", "encrypted_password", "salt", "admin", "last_name", "organisation_name", "job_title", "address", "zip", "country", "membership_type", "currency", "language", "trial_member", "payment_type", "trial_used", "years_paid", "cancelled", "active_member", "phone_number") VALUES ('Non active member', 'nonactive@percorch.com', '2011-05-04 22:47:01.136274', '2011-05-04 22:47:01.136274', 'b1ecd63b06f340d6cc53b21ca9795a4093cc8e74b858db11ec3c5af1b903264e', '389da05f8c733d05343f79ba07335c91cbeef7afcdc257951096a5ce1cc914e6', 'f', 'Non active member', 'Non active member', 'Non active member', 'Non active member', 'Non active member', 'Non active member', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'f', 'Non active member')
+Redirected to http://localhost:3000/users/114
+Completed 302 Found in 96ms
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:47:01 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 100ms (Views: 54.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/114/edit" for 127.0.0.1 at 2011-05-04 23:47:08 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered users/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 117ms (Views: 26.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:47:23 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 92ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-04 23:49:28 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:49:29 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 84ms (Views: 83.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:49:34 +0100
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:50:00 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"nonactivemember@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'nonactivemember@percorch.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 41ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:50:19 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"activemember@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'activemember@percorch.com' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 41ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:50:43 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"admin@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@percorch.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 41ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:51:17 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 92ms (Views: 11.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/114/edit" for 127.0.0.1 at 2011-05-04 23:51:22 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 66ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:51:23 +0100
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/114/edit" for 127.0.0.1 at 2011-05-04 23:51:26 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"114"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 65ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:51:26 +0100
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:51:27 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 89ms (Views: 11.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/114/edit" for 127.0.0.1 at 2011-05-04 23:51:31 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"114"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 68ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:51:31 +0100
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:53:17 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"active@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'active@percorch.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/114/edit
+Completed 302 Found in 82ms
+
+
+Started GET "/users/114/edit" for 127.0.0.1 at 2011-05-04 23:53:17 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"114"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+  [1m[36mUser Load (38.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:53:17 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 41.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:53:53 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'edcervenka@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/112
+Completed 302 Found in 82ms
+
+
+Started GET "/users/112" for 127.0.0.1 at 2011-05-04 23:53:53 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 92ms (Views: 11.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/112/edit" for 127.0.0.1 at 2011-05-04 23:54:06 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"112"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered users/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 107ms (Views: 23.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-04 23:54:13 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:54:13 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered welcome/home.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:54:15 +0100
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:54:32 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"nonactive@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'nonactive@percorch.com' LIMIT 1
+Redirected to http://localhost:3000/users/114
+Completed 302 Found in 82ms
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:54:32 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 92ms (Views: 11.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-04 23:54:39 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:54:39 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (130.2ms)
+Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/114" for 127.0.0.1 at 2011-05-04 23:55:12 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 114 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 94ms (Views: 11.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-04 23:55:34 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:55:34 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-04 23:55:38 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 65ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:55:38 +0100
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:55:58 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'edcervenka@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users
+Completed 302 Found in 79ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-04 23:55:58 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mUser Load (38.4ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 132ms (Views: 11.9ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-04 23:56:05 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:56:05 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-04 23:56:08 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 66ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-04 23:56:08 +0100
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-04 23:56:24 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"active@percorch.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (36.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'active@percorch.com' LIMIT 1
+Redirected to http://localhost:3000/users
+Completed 302 Found in 80ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-04 23:56:24 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:56:24 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (128.4ms)
+Completed 200 OK in 134ms (Views: 131.8ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/endorsements" for 127.0.0.1 at 2011-05-04 23:56:54 +0100
+  Processing by WelcomeController#endorsements as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Rendered welcome/endorsements.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 101ms (Views: 99.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-04 23:57:04 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (95.6ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:29:24 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Rendered welcome/home.html.erb within layouts/application (177.6ms)
+Completed 200 OK in 183ms (Views: 180.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:30:59 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 136ms (Views: 133.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:31:35 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Rendered welcome/home.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 117ms (Views: 114.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:33:19 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (139.6ms)
+Completed 200 OK in 173ms (Views: 170.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:33:36 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+Rendered welcome/home.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:34:06 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/113" for 127.0.0.1 at 2011-05-05 00:34:16 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 92ms (Views: 11.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/113" for 127.0.0.1 at 2011-05-05 00:35:19 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 113 LIMIT 1
+Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 93ms (Views: 11.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:35:22 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.6ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (88.5ms)
+Completed 200 OK in 121ms (Views: 84.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/composers/3" for 127.0.0.1 at 2011-05-05 00:35:45 +0100
+  Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComposer Load (0.1ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1[0m
+  [1m[35mWork Load (23.1ms)[0m  SELECT "works".* FROM "works" WHERE ("works".composer_id = 3) LIMIT 1
+  [1m[36mWork Load (0.6ms)[0m  [1mSELECT "works".* FROM "works" WHERE ("works".composer_id = 3) ORDER BY work_order_id[0m
+Rendered composers/show.html.erb within layouts/composers (57.9ms)
+Completed 200 OK in 117ms (Views: 60.8ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/works/3" for 127.0.0.1 at 2011-05-05 00:35:47 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mWork Load (0.4ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (25.8ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (168.4ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (267.4ms)
+Completed 200 OK in 383ms (Views: 116.5ms | ActiveRecord: 194.9ms)
+
+
+Started GET "/works/3" for 127.0.0.1 at 2011-05-05 00:37:10 +0100
+  Processing by WorksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mWork Load (0.5ms)[0m  SELECT "works".* FROM "works" WHERE "works"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (0.5ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) LIMIT 1[0m
+  [1m[35mComposer Load (0.2ms)[0m  SELECT "composers".* FROM "composers" WHERE "composers"."id" = 3 LIMIT 1
+  [1m[36mWorkdetail Load (13.0ms)[0m  [1mSELECT "workdetails".* FROM "workdetails" WHERE ("workdetails".work_id = 3) ORDER BY movement_id[0m
+Rendered works/show.html.erb within layouts/works (163.6ms)
+Completed 200 OK in 242ms (Views: 153.4ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-05 00:37:13 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-05 00:37:13 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (84.5ms)
+Completed 200 OK in 116ms (Views: 114.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-05 00:37:21 +0100
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-05 00:37:36 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2OGUbTWpxZS4n7XQNOB5dFJgstrmzhhWRkg5hsDajs=", "session"=>{"email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'edcervenka@yahoo.com' LIMIT 1
+Redirected to http://localhost:3000/users/112
+Completed 302 Found in 83ms
+
+
+Started GET "/users/112" for 127.0.0.1 at 2011-05-05 00:37:36 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 93ms (Views: 11.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:37:38 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (42.1ms)
+Completed 200 OK in 58ms (Views: 38.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:40:00 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.5ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (107.6ms)
+Completed   in 173ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x0000010427fe20>:0x00000104277388>):
+    55: 	
+    56: 
+    57: 		<p class="MainNavigation">
+    58: 		  <%= link_to I18n.t('layout.menu.account'), user %>	 
+    59: 		</p>
+    60: 		
+    61: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+  app/views/layouts/composers.html.erb:58:in `_app_views_layouts_composers_html_erb__2382732349086834370_2182320580__1159155075512443827'
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:40:19 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.8ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (45.6ms)
+Completed   in 61ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}):
+    55: 	
+    56: 
+    57: 		<p class="MainNavigation">
+    58: 		  <%= link_to I18n.t('layout.menu.account'), user_path %>	 
+    59: 		</p>
+    60: 		
+    61: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+  app/views/layouts/composers.html.erb:58:in `_app_views_layouts_composers_html_erb__2382732349086834370_2181505460__1159155075512443827'
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.5ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.5ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:42:31 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.4ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.4ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (48.3ms)
+Completed   in 65ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}):
+    55: 	
+    56: 
+    57: 		<p class="MainNavigation">
+    58: 		  <%= link_to I18n.t('layout.menu.account'), user_path(params[:id]) %>	 
+    59: 		</p>
+    60: 		
+    61: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+  app/views/layouts/composers.html.erb:58:in `_app_views_layouts_composers_html_erb__2382732349086834370_2181897640__1159155075512443827'
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:44:51 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (6.9ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (65.6ms)
+Completed   in 81ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000104263860>:0x0000010425bfe8>):
+    55: 	
+    56: 
+    57: 		<p class="MainNavigation">
+    58: 		  <%= link_to I18n.t('layout.menu.account'), user_path(user) %>	 
+    59: 		</p>
+    60: 		
+    61: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+  app/views/layouts/composers.html.erb:58:in `_app_views_layouts_composers_html_erb__2382732349086834370_2182265080__1159155075512443827'
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:46:27 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.1ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (42.4ms)
+Completed   in 58ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}):
+    55: 	
+    56: 
+    57: 		<p class="MainNavigation">
+    58: 		  <%= link_to I18n.t('layout.menu.account'), user_path(@user) %>	 
+    59: 		</p>
+    60: 		
+    61: 		<%= form_tag ' ', :method => 'GET', :class => 'locale' do %>
+  app/views/layouts/composers.html.erb:58:in `_app_views_layouts_composers_html_erb__2382732349086834370_2181420920__1159155075512443827'
+  app/controllers/composers_controller.rb:10:in `index'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.4ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.1ms)
+
+
+Started GET "/composers?letter=A" for 127.0.0.1 at 2011-05-05 00:47:30 +0100
+  Processing by ComposersController#index as HTML
+  Parameters: {"letter"=>"A"}
+  [1m[36mComposer Load (1.3ms)[0m  [1mSELECT "composers".* FROM "composers" WHERE (composer_name LIKE 'A%') ORDER BY composer_name[0m
+  [1m[35mComposer Load (7.3ms)[0m  SELECT "composers".* FROM "composers"
+Rendered composers/index.html.erb within layouts/composers (46.6ms)
+Completed 200 OK in 63ms (Views: 43.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-06 23:05:46 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (256.4ms)
+Completed 200 OK in 306ms (Views: 303.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-05-06 23:06:52 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-06 23:06:53 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered welcome/home.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-07 23:45:08 +0100
+  Processing by WelcomeController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered welcome/home.html.erb within layouts/application (218.1ms)
+Completed 200 OK in 267ms (Views: 265.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-07 23:45:17 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed   in 62ms
+
+NoMethodError (undefined method `admin?' for nil:NilClass):
+  app/controllers/users_controller.rb:65:in `admin_user'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-05-07 23:49:43 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed   in 58ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-05-07 23:49:52 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 122ms (Views: 100.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-05-07 23:50:41 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3LCqO3yq1yPDbLVoWaSYWsIuThP8IIlMBN6JHkNJgTo=", "user"=>{"first_name"=>"", "last_name"=>"", "organisation_name"=>"", "job_title"=>"", "address"=>"", "zip"=>"", "country"=>"", "phone_number"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "active_member"=>"0", "admin"=>"0"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (12.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 244ms (Views: 79.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-05-07 23:52:08 +0100
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 112ms (Views: 111.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-05-07 23:52:20 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3LCqO3yq1yPDbLVoWaSYWsIuThP8IIlMBN6JHkNJgTo=", "session"=>{"email"=>"edcervenka@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (24.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'edcervenka@yahoo.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/112
+Completed 302 Found in 118ms
+
+
+Started GET "/users/112" for 127.0.0.1 at 2011-05-07 23:52:20 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 92ms (Views: 11.4ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2011-05-07 23:52:28 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (49.6ms)
+Completed   in 138ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000102aa5e58>:0x00000102aa01b0>):
+    4:   <% @users.each do |user| %>
+    5:     <li>
+    6:       
+    7:       <%= link_to full_name, user %>
+    8: 
+    9:     </li>
+    10:   <% end %>
+  app/helpers/users_helper.rb:4:in `full_name'
+  app/views/users/index.html.erb:7:in `block in _app_views_users_index_html_erb___2736967995486837463_2169820060__2892900822496938525'
+  app/views/users/index.html.erb:4:in `each'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2736967995486837463_2169820060__2892900822496938525'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.3ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2011-05-07 23:53:07 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (14.5ms)
+Completed   in 102ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000102d1ebf8>:0x00000102d18780>):
+    4:   <% @users.each do |user| %>
+    5:     <li>
+    6:       
+    7:       <%= link_to full_name, user_path %>
+    8: 
+    9:     </li>
+    10:   <% end %>
+  app/helpers/users_helper.rb:4:in `full_name'
+  app/views/users/index.html.erb:7:in `block in _app_views_users_index_html_erb___2736967995486837463_2171115180__2892900822496938525'
+  app/views/users/index.html.erb:4:in `each'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2736967995486837463_2171115180__2892900822496938525'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2011-05-07 23:53:27 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (38.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (14.2ms)
+Completed   in 137ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000104021a98>:0x0000010401dd08>):
+    4:   <% @users.each do |user| %>
+    5:     <li>
+    6:       
+    7:       <%= link_to full_name, '#' %>
+    8: 
+    9:     </li>
+    10:   <% end %>
+  app/helpers/users_helper.rb:4:in `full_name'
+  app/views/users/index.html.erb:7:in `block in _app_views_users_index_html_erb___2736967995486837463_2181093680__2892900822496938525'
+  app/views/users/index.html.erb:4:in `each'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2736967995486837463_2181093680__2892900822496938525'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:00:31 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed   in 90ms
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    4:   <% @users.each do |user| %>
+    5:     <li>
+    6:       
+    7:       <%= link_to full_name, '#' %>
+    8: 
+    9:     </li>
+    10:   <% end %>
+  app/helpers/users_helper.rb:4:in `full_name'
+  app/views/users/index.html.erb:7:in `block in _app_views_users_index_html_erb___2736967995486837463_2169732180__2892900822496938525'
+  app/views/users/index.html.erb:4:in `each'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2736967995486837463_2169732180__2892900822496938525'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:05:04 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 94ms (Views: 9.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:06:24 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 94ms (Views: 10.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:06:40 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 96ms (Views: 11.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:07:56 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 96ms (Views: 11.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:08:14 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (14.1ms)
+Completed   in 102ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00000102cfc3c8>:0x00000102ced210>):
+    4:   <% @users.each do |user| %>
+    5:     <li>
+    6:       
+    7:       <%= link_to full_name, user %>
+    8: 
+    9:     </li>
+    10:   <% end %>
+  app/helpers/users_helper.rb:4:in `full_name'
+  app/views/users/index.html.erb:7:in `block in _app_views_users_index_html_erb___2736967995486837463_2171024040__2892900822496938525'
+  app/views/users/index.html.erb:4:in `each'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2736967995486837463_2171024040__2892900822496938525'
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:09:09 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 95ms (Views: 11.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:11:16 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+ERROR: compiling _app_views_users_index_html_erb___2736967995486837463_2169867800__2892900822496938525 RAISED /Users/ed/perc/app/views/users/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_users_index_html_erb___2736967995486837463_2169867800__2892900822496938525(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>All users</h1>
+
+<ul class="users">
+  ');@output_buffer.append= ( render @users );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    </li>
+');   end 
+@output_buffer.safe_concat('</ul>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:446:in `_run__4185546949671811712__process_action__2831253851582506285__callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ed/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed   in 90ms
+
+ActionView::Template::Error (/Users/ed/perc/app/views/users/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting $end):
+    6:     </li>
+    7:   <% end %>
+    8: </ul>
+  
+
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/ed/.rvm/gems/ruby-1.9.2-p180@rails3tutorial/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-08 00:11:38 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/_user.html.erb (1.7ms)
+Rendered users/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 98ms (Views: 13.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/112" for 127.0.0.1 at 2011-05-08 00:12:45 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 93ms (Views: 12.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/112/edit" for 127.0.0.1 at 2011-05-08 00:12:47 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"112"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 112 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.5ms)
+Rendered users/edit.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 137ms (Views: 57.7ms | ActiveRecord: 1.1ms)

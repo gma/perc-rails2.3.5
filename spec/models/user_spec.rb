@@ -9,6 +9,7 @@ describe User do
       :address => "Some address",
       :zip => "Some postcode",
       :country => "Some country",
+      :phone_number => "0000",
       :email => "user@example.com",
       :password => "foobar",
       :password_confirmation => "foobar"
@@ -42,6 +43,11 @@ describe User do
   it "should require a country" do
     no_country_user = User.new(@attr.merge(:country => ""))
     no_country_user.should_not be_valid
+  end
+  
+  it "should require a phone number" do
+    no_phone_number_user = User.new(@attr.merge(:phone_number => ""))
+    no_phone_number_user.should_not be_valid
   end
   
   it "should require an email address" do
@@ -158,5 +164,25 @@ describe User do
         matching_user.should == @user
       end
     end                
-  end                                 
+  end
+  
+  describe "admin attribute" do
+
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+
+    it "should respond to admin" do
+      @user.should respond_to(:admin)
+    end
+
+    it "should not be an admin by default" do
+      @user.should_not be_admin
+    end
+
+    it "should be convertible to an admin" do
+      @user.toggle!(:admin)
+      @user.should be_admin
+    end
+  end
 end

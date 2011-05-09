@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110503234641) do
+ActiveRecord::Schema.define(:version => 20110504215753) do
 
   create_table "composers", :force => true do |t|
     t.string   "composer_name"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20110503234641) do
     t.datetime "updated_at"
     t.string   "encrypted_password"
     t.string   "salt"
-    t.boolean  "admin"
+    t.boolean  "admin",              :default => false
     t.string   "last_name"
     t.string   "organisation_name"
     t.string   "job_title"
@@ -76,7 +76,8 @@ ActiveRecord::Schema.define(:version => 20110503234641) do
     t.boolean  "trial_used"
     t.string   "years_paid"
     t.boolean  "cancelled"
-    t.boolean  "active_member"
+    t.boolean  "active_member",      :default => false
+    t.string   "phone_number"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

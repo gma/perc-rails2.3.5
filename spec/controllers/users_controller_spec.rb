@@ -5,7 +5,7 @@ describe UsersController do
   
   describe "GET 'index'" do
 
-    describe "for non-signed-in users" do
+    describe "for non-admin users" do
       it "should deny access" do
         get :index
         response.should redirect_to(signin_path)
@@ -13,33 +13,7 @@ describe UsersController do
       end
     end
 
-    describe "for signed-in users" do
-
-      before(:each) do
-        @user = test_sign_in(Factory(:user))
-        second = Factory(:user, :first_name => "Bob", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "another@example.com")
-        third  = Factory(:user, :first_name => "Ben", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "another@example.net")
-
-        @users = [@user, second, third]
-      end
-
-      it "should be successful" do
-        get :index
-        response.should be_success
-      end
-
-      it "should have the right title" do
-        get :index
-        response.should have_selector("title", :content => "All users")
-      end
-
-      it "should have an element for each user" do
-        get :index
-        @users.each do |user|
-          response.should have_selector("li", :content => user.first_name)
-        end
-      end
-    end
+    
   end
   
   describe "GET 'show'" do
@@ -87,6 +61,11 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector("p", :content => @user.country)
     end
+    
+    it "should include the user's phone number" do
+      get :show, :id => @user
+      response.should have_selector("p", :content => @user.phone_number)
+    end
         
   end        
 
@@ -126,6 +105,11 @@ describe UsersController do
       response.should have_selector("input[name='user[country]'][type='text']")
     end
     
+    it "should have a phone number field" do
+      get :new
+      response.should have_selector("input[name='user[phone_number]'][type='text']")
+    end
+    
     it "should have an email field" do
       get :new
       response.should have_selector("input[name='user[email]'][type='text']")
@@ -148,7 +132,7 @@ describe UsersController do
     describe "failure" do
       
       before(:each) do
-        @attr = { :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :email => "", :password => "", 
+        @attr = { :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :phone_number => "", :email => "", :password => "", 
                   :password_confirmation => "" }
       end
       
@@ -172,7 +156,7 @@ describe UsersController do
     describe "success" do
       
       before(:each) do
-        @attr = { :first_name => "New User", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "user@example.com",
+        @attr = { :first_name => "New User", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :phone_number => "0000", :email => "user@example.com",
                   :password => "foobar", :password_confirmation => "foobar" }
       end
       
@@ -182,6 +166,11 @@ describe UsersController do
         end.should change(User, :count).by(1)
       end
       
+      it "should sign the user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
+            
       it "should redirect to the user show page" do
         post :create, :user => @attr
         response.should redirect_to(user_path(assigns(:user)))
@@ -217,7 +206,7 @@ describe UsersController do
     describe "failure" do
     
       before(:each) do
-        @attr = { :email => "", :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :password => "",
+        @attr = { :email => "", :first_name => "", :last_name => "", :address => "", :zip => "", :country => "", :phone_number => "", :password => "",
                   :password_confirmation => "" }
       end
       
@@ -235,7 +224,7 @@ describe UsersController do
     describe "success" do
 
       before(:each) do
-        @attr = { :first_name => "New Name", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :email => "user@example.org",
+        @attr = { :first_name => "New Name", :last_name => "Surname", :address => "Some address", :zip => "Some postcode", :country => "Some country", :phone_number => "0000", :email => "user@example.org",
                   :password => "barbaz", :password_confirmation => "barbaz" }
       end
 
@@ -247,6 +236,7 @@ describe UsersController do
         @user.address.should  == @attr[:address] 
         @user.zip.should  == @attr[:zip]
         @user.country.should  == @attr[:country]  
+        @user.phone_number.should  == @attr[:phone_number]
         @user.email.should == @attr[:email]
       end
 
