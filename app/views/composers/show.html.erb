@@ -3,17 +3,15 @@
 </p>
 
 <table>
-
-
 	
-	<% for work in @works %>
-	  <tr>
-
-	    <td><%= link_to work.work_name, work_path(work.id) %> 
-	<%= if @work.showarrorch.present? ; work.arr_orch ; end %>	
-<%=h work.opus_no %></td>
-
-	<% end %>
+<% for work in @works %>
+  <tr><td><%= link_to work.work_name, work_path(work.id) %>
+	<%= work.opus_no %> 
+	<% if work.showarrorch? %>
+	  <%= work.arr_orch %> 
+    <% end %>
+	</td>
+<% end %>
 
 </table>
 

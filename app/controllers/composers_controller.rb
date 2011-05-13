@@ -1,6 +1,8 @@
 require "paginate_alphabetically"
-
+  
+  
 class ComposersController < ApplicationController
+ # before_filter :active_user, :only => [:index, :show]
   
   # GET /composers
   # GET /composers.xml
@@ -26,5 +28,8 @@ class ComposersController < ApplicationController
     end
   end
 
+   
 
+  
+  
 end
