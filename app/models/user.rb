@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110503234641
+# Schema version: 20110504215753
 #
 # Table name: users
 #
@@ -17,7 +17,6 @@
 #  address            :text
 #  zip                :string(255)
 #  country            :string(255)
-#  phone_no           :string(255)
 #  membership_type    :string(255)
 #  currency           :string(255)
 #  language           :string(255)
@@ -27,6 +26,7 @@
 #  years_paid         :string(255)
 #  cancelled          :boolean
 #  active_member      :boolean
+#  phone_number       :string(255)
 #
 
 require 'digest'

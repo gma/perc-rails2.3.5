@@ -10,10 +10,90 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110504215753) do
+ActiveRecord::Schema.define(:version => 20110514174930) do
+
+  create_table "anvils", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bell_plates", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bongos", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bongos_congas", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "boobams", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "burmese_gongs", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chinese_gongs", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "composers", :force => true do |t|
     t.string   "composer_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cowbells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "crotales", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +104,30 @@ ActiveRecord::Schema.define(:version => 20110504215753) do
     t.string   "company"
     t.string   "job_title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "factory_whistles", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "flower_pots", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "handbells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,6 +143,38 @@ ActiveRecord::Schema.define(:version => 20110504215753) do
     t.datetime "updated_at"
   end
 
+  create_table "japanese_temple_bells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "log_drums", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "marimbas", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "metalophones", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "no_percs", :force => true do |t|
     t.string   "composer_name"
     t.string   "work_name"
@@ -48,6 +184,94 @@ ActiveRecord::Schema.define(:version => 20110504215753) do
   end
 
   add_index "no_percs", ["composer_name", "work_name"], :name => "no_percs_index"
+
+  create_table "rototoms", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sleighbells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songbells", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "steel_pans", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tamburis", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taxi_horns", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "temple_blocks", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thai_gongs", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tuned_gongs", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tuned_tom_toms", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tuned_woodblocks", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "unicode_test", :id => false, :force => true do |t|
     t.string "unicode1", :limit => 25
@@ -148,5 +372,13 @@ ActiveRecord::Schema.define(:version => 20110504215753) do
   end
 
   add_index "works", ["composer_id", "work_order_id", "work_name"], :name => "works_index"
+
+  create_table "xylorimbas", :force => true do |t|
+    t.integer  "work_id"
+    t.string   "movement_name"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
