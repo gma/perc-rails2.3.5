@@ -65,7 +65,7 @@
 			<% if signed_in? %>
         <p class="MainNavigation">
         <br /><br />
-        <%= link_to I18n.t('layout.menu.account'), '#' %>	 
+        <%= link_to I18n.t('layout.menu.account'), user_path(current_user) %>
         </p>
       <% end %>
 		
