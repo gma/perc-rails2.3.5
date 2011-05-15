@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514174930) do
+ActiveRecord::Schema.define(:version => 20110515140541) do
 
   create_table "anvils", :force => true do |t|
     t.integer  "work_id"
@@ -139,6 +139,19 @@ ActiveRecord::Schema.define(:version => 20110514174930) do
     t.string   "german"
     t.string   "spanish"
     t.string   "italian"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instrument_works", :force => true do |t|
+    t.integer  "instrument_id"
+    t.integer  "work_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instruments", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

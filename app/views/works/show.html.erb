@@ -27,13 +27,14 @@
   </tr>
 <% end %>
 </table>
+
+<%= render :partial => 'attachments' %>
+
 <br />
 <%= if @work.notes.present? ; "<p><b>Notes: </b>".html_safe + @work.notes + "</p>".html_safe; end %>
 
 <p>
-	
   <%= link_to (I18n.t 'composers.back_works') + " " + "#{@work.composer.composer_name}", :back %>
-  
 </p>
 <p>
   <%= link_to (I18n.t 'composers.new_search'), composers_path(:letter => 'A') %>
