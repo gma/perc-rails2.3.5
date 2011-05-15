@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 describe InstrumentTranslationsController do
-render_views
+  extend ActiveMembersHelpers
+
+  render_views
+
+  def get_index
+    get :index
+  end
 
   describe "GET 'index'" do
-    it "should be successful" do
-      get 'index'
-      response.should be_success
-    end
+    should_require_active_members :get_index
   end
 end

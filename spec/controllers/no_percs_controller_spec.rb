@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 describe NoPercsController do
+  extend ActiveMembersHelpers
+
   render_views
   
-  describe "GET 'no_percs#index'" do
-    it "should be successful" do
-      get 'index'
-      response.should be_success
-    end
+  def get_index
+    get :index
+  end
+
+  describe "GET 'index'" do
+    should_require_active_members :get_index
   end
 end    

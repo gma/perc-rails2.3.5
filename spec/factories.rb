@@ -78,3 +78,14 @@ end
 Factory.define :composer do |composer|
   composer.composer_name "Some Composer"
 end
+
+Factory.define :work do |work|
+  work.work_name 'Symphony'
+  work.association :composer
+end
+
+Factory.define :workdetail do |detail|
+  detail.movement_id 1
+  detail.movement_name 'Complete'
+  detail.association :work
+end

@@ -1,9 +1,7 @@
 class WorksController < ApplicationController
-  
-  # GET /works/1
-  # GET /works/1.xml
+  before_filter :require_active_user
+
    def show
-     
      @work = Work.find(params[:id])
      @workdetails = @work.workdetails.order("movement_id")
  
@@ -13,6 +11,4 @@ class WorksController < ApplicationController
        format.xml  { render :xml => @work }
      end
    end
-
-
 end

@@ -24,6 +24,7 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
   def test_sign_in(user)
     controller.sign_in(user)
   end
@@ -34,4 +35,38 @@ RSpec.configure do |config|
     fill_in :password, :with => user.password
     click_button
   end  
+end
+
+module ActiveMembersHelpers
+  def should_require_active_members(method)
+    describe "authentication" do
+      def login(user)
+        controller.instance_variable_set(:@current_user, user)
+      end
+
+      describe "of inactive members" do
+        before(:each) do
+          @user = Factory.create(:user, :active_member => false)
+        end
+
+        it "should redirect to payment page" do
+          login(@user)
+          send(method)
+          response.should redirect_to(user_path(@user))
+        end
+      end
+
+      describe "of active members" do
+        before(:each) do
+          @user = Factory.create(:user, :active_member => true)
+        end
+
+        it "should display the page" do
+          login(@user)
+          send(method)
+          response.should be_success
+        end
+      end
+    end
+  end
 end

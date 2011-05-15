@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   end
   
   def show
-      @user = User.find(params[:id])
-      @title = @user.first_name
+    @user = User.find(params[:id])
+    @title = @user.first_name
   end
   
   def new
@@ -52,7 +52,6 @@ class UsersController < ApplicationController
   end
   
   private
-
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
