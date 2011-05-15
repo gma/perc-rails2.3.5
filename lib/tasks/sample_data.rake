@@ -1,9 +1,9 @@
-require 'faker'
+
 
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
-    
+    require 'faker'
     User.create!(:first_name => "Example User",
                  :email => "user@example.com",
                  :password => "foobar",
