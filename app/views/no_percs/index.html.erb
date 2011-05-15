@@ -6,22 +6,17 @@
   <%- end -%>
 </div>
 <br/ >
-<table border=1>
-  <tr>
-    <th>Composer</th>
-    <th>Work</th>
 
-<% @no_percs.each do |no_perc| %>
-
-
-  <tr>
-    <td><%=h no_perc.composer_name %></td>
-    <td><%=h no_perc.work_name %></td>
-
-
-  </tr>
-<% end %>
-</table>
+<ul class="composers">
+<% @composers.each do |composer, works| %>
+  <li><h2><%= composer %></h2></li>
+  <ul class="works">
+    <% works.each do |work| %>
+      <li><%= work.work_name %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</ul>
 
 <br />
 

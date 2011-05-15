@@ -55,7 +55,14 @@ pre {
 }
 
 
-
+ul.composers {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+ul.works {
+  list-style: disc;
+}
 
 
 

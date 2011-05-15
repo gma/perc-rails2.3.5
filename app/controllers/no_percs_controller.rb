@@ -4,10 +4,8 @@ class NoPercsController < ApplicationController
   before_filter :require_active_user
   
   def index
-    @no_percs = NoPerc.alphabetical_group(params[:letter])
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @no_percs }
+    @composers = NoPerc.alphabetical_group(params[:letter]).group_by do |work|
+      work.composer_name
     end
   end
 end
