@@ -20,34 +20,7 @@ class Work < ActiveRecord::Base
   validates_presence_of :composer_id, :work_name
   
   belongs_to :composer
+  has_many :instrument_works
+  has_many :instruments, :through => :instrument_works
   has_many :workdetails
-           :anvils
-           :bell_plates
-           :bells
-           :bongos
-           :bongos_congas
-           :boobams
-           :burmese_gongs
-           :chinese_gongs
-           :cowbells
-           :crotales
-           :factory_whistles
-           :flower_pots
-           :handbells
-           :japanese_temple_bells
-           :log_drums
-           :marimbas
-           :metalophones
-           :rototoms
-           :sleighbells
-           :songbells
-           :steel_pans
-           :tamburis
-           :taxi_horns
-           :temple_blocks
-           :thai_gongs
-           :tuned_gongs
-           :tuned_woodblocks
-           :xylorimbas
-  
 end
