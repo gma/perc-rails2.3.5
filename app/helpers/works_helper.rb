@@ -10,7 +10,8 @@ module WorksHelper
     method = number.nil? ? instrument : "#{instrument}_#{number}"
     data = workdetail.send(method)
     if data.present?
-      "<td>#{data}</td>".html_safe
+      attributes = (data == '-') ? ' align="center"' : ''
+      %Q{<td#{attributes}>#{data}</td>}.html_safe
     end
   end
 end
