@@ -3,6 +3,7 @@ class WorksController < ApplicationController
 
    def show
      @work = Work.find(params[:id])
+     @current_user.searches << Search.new(:work_id => @work.id)
      @workdetails = @work.workdetails.order("movement_id")
  
      @workdetail = @work.workdetails.order.first

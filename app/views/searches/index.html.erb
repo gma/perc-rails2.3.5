@@ -1,0 +1,9 @@
+<h1>My recent searches</h1>
+<ul class="works">
+<% @searches.each do |search| %>
+  <li>
+    <%= link_to_work(search.work) %>
+    (<%= search.created_at.to_date.to_s(:short) %>)
+  </li>
+<% end %>
+<ul>

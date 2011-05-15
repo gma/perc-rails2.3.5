@@ -52,6 +52,8 @@ class User < ActiveRecord::Base
                            :confirmation => true,
                            :length       => { :within => 6..40 }
                        
+  has_many :searches
+
   before_save :encrypt_password
   
   # Return true if the user's password matches the submitted password.
@@ -71,6 +73,11 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end   
+
+  def recent_searches
+    searches.group('work_id').
+      includes(:work => :composer).limit(10).order('created_at DESC')
+  end
   
   private
   

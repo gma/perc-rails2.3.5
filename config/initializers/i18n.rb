@@ -1,5 +1,3 @@
-
-
 LANGUAGES = {
   
   'English' => 'en',

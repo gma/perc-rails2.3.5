@@ -45,6 +45,8 @@ Perc::Application.routes.draw do
 
   resources :works
 
+  resources :searches
+
   resources :workdetails
   # The priority is based upon order of creation:
   # first created -> highest priority.
