@@ -37,35 +37,35 @@
 
 			<% if signed_in? && current_user.active_member? %>
         <p class="MainNavigation">
-        <%= link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path  %>
-        <%= link_to I18n.t('layout.menu.request'), new_work_request_path %>
-        <%= link_to I18n.t('layout.menu.add'), '#' %>
+        <%= nav_link_to I18n.t('layout.menu.write_endorsement'), new_endorsement_path %>
+        <%= nav_link_to I18n.t('layout.menu.request'), new_work_request_path %>
+        <%= nav_link_to I18n.t('layout.menu.add'), '#' %>
         </p>
         <br /><br />
         <p class="MainNavigation">
-        <%= link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path %>
-        <%= link_to I18n.t('layout.menu.searches'), searches_path %>
-        <%= link_to I18n.t('layout.menu.gig'), '#' %>
-        <%= link_to I18n.t('layout.menu.schedule'), '#' %>
-        <%= link_to I18n.t('layout.menu.planner'), '#' %>
+        <%= nav_link_to I18n.t('layout.menu.instrument_translations'), instrument_translations_path %>
+        <%= nav_link_to I18n.t('layout.menu.searches'), searches_path %>
+        <%= nav_link_to I18n.t('layout.menu.gig'), '#' %>
+        <%= nav_link_to I18n.t('layout.menu.schedule'), '#' %>
+        <%= nav_link_to I18n.t('layout.menu.planner'), '#' %>
         </p>
       <% end %>
 
       <% if (! signed_in?) || (! current_user.active_member?) %>
         <p class="MainNavigation">
-        <%= link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
-        <%= link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
-        <%= link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
-        <%= link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
-        <%= link_to I18n.t('layout.menu.links'), links_path %>
-        <%= link_to 'Preview', composers_path(:letter => 'A') %>
+        <%= nav_link_to I18n.t('layout.menu.member_orchestras'), member_orchestras_path %>
+        <%= nav_link_to I18n.t('layout.menu.endorsements'),  endorsements_path %>
+        <%= nav_link_to I18n.t('layout.menu.free_trial'), free_trial_path %>
+        <%= nav_link_to I18n.t('layout.menu.subscription_rates'), subscription_rates_path %>
+        <%= nav_link_to I18n.t('layout.menu.links'), links_path %>
+        <%= nav_link_to 'Preview', composers_path(:letter => 'A') %>
         </p>
       <% end %>
 
 			<% if signed_in? %>
         <p class="MainNavigation">
         <br /><br />
-        <%= link_to I18n.t('layout.menu.account'), user_path(current_user) %>
+        <%= nav_link_to I18n.t('layout.menu.account'), user_path(current_user) %>
         </p>
       <% end %>
 		
