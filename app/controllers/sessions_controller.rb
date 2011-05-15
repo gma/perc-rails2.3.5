@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user
-      flash[:message] = "Welcome " + user.first_name
+      flash[:message] = "Welcome to the members area " + user.first_name + ". Click the links above and to the right to navigate."
       redirect_back_or user
     end
   end

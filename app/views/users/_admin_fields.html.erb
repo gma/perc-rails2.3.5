@@ -1,0 +1,42 @@
+<% if @user.admin? %>
+<div class="field">
+  <%= f.label :admin %><br />
+  <%= f.check_box :admin %>
+</div>
+<div class="field">
+  <%= f.label :active_member %><br />
+  <%= f.check_box :active_member %>
+</div>
+<div class="field">
+  <%= f.label :years_paid %><br />
+  <%= f.text_field :years_paid %>
+</div> 
+<div class="field">
+  <%= f.label :membership_type %><br />
+  <%= f.text_field :membership_type %>
+</div>
+<div class="field">
+  <%= f.label :currency %><br />
+  <%= f.text_field :currency %>
+</div>
+<div class="field">
+  <%= f.label :payment_type %><br />
+  <%= f.check_box :payment_type %>
+</div>
+<div class="field">
+  <%= f.label :language %><br />
+  <%= f.text_field :language %>
+</div>
+<div class="field">
+  <%= f.label :trial_member %><br />
+  <%= f.check_box :trial_member %>
+</div>
+<div class="field">
+  <%= f.label :trial_used %><br />
+  <%= f.check_box :trial_used %>
+</div>
+<div class="field">
+  <%= f.label :cancelled %><br />
+  <%= f.check_box :cancelled %>
+</div>
+<% end %>

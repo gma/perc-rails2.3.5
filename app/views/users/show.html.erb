@@ -1,9 +1,17 @@
-<h1>
-<%= @user.first_name %>
-<%= @user.last_name %>
-</h1>
-<p><%= @user.organisation_name %></p>
-<p><%= @user.job_title %></p>
+<p><%= link_to "Update my details", edit_user_path %></p>
+
+First name:
+<p><%= @user.first_name %></p>
+Last name:
+<p><%= @user.last_name %></p>
+<% if @user.organisation_name? %>
+  Organisation name:
+  <p><%= @user.organisation_name %></p>
+<% end %>
+<% if @user.job_title? %>
+  Job title:
+  <p><%= @user.job_title %></p>
+<% end %>
 Address:
 <p><%= @user.address %></p>
 Zip:
@@ -12,8 +20,17 @@ Country:
 <p><%= @user.country %></p>
 Phone no:
 <p><%= @user.phone_number %></p>
-<p>Active member: <%= @user.active_member %></p>
-<p>Admin: <%= @user.admin %></p>
+<% if @user.admin? %>
+  <p>Active member: <%= @user.active_member %></p>
+  <p>Admin: <%= @user.admin %></p>
+  <p>Membership type: <%= @user.membership_type %></p>
+  <p>Currency: <%= @user.currency  %></p>
+  <p>Language: <%= @user.language %></p>
+  <p>Trial Membership: <%= @user.trial_member %></p>
+  <p>Trial Used: <%= @user.trial_used %></p>
+  <p>Payment type: <%= @user.payment_type %></p>
+  <p>Years Paid: <%= @user.trial_used %></p>
+  <p>Cancelled: <%= @user.cancelled %></p>    
+<% end %>
 
 
-<%= link_to "Change my details", edit_user_path %>
